@@ -1,0 +1,34 @@
+/* Common Styles File for all HTML files: index, about, shop, and cart */
+@import url("https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300;400;500;600;700&display=swap");
+
+/* Root style variables for the complete document for reduction in code repetition */
+:root {
+  --box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+  --border: 0.2rem solid rgba(0, 0, 0, 0.1);
+  --outline: 0.1rem solid rgba(0, 0, 0, 0.1);
+  --outline-hover: 0.2rem solid var(--black);
+}
+
+/* Standard root styles for the full body of html documents to reset box sizing and fonts */
+* {
+  font-family: "Signika Negative", sans-serif;
+  margin: 0;
+  box-sizing: border-box;
+  outline: 0;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all 0.2s linear;
+}
+
+/* remove scroll in x-direction, set scroll behavior and set scroll padding to avoid clash of header bar and content */
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 7rem;
+}
+
+/* set background color of body */
+body {
+  background: #eee;
+}
