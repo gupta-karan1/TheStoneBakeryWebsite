@@ -30,14 +30,21 @@
     <!-- header sections starts -->
     <header class="header">
       <!-- brand logo -->
-      <a href="/html/index.html" class="logo">The Stone Bakers</a>
+      <a href="/html/index.html" class="logo">
+        <img
+          src="/img/placeholder.jpg"
+          alt="the stone bakery logo"
+          title="the stone bakery logo"
+        />
+        The Stone Bakers</a
+      >
 
       <!-- navigation menu starts -->
       <nav class="navbar">
-        <a href="/html/index.html">Home</a>
-        <a href="/html/about.html">About</a>
-        <a href="/html/shop.html">Bakery Shop</a>
-        <a href="/html/cart.html">Shopping Cart</a>
+        <a href="/html/index.html" title="home">Home</a>
+        <a href="/html/about.html" title="about us">About Us</a>
+        <a href="/html/shop.html" title="bakery shop">Bakery Shop</a>
+        <a href="/html/cart.html" title="shopping cart">Shopping Cart</a>
       </nav>
       <!-- navigation menu ends -->
 
@@ -47,6 +54,12 @@
           class="fas fa-bars"
           id="menu-btn"
           title="menu"
+          type="button"
+        ></button>
+        <button
+          class="fas fa-user"
+          id="login-btn"
+          title="user login"
           type="button"
         ></button>
         <button
@@ -61,16 +74,10 @@
           title="shopping cart"
           type="button"
         ></button>
-        <button
-          class="fas fa-user"
-          id="login-btn"
-          title="user login"
-          type="button"
-        ></button>
       </section>
       <!-- nav menu icons ends -->
 
-      <!-- search input box that appears & disappears starts -->
+      <!-- search input box starts -->
       <form action="" class="search-form">
         <input
           type="search"
@@ -80,24 +87,45 @@
         />
         <label for="search-box" class="fas fa-search"></label>
       </form>
-      <!-- search input box that appears & disappears from left ends -->
+      <!-- search input box ends -->
 
-      <!-- shopping cart box that appears & disappears from left starts  -->
+      <!-- shopping cart box starts  -->
       <section class="shopping-cart">
         <!-- shopping item 1 starts-->
         <section class="box">
-          <i class="fas fa-trash"></i>
-          <img src="" alt="rolling pin" width="150" loading="lazy" />
-          <article class="content">
-            <h3>rolling pin</h3>
-            <p class="price">$4.99/-</p>
-            <p class="quantity">qty : 1</p>
+          <article class="card">
+            <img
+              src="/img/placeholder.jpg"
+              alt="rolling pin"
+              loading="lazy"
+              id="itemImage"
+            />
+            <article class="content">
+              <h3 id="itemName">rolling pin</h3>
+              <p class="price">price: <span id="priceValue">$6.99</span>/-</p>
+              <p class="quantity">quantity: <span id="itemQuantity">1</span></p>
+            </article>
+          </article>
+
+          <article class="counterIcons">
+            <i class="fas fa-plus-circle"></i>
+            <!-- <input type="number" name="quantity" id="itemNum" /> -->
+            <i class="fas fa-minus-circle"></i>
           </article>
         </section>
         <!-- shopping item 1 ends-->
+        <p class="total">total : <span id="totalValue">$19.69/-</span></p>
+        <button class="primaryBtn" formaction="/html/cart.html" type="submit">
+          <i class="fas fa-shopping-cart"></i>
+          checkout
+        </button>
       </section>
-      <!-- shopping cart box that appears & disappears from left ends  -->
+
+      <!-- shopping cart box ends  -->
     </header>
     <!-- header sections ends -->
+
+    <!-- JavaScript file attached at the end to load content first and then the script -->
+    <script src="/js/script.js"></script>
   </body>
 </html>

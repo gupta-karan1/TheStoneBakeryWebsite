@@ -1,15 +1,29 @@
 /* Common Styles File for all HTML files: index, about, shop, and cart */
+
+/* font import from google fonts */
 @import url("https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300;400;500;600;700&display=swap");
 
 /* Root style variables for the complete document for reduction in code repetition */
+
 :root {
-  --box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
-  --border: 0.2rem solid rgba(0, 0, 0, 0.1);
-  --outline: 0.1rem solid rgba(0, 0, 0, 0.1);
-  --outline-hover: 0.2rem solid var(--black);
+  --rubyRed: #9b2226;
+  --rufous: #ae2012;
+  --rust: #bb3e03;
+  --alloyOrange: #ca6702;
+  --gamboge: #ee9b00;
+  --mediumChampagne: #e9d8a6;
+  --middleBlueGreen: #94d2bd;
+  --viridianGreen: #0a9396;
+  --blueSapphire: #005f73;
+  --richBlack: #001219;
+  --box-shadow: 0 0.5rem 1.5rem rgba(0, 18, 25, 0.1);
+  --border: var(--rufous) 0.15rem solid;
+  --outline: 0.1rem solid rgba(0, 18, 25, 0.1);
+  --outline-hover: 0.2rem solid var(--richBlack);
 }
 
 /* Standard root styles for the full body of html documents to reset box sizing and fonts */
+
 * {
   font-family: "Signika Negative", sans-serif;
   margin: 0;
@@ -22,6 +36,7 @@
 }
 
 /* remove scroll in x-direction, set scroll behavior and set scroll padding to avoid clash of header bar and content */
+
 html {
   overflow-x: hidden;
   scroll-behavior: smooth;
@@ -29,6 +44,261 @@ html {
 }
 
 /* set background color of body */
+
 body {
-  background: #eee;
+  background: var(--mediumChampagne);
 }
+
+/* button style */
+
+.primaryBtn {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 0.8rem 3rem;
+  font-size: 1.7rem;
+  border-radius: 0.5rem;
+  border: none;
+  color: var(--mediumChampagne);
+  cursor: pointer;
+  background-color: var(--rufous);
+  font-weight: 700;
+  box-shadow: 0rem 0.5rem var(--gamboge);
+}
+
+.primaryBtn:hover {
+  color: var(--rufous);
+  background: var(--gamboge);
+  box-shadow: 0rem 0.5rem var(--rufous);
+}
+
+.primaryBtn:active {
+  color: var(--rufous);
+  background-color: var(--gamboge);
+  transform: translateY(0.5rem);
+  box-shadow: none;
+}
+
+/* header navigation styles start */
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 5%;
+  background-color: var(--middleBlueGreen);
+  box-shadow: var(--box-shadow);
+}
+
+.header .logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--rufous);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .logo img {
+  margin-right: 0.5rem;
+  width: 4rem;
+  height: 4rem;
+}
+
+.header .navbar a {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 0 1rem;
+  color: var(--rufous);
+  text-decoration: underline;
+}
+
+.header .navbar a:hover {
+  color: var(--middleBlueGreen);
+  background-color: var(--blueSapphire);
+  text-decoration: underline;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: var(--box-shadow);
+}
+
+.header .navbar a:active {
+  color: var(--mediumChampagne);
+}
+
+.header .icons button {
+  height: 4rem;
+  width: 4rem;
+  line-height: 4rem;
+  border-radius: 0.5rem;
+  background: var(--middleBlueGreen);
+  color: var(--rufous);
+  font-size: 1.5rem;
+  margin-left: 1rem;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: var(--box-shadow);
+  outline: var(--rufous) 0.15rem solid;
+}
+
+.header .icons button:hover {
+  background: var(--blueSapphire);
+  color: var(--middleBlueGreen);
+  outline: none;
+}
+
+.header .icons button:first-child {
+  background: var(--rufous);
+  color: var(--middleBlueGreen);
+}
+.header .icons button:first-child:hover {
+  background: var(--blueSapphire);
+  color: var(--middleBlueGreen);
+}
+
+/* header navigation styles ends */
+
+/* remove display of menu button for desktop screen */
+#menu-btn {
+  display: none;
+}
+
+/* search form in header style starts */
+
+.header .search-form {
+  position: absolute;
+  top: 110%;
+  right: -110%; /* change this to -110% to remove from screen */
+  width: 50rem;
+  height: 5rem;
+  background-color: var(--mediumChampagne);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  box-shadow: var(--box-shadow);
+  border: var(--rufous) 0.15rem solid;
+}
+
+.header .search-form.active {
+  right: 5rem;
+  transition: 0.4s linear;
+}
+
+.header .search-form input {
+  height: 100%;
+  width: 100%;
+  background: none;
+  text-transform: none;
+  font-size: 2rem;
+  color: var(--richBlack);
+  padding: 0 1.5rem;
+}
+
+.header .search-form label {
+  font-size: 2rem;
+  padding-right: 1.5rem;
+  color: var(--rufous);
+  cursor: pointer;
+}
+
+.header .search-form label:hover {
+  color: var(--blueSapphire);
+}
+
+/* search form in header style ends */
+
+/* shopping cart box in header style starts */
+.header .shopping-cart {
+  position: absolute;
+  top: 110%;
+  right: 5rem; /* change this to -110% to remove from screen */
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: var(--box-shadow);
+  width: 30rem;
+  background: var(--mediumChampagne);
+  border: var(--rufous) 0.15rem solid;
+}
+
+/* .header .shopping-cart.active {
+    right: 2rem;
+    transition: 0.3s linear;
+  } */
+
+.header .shopping-cart .box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  /* position: relative; */
+  margin: 1rem 0;
+  padding: 0.5rem;
+  border: var(--border);
+  border-radius: 0.5rem;
+  box-shadow: var(--box-shadow);
+}
+
+.header .shopping-cart .box img {
+  height: 6rem;
+}
+
+.header .shopping-cart .box .card {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+/* .header .shopping-cart .box .fa-plus-circle {
+  font-size: 1.5rem;
+  position: absolute;
+  top: 50%;
+  right: 2rem;
+  cursor: pointer;
+  color: var(--rufous);
+} */
+
+.header .shopping-cart .box .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.header .shopping-cart .box .content h3 {
+  color: var(--richBlack);
+  font-size: 1.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.header .shopping-cart .box .content p {
+  color: var(--richBlack);
+  font-size: 1.2rem;
+}
+
+.header .shopping-cart .box .content .quantity {
+  margin-top: 0.1rem;
+}
+
+.header .shopping-cart .total {
+  font-size: 2.5rem;
+  padding: 1rem 0;
+  text-align: center;
+  color: var(--rufous);
+  font-weight: 300;
+}
+
+.header .shopping-cart .total #totalValue {
+  font-weight: 700;
+}
+
+.header .shopping-cart .primaryBtn {
+  display: block;
+  text-align: center;
+  margin: 2rem auto;
+}
+/* shopping cart box in header style ends */
