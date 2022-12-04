@@ -551,15 +551,71 @@ body {
 
 /* hero section styles end here */
 
-.banner1 {
-  background-color: var(--alloyOrange);
+/* banner 1 style starts here */
+.home .banner1 {
+  background-color: var(--rubyRed);
   height: 100vh;
+  background-image: url(/img/christmasOffer1.jpg);
   background-repeat: no-repeat;
-  background-attachment: scroll;
-  width: 100vw;
+  background-attachment: fixed;
+  background-size: contain;
+  background-position: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 2rem;
+  gap: 1rem;
 }
 
+.home .banner1 h2 {
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--antiquewhite);
+}
+
+.home .banner1 h2 span {
+  font-size: 6rem;
+  text-decoration: underline;
+  color: var(--antiquewhite);
+}
+.home .banner1 h3 {
+  font-size: 2.5rem;
+  color: var(--antiquewhite);
+  font-weight: 500;
+}
+
+.home .banner1 h4 {
+  font-size: 1.5rem;
+  color: var(--antiquewhite);
+  font-weight: 300;
+  text-align: right;
+}
+
+/* banner 1 style ends here */
+
+/* section 2 banner 2 style starts here */
+.secondBanner {
+  background-color: var(--viridianGreen);
+  height: 100vh;
+  background-image: url(/img/banner2background.jpg);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 60%;
+  background-attachment: fixed;
+  background-position-y: top;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 2rem;
+  gap: 1rem;
+}
+/* section 2 banner 2 style ends here */
+
 /* main section styles end here */
+
+/* --------------------------------- */
 
 /* media queries for responsive website starts*/
 
@@ -651,13 +707,46 @@ body {
   }
 
   .home .hero h1 {
-    font-size: 4rem;
+    font-size: 2.5rem;
   }
 
   .home .hero .heroBtns {
     position: relative;
     right: 3rem;
   }
+
+  /* section 1 banner 1  styles starts */
+  .home .banner1 {
+    background-size: cover;
+    background-position: center;
+  }
+
+  .home .banner1 h4 {
+    background-color: var(--rubyRed);
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    text-align: left;
+  }
+  .home .banner1 h2 {
+    background-color: var(--rubyRed);
+    padding: 0.5rem;
+    font-size: 3rem;
+  }
+  .home .banner1 h3 {
+    background-color: var(--rubyRed);
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+
+  .home .banner1 h2 span {
+    font-size: 4rem;
+  }
+
+  .home .banner1 a {
+    margin: 1rem auto;
+  }
+
+  /* section 1 banner 1 styles ends */
 }
 
 /* media queries for responsive website ends*/
