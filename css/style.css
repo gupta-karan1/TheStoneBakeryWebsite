@@ -617,6 +617,7 @@ body {
   font-size: 4rem;
   font-weight: 700;
   color: var(--antiquewhite);
+  width: 30vw;
 }
 
 .home .banner2 h2 span {
@@ -672,10 +673,10 @@ body {
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  padding: 2rem;
+  padding: 0.5rem;
 }
 
-.home .banner4 .card {
+.home .banner4 .card-wrapper .card {
   background-color: var(--antiquewhite);
   height: 70vh;
   width: 60vh;
@@ -686,58 +687,55 @@ body {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  text-align: center;
+  margin-bottom: 1rem;
 }
-.home .banner4 .card:hover {
+.home .banner4 .card-wrapper .card:hover {
   border: var(--border);
   box-shadow: 0rem 1rem var(--rufous);
   cursor: pointer;
   background-color: var(--antiquewhite);
 }
 
-.home .banner4 .card:active {
+.home .banner4 .card-wrapper .card:active {
   transform: translateY(1rem);
   box-shadow: none;
   background-color: var(--antiquewhite);
 }
 
-.home .banner4 .card {
-  text-align: center;
-  margin-bottom: 1rem;
-}
-
-.home .banner4 .card img {
+.home .banner4 .card-wrapper .card img {
   border-radius: 1rem;
   box-shadow: var(--box-shadow);
   margin-bottom: 0.5rem;
 }
 
-.home .banner4 .card h4 {
+.home .banner4 .card-wrapper .card h4 {
   color: var(--rufous);
   font-size: 0.8rem;
   font-weight: 500;
 }
 
-.home .banner4 .card h2 {
+.home .banner4 .card-wrapper .card h2 {
   font-size: 2rem;
   font-weight: 700;
 }
-.home .banner4 .card h3 {
+.home .banner4 .card-wrapper .card h3 {
   font-size: 1rem;
   font-weight: 500;
 }
 
-.home .banner4 .card p {
+.home .banner4 .card-wrapper .card p {
   font-size: 1rem;
   font-weight: 300;
 }
 
-.home .banner4 .card a {
+.home .banner4 .card-wrapper .card a {
   font-weight: 500;
   text-decoration: underline;
   color: var(--rubyRed);
 }
 
-.home .banner4 .card a:hover {
+.home .banner4 .card-wrapper .card a:hover {
   font-weight: 700;
   transform: scale(105%);
   text-decoration: none;
@@ -750,13 +748,70 @@ body {
 .masterclass1 {
   height: 100vh;
   background-color: var(--rubyRed);
+  background-image: url(/img/masterclass1.jpg);
+  background-repeat: no-repeat;
+  background-size: 55%;
+  background-attachment: fixed;
+  background-position: left top;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 0 4rem;
+  padding-right: 6rem;
+  gap: 1.2rem;
 }
+
+.masterclass1 h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--antiquewhite);
+  width: 36vw;
+}
+
+.masterclass1 h3 {
+  font-size: 1.5rem;
+  color: var(--antiquewhite);
+  width: 36vw;
+  font-weight: 300;
+}
+
+.masterclass1 h4 {
+  font-size: 1.8rem;
+  color: var(--antiquewhite);
+  width: 36vw;
+  font-weight: 500;
+}
+
+.masterclass1 h4 span {
+  background-color: var(--rufous);
+  padding: 1rem;
+  position: relative;
+  top: 1rem;
+}
+
+.masterclass1 p {
+  color: var(--antiquewhite);
+  font-weight: 500;
+  font-size: 1.3rem;
+}
+
 /* masterclass banner 1 ends */
 
 /* banner 5 style starts */
 .banner5 {
   background-color: var(--rust);
   height: 100vh;
+  background-image: url(/img/banner5.jpg);
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: 55%;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.2rem;
 }
 /* banner 5 style ends */
 
@@ -855,7 +910,7 @@ body {
 
 @media (max-width: 425px) {
   html {
-    font-size: 85%;
+    font-size: 94%;
   }
 
   #menu-btn {
@@ -869,12 +924,14 @@ body {
     align-items: center;
     gap: 0.5rem;
     padding: 1.5rem;
-    position: relative;
+    width: 100vw;
+    position: sticky;
   }
 
   .header .search-form {
     width: 90%;
   }
+
   .header .search-form.active {
     right: 1.5rem;
   }
@@ -882,6 +939,7 @@ body {
   .header .shopping-cart {
     width: 90%;
   }
+
   .header .shopping-cart.active {
     right: 1.5rem;
   }
@@ -889,6 +947,7 @@ body {
   .header .login-form {
     width: 90%;
   }
+
   .header .login-form.active {
     right: 1.5rem;
   }
@@ -926,53 +985,75 @@ body {
   }
 
   .home .hero {
-    background-size: cover;
-    background-image: url(/img/heroMobile.jpg);
-    background-position: center;
+    /* background-image: url(/img/heroMobile.jpg); */
+    background-repeat: no-repeat;
+    background-position: -140% 32%;
+    background-size: 80%;
+    background-color: var(--gamboge);
   }
 
   .home .hero .heroText {
     position: relative;
     right: 3rem;
-    margin-top: 3rem;
+    top: -10rem;
   }
 
   .home .hero h1 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
+  }
+
+  .home .hero h4 {
+    font-size: 1rem;
+    width: 100%;
+  }
+
+  .home .hero p {
+    font-size: 1.2rem;
+    width: 90%;
   }
 
   .home .hero .heroBtns {
     position: relative;
     right: 3rem;
+    top: -10rem;
+  }
+
+  .home .hero .heroBtns .tertiaryBtn {
+    display: none;
   }
 
   /* banner 1  styles starts */
   .home .banner1 {
-    background-size: cover;
-    background-position: center;
+    background-size: 120%;
+    background-position: bottom;
+    background-repeat: repeat-y;
     padding: 0 2rem;
+    text-align: center;
   }
 
   .home .banner1 h4 {
     background-color: var(--rubyRed);
     padding: 1rem;
     font-size: 1.2rem;
-    text-align: left;
+    text-align: center;
     width: 100%;
+    border-radius: 0.5rem;
   }
   .home .banner1 h2 {
     background-color: var(--rubyRed);
     padding: 1rem;
-    font-size: 3rem;
+    font-size: 2.2rem;
+    border-radius: 0.5rem;
   }
   .home .banner1 h3 {
     background-color: var(--rubyRed);
     padding: 1rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
+    border-radius: 0.5rem;
   }
 
   .home .banner1 h2 span {
-    font-size: 4rem;
+    font-size: 3rem;
   }
 
   .home .banner1 a {
@@ -983,27 +1064,32 @@ body {
 
   /* banner 2 style starts */
   .home .banner2 {
-    background-size: cover;
+    background-repeat: repeat-y;
+    background-size: contain;
     background-position: bottom;
-    background-position-y: 10rem;
     padding: 0 2rem;
+    text-align: center;
   }
   .home .banner2 h4 {
     background-color: var(--blueSapphire);
     padding: 1rem;
     font-size: 1.2rem;
-    text-align: left;
     width: 100%;
+    border-radius: 0.5rem;
+    text-align: center;
   }
   .home .banner2 h2 {
     background-color: var(--blueSapphire);
     padding: 1rem;
-    font-size: 3rem;
+    font-size: 2.2rem;
+    border-radius: 0.5rem;
   }
   .home .banner2 h3 {
     background-color: var(--blueSapphire);
     padding: 1rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
+    border-radius: 0.5rem;
+    width: 100%;
   }
 
   .home .banner2 a {
@@ -1012,8 +1098,8 @@ body {
   /* banner 2 style ends */
   /* banner 3 style starts */
   .home .banner3 h2 {
-    font-size: 2.5rem;
-    width: 90%;
+    font-size: 2.4rem;
+    width: 95%;
     padding: 1rem;
     text-align: center;
   }
@@ -1021,7 +1107,28 @@ body {
 
   /* banner 4 style starts */
 
-  /* banner 4 style ends */
+  .home .banner4 {
+    height: max-content;
+    padding: 5rem;
+    padding-top: 0;
+  }
+
+  .home .banner4 .card-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem;
+  }
+  .home .banner4 .card-wrapper .card {
+    width: 90vw;
+  }
+  .home .banner4 .card-wrapper .card h3 {
+    display: none;
+  }
+  .home .banner4 .card-wrapper .card h4 {
+    display: none;
+  }
 }
 
 /* media queries for responsive website ends*/
