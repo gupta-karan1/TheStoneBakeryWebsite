@@ -60,7 +60,7 @@ body {
   font-size: 1.7rem;
   border-radius: 0.5rem;
   border: none;
-  color: var(--mediumChampagne);
+  color: var(--antiquewhite);
   cursor: pointer;
   background-color: var(--rufous);
   font-weight: 700;
@@ -80,6 +80,59 @@ body {
   box-shadow: none;
 }
 
+.secondaryBtn {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 0.8rem 3rem;
+  font-size: 1.5rem;
+  border-radius: 0.5rem;
+  border: var(--border);
+  color: var(--antiquewhite);
+  cursor: pointer;
+  background-color: var(--rufous);
+  font-weight: 700;
+  box-shadow: 0rem 0.5rem var(--richBlack);
+}
+
+.secondaryBtn:hover {
+  background-color: var(--gamboge);
+  color: var(--rufous);
+  box-shadow: 0rem 0.5rem var(--richBlack);
+}
+.secondaryBtn:active {
+  background-color: var(--gamboge);
+  color: var(--rufous);
+  transform: translateY(0.5rem);
+  box-shadow: none;
+}
+
+.tertiaryBtn {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 0.8rem 3rem;
+  font-size: 1.5rem;
+  border-radius: 0.5rem;
+  border: var(--border);
+  color: var(--rufous);
+  cursor: pointer;
+  background-color: var(--gamboge);
+  font-weight: 700;
+  box-shadow: 0rem 0.5rem var(--richBlack);
+}
+
+.tertiaryBtn:hover {
+  background-color: var(--rufous);
+  color: var(--antiquewhite);
+  box-shadow: 0rem 0.5rem var(--richBlack);
+}
+
+.tertiaryBtn:active {
+  background-color: var(--rufous);
+  color: var(--antiquewhite);
+  transform: translateY(0.5rem);
+  box-shadow: none;
+}
+
 /* header navigation styles start */
 
 .header {
@@ -92,14 +145,14 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 2rem 5%;
-  background-color: var(--middleBlueGreen);
+  background-color: var(--gamboge);
   box-shadow: var(--box-shadow);
 }
 
 .header .logo {
   font-size: 2rem;
   font-weight: 700;
-  color: var(--rufous);
+  color: var(--rubyRed);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -114,7 +167,7 @@ body {
   font-size: 1.5rem;
   font-weight: 500;
   margin: 0 1rem;
-  color: var(--rufous);
+  color: var(--rubyRed);
   text-decoration: underline;
 }
 
@@ -128,7 +181,7 @@ body {
 }
 
 .header .navbar a:active {
-  color: var(--mediumChampagne);
+  color: var(--antiquewhite);
 }
 
 .header .icons button {
@@ -136,13 +189,15 @@ body {
   width: 4rem;
   line-height: 4rem;
   border-radius: 0.5rem;
+
   background: var(--middleBlueGreen);
-  color: var(--rufous);
+  color: var(--blueSapphire);
   font-size: 1.5rem;
   margin-left: 1rem;
   text-align: center;
   cursor: pointer;
-  outline: var(--rufous) 0.15rem solid;
+  outline: none;
+  box-shadow: 0rem 0.5rem var(--viridianGreen);
 }
 
 .header .icons button:hover {
@@ -159,20 +214,21 @@ body {
 
 .header .icons button:last-child {
   border: none;
-  color: var(--mediumChampagne);
+  color: var(--antiquewhite);
   cursor: pointer;
   background-color: var(--rufous);
   outline: none;
+  box-shadow: 0rem 0.5rem var(--richBlack);
 }
 .header .icons button:last-child:hover {
-  color: var(--rufous);
-  background: var(--gamboge);
-  box-shadow: 0rem 0.5rem var(--rufous);
+  color: var(--antiquewhite);
+  background-color: var(--rust);
+  box-shadow: 0rem 0.5rem var(--richBlack);
 }
 
 .header .icons button:last-child:active {
-  color: var(--rufous);
-  background-color: var(--gamboge);
+  color: var(--antiquewhite);
+  background-color: var(--rust);
   transform: translateY(0.5rem);
   box-shadow: none;
 }
@@ -190,7 +246,7 @@ body {
   position: absolute;
   top: 110%;
   right: -110%; /* change this to -110% to remove from screen */
-  width: 50rem;
+  width: 30rem;
   height: 5rem;
   background-color: var(--antiquewhite);
   border-radius: 0.5rem;
@@ -238,7 +294,7 @@ body {
   border-radius: 0.5rem;
   box-shadow: var(--box-shadow);
   width: 30rem;
-  background: var(--mediumChampagne);
+  background: var(--antiquewhite);
   border: var(--rufous) 0.15rem solid;
 }
 
@@ -382,7 +438,7 @@ body {
   border: var(--border);
   padding: 2rem;
   border-radius: 0.5rem;
-  background-color: var(--mediumChampagne);
+  background-color: var(--antiquewhite);
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -442,11 +498,74 @@ body {
 
 /* user login form box style ends */
 
+/* header section styles end here */
+
+/* ----------------------------------------------------- */
+
+/* main section styles start here */
+
+/* hero section styles start here */
+.hero {
+  background: url(/img/hero2.jpg) no-repeat;
+  background-position: top;
+  background-size: 100%;
+  height: 100vh;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 5rem;
+}
+
+.hero .heroText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.hero h4 {
+  color: var(--richBlack);
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  color: var(--richBlack);
+  font-weight: 700;
+}
+
+.hero p {
+  color: var(--richBlack);
+  font-size: 1.3rem;
+  font-weight: 300;
+}
+
+.hero .heroBtns .secondaryBtn {
+  margin-right: 1rem;
+}
+
+/* hero section styles end here */
+
+.banner1 {
+  background-color: var(--alloyOrange);
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  width: 100vw;
+}
+
+/* main section styles end here */
+
 /* media queries for responsive website starts*/
 
 @media (max-width: 425px) {
   html {
-    font-size: 90%;
+    font-size: 80%;
   }
 
   #menu-btn {
@@ -456,13 +575,14 @@ body {
   .header {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
-    gap: 1rem;
+    gap: 0.5rem;
+    padding: 1rem;
   }
 
   section {
-    padding: 1rem;
+    padding: 0.5rem 0rem;
   }
 
   .header .search-form {
@@ -518,12 +638,26 @@ body {
     align-items: center;
   }
 
-  /* .heading {
-    font-size: 2.5rem;
-  } */
-  /* .footer {
-    text-align: center;
-  } */
+  .home .hero {
+    background-size: cover;
+    background-image: url(/img/heroMobile.jpg);
+    background-position: center;
+  }
+
+  .home .hero .heroText {
+    position: relative;
+    right: 3rem;
+    margin-top: 2rem;
+  }
+
+  .home .hero h1 {
+    font-size: 4rem;
+  }
+
+  .home .hero .heroBtns {
+    position: relative;
+    right: 3rem;
+  }
 }
 
 /* media queries for responsive website ends*/
