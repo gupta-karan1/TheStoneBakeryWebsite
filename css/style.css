@@ -498,13 +498,13 @@ body {
 
 /* user login form box style ends */
 
-/* header section styles end here */
+/* header section styles end  */
 
 /* ----------------------------------------------------- */
 
-/* main section styles start here */
+/* main section styles start  */
 
-/* hero section styles start here */
+/* hero section styles start  */
 .hero {
   background: url(/img/hero2.jpg) no-repeat;
   background-position: top;
@@ -549,22 +549,22 @@ body {
   margin-right: 1rem;
 }
 
-/* hero section styles end here */
+/* hero section styles end  */
 
-/* banner 1 style starts here */
+/* banner 1 style starts  */
 .home .banner1 {
   background-color: var(--rubyRed);
   height: 100vh;
   background-image: url(/img/christmasOffer1.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: contain;
-  background-position: left;
+  background-size: 70%;
+  background-position: bottom left;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
-  padding: 2rem;
+  padding: 0 4rem;
   gap: 1rem;
 }
 
@@ -592,28 +592,70 @@ body {
   text-align: right;
 }
 
-/* banner 1 style ends here */
+/* banner 1 style ends  */
 
-/* section 2 banner 2 style starts here */
-.secondBanner {
-  background-color: var(--viridianGreen);
+/* section 2 banner 2 style starts  */
+.banner2 {
+  background-color: var(--blueSapphire);
   height: 100vh;
   background-image: url(/img/banner2background.jpg);
   background-repeat: no-repeat;
-  background-position: left;
-  background-size: 60%;
+  background-position: right;
+  background-size: 55%;
   background-attachment: fixed;
   background-position-y: top;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-end;
-  padding: 2rem;
+  align-items: flex-start;
+  padding: 0 4rem;
   gap: 1rem;
 }
-/* section 2 banner 2 style ends here */
 
-/* main section styles end here */
+.home .banner2 h2 {
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--antiquewhite);
+}
+
+.home .banner2 h2 span {
+  font-size: 6rem;
+  text-decoration: underline;
+  color: var(--antiquewhite);
+}
+.home .banner2 h3 {
+  font-size: 2.5rem;
+  color: var(--antiquewhite);
+  font-weight: 500;
+}
+
+.home .banner2 h4 {
+  font-size: 1.5rem;
+  color: var(--antiquewhite);
+  font-weight: 300;
+  text-align: left;
+  width: 40%;
+}
+
+/* section 2 banner 2 style ends  */
+
+/* section 3 banner 3 style starts  */
+.home .banner3 {
+  height: 20vh;
+  background-color: var(--rust);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home .banner3 h2 {
+  font-weight: 700;
+  font-size: 3.5rem;
+  color: var(--antiquewhite);
+}
+/* section 3 banner 3 style ends  */
+
+/* main section styles end  */
 
 /* --------------------------------- */
 
@@ -621,7 +663,7 @@ body {
 
 @media (max-width: 425px) {
   html {
-    font-size: 80%;
+    font-size: 85%;
   }
 
   #menu-btn {
@@ -703,7 +745,7 @@ body {
   .home .hero .heroText {
     position: relative;
     right: 3rem;
-    margin-top: 2rem;
+    margin-top: 3rem;
   }
 
   .home .hero h1 {
@@ -715,26 +757,27 @@ body {
     right: 3rem;
   }
 
-  /* section 1 banner 1  styles starts */
+  /* banner 1  styles starts */
   .home .banner1 {
     background-size: cover;
     background-position: center;
+    padding: 0 2rem;
   }
 
   .home .banner1 h4 {
     background-color: var(--rubyRed);
-    padding: 0.5rem;
+    padding: 1rem;
     font-size: 1.2rem;
     text-align: left;
   }
   .home .banner1 h2 {
     background-color: var(--rubyRed);
-    padding: 0.5rem;
+    padding: 1rem;
     font-size: 3rem;
   }
   .home .banner1 h3 {
     background-color: var(--rubyRed);
-    padding: 0.5rem;
+    padding: 1rem;
     font-size: 2rem;
   }
 
@@ -746,7 +789,44 @@ body {
     margin: 1rem auto;
   }
 
-  /* section 1 banner 1 styles ends */
+  /* banner 1 styles ends */
+
+  /* banner 2 style starts */
+  .home .banner2 {
+    background-size: cover;
+    background-position: bottom;
+    background-position-y: 10rem;
+    padding: 0 2rem;
+  }
+  .home .banner2 h4 {
+    background-color: var(--blueSapphire);
+    padding: 1rem;
+    font-size: 1.2rem;
+    text-align: left;
+    width: 100%;
+  }
+  .home .banner2 h2 {
+    background-color: var(--blueSapphire);
+    padding: 1rem;
+    font-size: 3rem;
+  }
+  .home .banner2 h3 {
+    background-color: var(--blueSapphire);
+    padding: 1rem;
+    font-size: 2rem;
+  }
+
+  .home .banner2 a {
+    margin: 1rem auto;
+  }
+  /* banner 2 style ends */
+  /* banner 3 style starts */
+  .home .banner3 h2 {
+    font-size: 2.5rem;
+    width: 80%;
+    padding: 1rem;
+  }
+  /* banner 3 style ends */
 }
 
 /* media queries for responsive website ends*/
