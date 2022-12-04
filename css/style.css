@@ -366,7 +366,7 @@ body {
   gap: 0.5rem;
 }
 
-.header .shopping-cart .box .counterIcons input {
+.counterIcons input {
   width: 4rem;
   height: 4rem;
   text-align: center;
@@ -377,33 +377,33 @@ body {
   background: var(--antiquewhite);
 }
 
-.header .shopping-cart .box .counterIcons .fa-minus-circle {
+.counterIcons .fa-minus-circle {
   font-size: 2.5rem;
   cursor: pointer;
   color: var(--rufous);
 }
 
-.header .shopping-cart .box .counterIcons .fa-minus-circle:hover {
+.counterIcons .fa-minus-circle:hover {
   color: var(--rust);
   transform: scale(120%);
 }
-.header .shopping-cart .box .counterIcons .fa-minus-circle:active {
+.counterIcons .fa-minus-circle:active {
   color: var(--gamboge);
   transform: scale(80%);
 }
 
-.header .shopping-cart .box .counterIcons .fa-plus-circle {
+.counterIcons .fa-plus-circle {
   font-size: 2.5rem;
   cursor: pointer;
   color: var(--rufous);
 }
 
-.header .shopping-cart .box .counterIcons .fa-plus-circle:hover {
+.counterIcons .fa-plus-circle:hover {
   color: var(--rust);
   transform: scale(120%);
 }
 
-.header .shopping-cart .box .counterIcons .fa-plus-circle:active {
+.counterIcons .fa-plus-circle:active {
   color: var(--gamboge);
   transform: scale(80%);
 }
@@ -590,12 +590,13 @@ body {
   color: var(--antiquewhite);
   font-weight: 300;
   text-align: right;
+  width: 40%;
 }
 
 /* banner 1 style ends  */
 
-/* section 2 banner 2 style starts  */
-.banner2 {
+/* banner 2 style starts  */
+.home .banner2 {
   background-color: var(--blueSapphire);
   height: 100vh;
   background-image: url(/img/banner2background.jpg);
@@ -637,12 +638,12 @@ body {
   width: 40%;
 }
 
-/* section 2 banner 2 style ends  */
+/* banner 2 style ends  */
 
-/* section 3 banner 3 style starts  */
+/* banner 3 style starts  */
 .home .banner3 {
-  height: 20vh;
-  background-color: var(--rust);
+  height: 30vh;
+  background-color: var(--viridianGreen);
   text-align: center;
   display: flex;
   justify-content: center;
@@ -651,11 +652,202 @@ body {
 .home .banner3 h2 {
   font-weight: 700;
   font-size: 3.5rem;
-  color: var(--antiquewhite);
+  color: var(--richBlack);
 }
-/* section 3 banner 3 style ends  */
+/* banner 3 style ends  */
+
+/* banner 4 style starts */
+.home .banner4 {
+  height: 100vh;
+  background-color: var(--middleBlueGreen);
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home .banner4 .card-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.home .banner4 .card {
+  background-color: var(--antiquewhite);
+  height: 70vh;
+  width: 60vh;
+  border-radius: 2rem;
+  box-shadow: var(--box-shadow);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.home .banner4 .card:hover {
+  border: var(--border);
+  box-shadow: 0rem 1rem var(--rufous);
+  cursor: pointer;
+  background-color: var(--antiquewhite);
+}
+
+.home .banner4 .card:active {
+  transform: translateY(1rem);
+  box-shadow: none;
+  background-color: var(--antiquewhite);
+}
+
+.home .banner4 .card {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.home .banner4 .card img {
+  border-radius: 1rem;
+  box-shadow: var(--box-shadow);
+  margin-bottom: 0.5rem;
+}
+
+.home .banner4 .card h4 {
+  color: var(--rufous);
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.home .banner4 .card h2 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.home .banner4 .card h3 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.home .banner4 .card p {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.home .banner4 .card a {
+  font-weight: 500;
+  text-decoration: underline;
+  color: var(--rubyRed);
+}
+
+.home .banner4 .card a:hover {
+  font-weight: 700;
+  transform: scale(105%);
+  text-decoration: none;
+  color: var(--blueSapphire);
+}
+
+/* banner 4 style ends */
+
+/* masterclass banner 1 starts */
+.masterclass1 {
+  height: 100vh;
+  background-color: var(--rubyRed);
+}
+/* masterclass banner 1 ends */
+
+/* banner 5 style starts */
+.banner5 {
+  background-color: var(--rust);
+  height: 100vh;
+}
+/* banner 5 style ends */
+
+/* banner 6 style starts */
+.banner6 {
+  height: 30vh;
+  background-color: var(--alloyOrange);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner6 h2 {
+  font-weight: 700;
+  font-size: 3.5rem;
+  color: var(--richBlack);
+}
+
+/* banner 6 style ends */
+
+/* banner 7 style starts */
+
+.banner7 {
+  background-color: var(--gamboge);
+  height: 100vh;
+}
+
+/* banner 7 style ends */
+
+/* masterclass banner 1 starts */
+
+.masterclass2 {
+  height: 100vh;
+  background-color: var(--rubyRed);
+}
+
+/* masterclass banner 1 ends */
+
+/* testimonials banner starts */
+
+.testimonials {
+  background-color: var(--middleBlueGreen);
+  height: 80vh;
+}
+
+/* testimonials banner starts */
+
+/* brandNumbers banner starts */
+
+.brandNumbers {
+  background-color: var(--viridianGreen);
+  height: 60vh;
+}
+
+/* brandNumbers banner starts */
+
+/* customerBrands banner starts */
+
+.customerBrands {
+  background-color: var(--blueSapphire);
+  height: 40vh;
+}
+
+/* customerBrands banner starts */
+
+/* faqs banner starts */
+
+.faqs {
+  background-color: var(--rubyRed);
+  height: 100vh;
+}
+
+/* faqs banner starts */
+
+/* subscribeNews banner starts */
+
+.subscribeNews {
+  background-color: var(--rufous);
+  height: 20vh;
+}
+/* subscribeNews banner starts */
 
 /* main section styles end  */
+
+/* footer section styles starts */
+.footer {
+  background-color: var(--gamboge);
+  height: 50vh;
+}
+/* footer section styles ends */
 
 /* --------------------------------- */
 
@@ -676,11 +868,8 @@ body {
     justify-content: space-between;
     align-items: center;
     gap: 0.5rem;
-    padding: 1rem;
-  }
-
-  section {
-    padding: 0.5rem 0rem;
+    padding: 1.5rem;
+    position: relative;
   }
 
   .header .search-form {
@@ -720,7 +909,7 @@ body {
   }
 
   .header .navbar a {
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin: 2rem 2.5rem;
     display: flex;
     flex-direction: column;
@@ -769,6 +958,7 @@ body {
     padding: 1rem;
     font-size: 1.2rem;
     text-align: left;
+    width: 100%;
   }
   .home .banner1 h2 {
     background-color: var(--rubyRed);
@@ -823,10 +1013,15 @@ body {
   /* banner 3 style starts */
   .home .banner3 h2 {
     font-size: 2.5rem;
-    width: 80%;
+    width: 90%;
     padding: 1rem;
+    text-align: center;
   }
   /* banner 3 style ends */
+
+  /* banner 4 style starts */
+
+  /* banner 4 style ends */
 }
 
 /* media queries for responsive website ends*/
