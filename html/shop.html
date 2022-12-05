@@ -407,6 +407,249 @@
         </section>
       </section>
       <!-- banner4 ends -->
+
+      <!-- banner5 starts -->
+      <section class="banner5">
+        <a href="" class="tertiaryBtn">
+          Go to shopping cart <i class="fas fa-shopping-bag"></i>
+        </a>
+      </section>
+      <!-- banner5 ends -->
+
+      <!-- banner6 starts -->
+      <section class="banner6">
+        <h2>
+          Authentic Bakery Products
+          <f class="fas fa-bread-slice"></f>
+        </h2>
+      </section>
+      <!-- banner6 ends -->
+
+      <!-- banner7 starts -->
+      <section class="banner7">
+        <!-- title -->
+        <article class="title">
+          <h2>Filter:</h2>
+        </article>
+        <!-- filter buttons -->
+        <article class="btn-container">
+          <button type="button" class="filter-btn" data-id="all">all</button>
+        </article>
+        <!-- menu items -->
+        <article class="section-center">
+          <!-- single item -->
+          <article class="menu-item">
+            <img
+              src="/img/product-walnut-pie.jpg"
+              alt="menu item"
+              class="photo"
+            />
+            <div class="item-info">
+              <header>
+                <h4>Vegan Oat Muffin</h4>
+                <h4 class="price">$15</h4>
+              </header>
+              <article class="counterIcons">
+                <i class="fas fa-minus-circle"></i>
+                <input
+                  type="number"
+                  name="quantity"
+                  id="itemNum"
+                  placeholder="0"
+                  title="Number of Items"
+                />
+                <i class="fas fa-plus-circle"></i>
+              </article>
+            </div>
+          </article>
+          <!-- end of single item -->
+        </article>
+      </section>
+      <!-- banner7 ends -->
+
+      <!-- banner8 starts -->
+      <section class="banner8">
+        <a href="" class="tertiaryBtn">
+          Go to shopping cart <i class="fas fa-shopping-bag"></i>
+        </a>
+      </section>
+      <!-- banner8 ends -->
+
+      <!-- banner9 starts -->
+      <section class="banner9">
+        <h2>
+          place a custom order
+          <f class="fas fa-list-alt"></f>
+        </h2>
+      </section>
+      <!-- banner9 ends -->
+
+      <!-- banner 10 custom order form starts -->
+      <section class="banner10">
+        <form action="" class="customForm" id="customForm">
+          <label for="firstName"
+            >Your Full Name:
+            <input
+              type="text"
+              name="fullName"
+              id="fullName"
+              placeholder="full name eg. Emma Watson"
+              title="enter your first name"
+          /></label>
+
+          <label for="userEmail"
+            >Your email address:
+            <input
+              type="email"
+              name="userEmail"
+              id="userEmail"
+              placeholder="email address eg. emma@gmail.com"
+              title="enter your email address"
+              required
+          /></label>
+
+          <label for="contactNumber"
+            >Your contact number:
+            <input
+              type="tel"
+              name="contactNumber"
+              id="contactNumber"
+              placeholder="contact number eg. +353-88999988"
+              title="enter your email address"
+              required
+              pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
+          /></label>
+
+          <label for="userMessage"
+            >Your custom order:
+            <textarea
+              rows="6"
+              name="userMessage"
+              id="userMessage"
+              placeholder="type your custom order"
+              required
+            >
+            </textarea>
+          </label>
+
+          <label for="deliveryDate"
+            >Select a delivery date
+            <input
+              type="date"
+              name="deliveryDate"
+              id="deliveryDate"
+              title="select a delivery date"
+          /></label>
+
+          <label for="deliveryTime"
+            >Select a delivery time:
+            <input
+              type="time"
+              name="deliveryTime"
+              id="deliveryTime"
+              title="select a delivery time"
+          /></label>
+
+          <label for="selectCategory">
+            select product category:
+            <select name="selectCategory" id="selectCategory">
+              <optgroup label="home baking">
+                <option value="utensils">baking utensils</option>
+                <option value="ingredients" selected>baking ingredients</option>
+                <option value="guidebooks">baking guidebooks</option>
+                <option value="masterclass">baking masterclass</option>
+                <option value="other">other</option>
+              </optgroup>
+
+              <optgroup label="bakery products">
+                <option value="breads">breads</option>
+                <option value="pies">pies</option>
+                <option value="muffins">muffins</option>
+                <option value="pastries">pastries</option>
+                <option value="cookies">cookies</option>
+                <option value="biscuits">biscuits</option>
+                <option value="desserts">desserts</option>
+                <option value="rolls">rolls</option>
+                <option value="other">other</option>
+              </optgroup>
+              <option value="miscellaneous">miscellaneous</option>
+            </select>
+          </label>
+
+          <label for="quantity"
+            >Quantity (between 1 & 20):
+            <input
+              type="number"
+              id="quantity"
+              name="quantity"
+              min="1"
+              max="20"
+            />
+          </label>
+
+          <article>
+            <label for="">Select baking preference: </label> <br />
+
+            <label for="vegan">
+              <input
+                type="radio"
+                name="vegan"
+                class="bakingPref"
+                id="vegan"
+                value="vegan"
+              />vegan
+            </label>
+            <br />
+            <label for="vegetarian">
+              <input
+                type="radio"
+                name="vegetarian"
+                class="bakingPref"
+                id="vegetarian"
+                value="vegetarian"
+              />vegetarian
+            </label>
+            <br />
+            <label for="kosher">
+              <input
+                type="radio"
+                name="kosher"
+                class="bakingPref"
+                id="kosher"
+                value="kosher"
+              />kosher
+            </label>
+            <br />
+            <label for="gluten-free">
+              <input
+                type="radio"
+                name="gluten-free"
+                class="bakingPref"
+                id="gluten-free"
+                value="gluten-free"
+              />gluten-free
+            </label>
+            <br />
+            <input
+              type="radio"
+              name="none"
+              class="bakingPref"
+              id="none"
+              value="none"
+            />
+            <label for="none"> none </label>
+          </article>
+
+          <input
+            type="submit"
+            value="submit"
+            id="customOrderSubmit"
+            class="secondaryBtn"
+          />
+          <input type="reset" value="reset form" class="tertiaryBtn" />
+        </form>
+      </section>
+      <!-- banner 10 custom order form ends -->
     </main>
     <!-- home section ends -->
     <!-- footer section starts -->

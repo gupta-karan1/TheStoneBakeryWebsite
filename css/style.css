@@ -842,7 +842,7 @@ body {
 /* banner 5 style ends */
 
 /* banner 6 style starts */
-.banner6 {
+.home .banner6 {
   height: 20vh;
   background-color: var(--gamboge);
   text-align: center;
@@ -851,7 +851,7 @@ body {
   align-items: flex-end;
 }
 
-.banner6 h2 {
+.home .banner6 h2 {
   font-weight: 700;
   font-size: 3.5rem;
   color: var(--richBlack);
@@ -861,7 +861,7 @@ body {
 
 /* banner 7 style starts */
 
-.banner7 {
+.home .banner7 {
   background-color: var(--gamboge);
   height: 100vh;
   background-attachment: fixed;
@@ -1272,7 +1272,7 @@ body {
 
 /* shop page banner1 style starts */
 .shop .banner1 {
-  height: 20vh;
+  height: 30vh;
   background-color: var(--alloyOrange);
   text-align: center;
   display: flex;
@@ -1284,7 +1284,6 @@ body {
   font-size: 3.5rem;
   color: var(--richBlack);
 }
-
 /* shop page banner1 style ends */
 
 /* shop page banner2 style starts */
@@ -1519,10 +1518,336 @@ body {
   width: 6rem;
   margin: 0.5rem;
 }
-/* banner3 style ends */
+/* banner4 style ends */
+
+/* banner5 style starts */
+.shop .banner5 {
+  height: 20vh;
+  background-color: var(--rufous);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shop .banner5 .tertiaryBtn {
+  margin-top: -0.5rem;
+}
+/* banner5 style ends  */
+
+/* banner6 starts */
+.shop .banner6 {
+  height: 30vh;
+  background-color: var(--viridianGreen);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shop .banner6 h2 {
+  font-weight: 700;
+  font-size: 3.5rem;
+  color: var(--richBlack);
+}
+/* banner6 ends */
+
+/* banner7 starts */
+.shop .banner7 {
+  background-color: var(--middleBlueGreen);
+  height: max-content;
+  padding: 2rem;
+}
+
+.shop .banner7 .title {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.shop .banner7 h2 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+.shop .banner7 .btn-container {
+  margin-bottom: 4rem;
+  display: flex;
+  justify-content: center;
+}
+.shop .banner7 .btn-container .filter-btn {
+  background: transparent;
+  border: 0.1rem solid var(--blueSapphire);
+  font-size: 2rem;
+  text-transform: capitalize;
+  margin: 0 0.5rem;
+  letter-spacing: 1px;
+  border-radius: 0.5rem;
+  padding: 0.375rem 0.75rem;
+  color: var(--blueSapphire);
+  cursor: pointer;
+  box-shadow: 0 0.5rem var(--blueSapphire);
+}
+.shop .banner7 .btn-container .filter-btn:hover {
+  background: var(--viridianGreen);
+  color: var(--middleBlueGreen);
+  border-color: var(--blueSapphire);
+  box-shadow: 0 0.5rem var(--blueSapphire);
+}
+.shop .banner7 .btn-container .filter-btn:active {
+  background: var(--blueSapphire);
+  color: var(--middleBlueGreen);
+  border-color: var(--viridianGreen);
+  box-shadow: none;
+  transform: translateY(0.5rem);
+}
+
+.shop .banner7 .section-center {
+  width: 80vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 2.5rem 2.5rem;
+}
+
+.shop .banner7 .section-center .menu-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem 2rem;
+  max-width: 20rem;
+  background-color: var(--antiquewhite);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+.shop .banner7 .section-center .menu-item:hover {
+  border: var(--border);
+  box-shadow: 0 0.5rem var(--rufous);
+}
+.shop .banner7 .section-center .menu-item:active {
+  border: var(--border);
+  box-shadow: none;
+  transform: translateY(0.5rem);
+}
+.shop .banner7 .section-center .menu-item .photo {
+  object-fit: cover;
+  height: 15rem;
+  border-radius: 0.5rem;
+}
+.shop .banner7 .section-center .menu-item .item-info header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+}
+.shop .banner7 .section-center .menu-item .item-info header h4 {
+  margin-bottom: 0rem;
+  font-size: 1.3rem;
+}
+.shop .banner7 .section-center .menu-item .item-info .price {
+  color: var(--blueSapphire);
+  font-size: 1.8rem;
+}
+.shop .counterIcons {
+  margin-top: 1.5rem;
+}
+/* banner7 ends */
+
+/* banner8 starts */
+.shop .banner8 {
+  height: 20vh;
+  background-color: var(--blueSapphire);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shop .banner8 .tertiaryBtn {
+  margin-top: -0.5rem;
+}
+/* banner8 ends */
+
+/* shop page banner9 style starts */
+.shop .banner9 {
+  height: 30vh;
+  background-color: var(--rubyRed);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.shop .banner9 h2 {
+  font-weight: 700;
+  font-size: 3.5rem;
+  color: var(--antiquewhite);
+}
+/* shop page banner9 style ends */
+
+/* shop page banner10 style starts */
+.shop .banner10 {
+  height: max-content;
+  background-color: var(--rufous);
+  padding: 2rem;
+}
+
+.shop .banner10 .customForm {
+  width: 80%;
+  height: max-content;
+  margin: 2rem auto;
+  box-shadow: var(--box-shadow);
+  border-radius: 2rem;
+  background-color: var(--antiquewhite);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 2.5rem;
+  gap: 2rem;
+}
+
+.shop .banner10 .customForm label {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--richBlack);
+}
+
+.shop .banner10 .customForm input,
+textarea,
+select {
+  height: 4rem;
+  border-radius: 1rem;
+  border: var(--border);
+  width: 70vw;
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.shop .banner10 .customForm textarea {
+  height: inherit;
+}
+
+.shop .banner10 .customForm #userEmail {
+  text-transform: none;
+}
+
+.shop .banner10 .customForm .bakingPref {
+  display: inline-block;
+  height: inherit;
+  width: inherit;
+  margin-right: 0.5em;
+}
+
+/* shop page banner10 style ends */
 /* shop page main section ends */
 
 /* -------------------shop page style ends------------------- */
+
+/* -------------------about page style starts------------------- */
+
+/* hero section styles start  */
+.about .hero {
+  background: url(/img/about-hero.jpg) no-repeat;
+  background-position: top;
+  background-size: 100%;
+  height: 100vh;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 5rem;
+}
+
+.about .hero .heroText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.about .hero h4 {
+  color: var(--richBlack);
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.about .hero h1 {
+  font-size: 4rem;
+  color: var(--richBlack);
+  font-weight: 700;
+}
+
+.about .hero p {
+  color: var(--richBlack);
+  font-size: 1.3rem;
+  font-weight: 300;
+}
+
+.about .hero .heroBtns .secondaryBtn {
+  margin-right: 1rem;
+}
+
+/* about page hero section styles end  */
+
+/* -------------------about page style ends------------------- */
+
+/* -------------------cart page style starts------------------- */
+
+/* cart page hero section styles start  */
+.cart .hero {
+  background: url(/img/cart-hero.jpg) no-repeat;
+  background-position: top;
+  background-size: cover;
+  height: 100vh;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 5rem;
+}
+
+.cart .hero .heroText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.cart .hero h4 {
+  color: var(--richBlack);
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.cart .hero h1 {
+  font-size: 4rem;
+  color: var(--richBlack);
+  font-weight: 700;
+}
+
+.cart .hero p {
+  color: var(--richBlack);
+  font-size: 1.3rem;
+  font-weight: 300;
+  width: 60%;
+  text-align: center;
+}
+
+.cart .hero .heroBtns {
+  margin-right: 1rem;
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* cart page hero section styles end  */
+
+/* -------------------cart page style ends------------------- */
 
 /* footer section styles starts */
 .footer {
