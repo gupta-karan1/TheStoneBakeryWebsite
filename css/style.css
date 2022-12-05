@@ -745,7 +745,7 @@ body {
 /* banner 4 style ends */
 
 /* masterclass banner 1 starts */
-.masterclass1 {
+.home .masterclass1 {
   height: 100vh;
   background-color: var(--rubyRed);
   background-image: url(/img/masterclass1.jpg);
@@ -762,35 +762,35 @@ body {
   gap: 1.2rem;
 }
 
-.masterclass1 h2 {
+.home .masterclass1 h2 {
   font-size: 3rem;
   font-weight: 700;
   color: var(--antiquewhite);
   width: 36vw;
 }
 
-.masterclass1 h3 {
+.home .masterclass1 h3 {
   font-size: 1.5rem;
   color: var(--antiquewhite);
   width: 36vw;
   font-weight: 300;
 }
 
-.masterclass1 h4 {
+.home .masterclass1 h4 {
   font-size: 1.8rem;
   color: var(--antiquewhite);
   width: 36vw;
   font-weight: 500;
 }
 
-.masterclass1 h4 span {
+.home .masterclass1 h4 span {
   background-color: var(--rufous);
   padding: 1rem;
   position: relative;
   top: 1rem;
 }
 
-.masterclass1 p {
+.home .masterclass1 p {
   color: var(--antiquewhite);
   font-weight: 500;
   font-size: 1.3rem;
@@ -799,7 +799,7 @@ body {
 /* masterclass banner 1 ends */
 
 /* banner 5 style starts */
-.banner5 {
+.home .banner5 {
   background-color: var(--rust);
   height: 100vh;
   background-image: url(/img/banner5.jpg);
@@ -812,7 +812,30 @@ body {
   justify-content: center;
   align-items: flex-start;
   gap: 1.2rem;
+  padding: 0 4rem;
 }
+
+.home .banner5 h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--antiquewhite);
+  width: 36vw;
+}
+
+.home .banner5 h3 {
+  font-size: 1.5rem;
+  color: var(--antiquewhite);
+  width: 36vw;
+  font-weight: 300;
+}
+
+.home .banner5 h4 {
+  font-size: 1.8rem;
+  color: var(--antiquewhite);
+  width: 36vw;
+  font-weight: 500;
+}
+
 /* banner 5 style ends */
 
 /* banner 6 style starts */
@@ -838,24 +861,204 @@ body {
 .banner7 {
   background-color: var(--gamboge);
   height: 100vh;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home .banner7 .card-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 0.5rem;
+}
+
+.home .banner7 .card-wrapper .card {
+  background-color: var(--antiquewhite);
+  height: 70vh;
+  width: 60vh;
+  border-radius: 2rem;
+  box-shadow: var(--box-shadow);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.home .banner7 .card-wrapper .card:hover {
+  border: var(--border);
+  box-shadow: 0rem 1rem var(--rufous);
+  cursor: pointer;
+  background-color: var(--antiquewhite);
+}
+
+.home .banner7 .card-wrapper .card:active {
+  transform: translateY(1rem);
+  box-shadow: none;
+  background-color: var(--antiquewhite);
+}
+
+.home .banner7 .card-wrapper .card img {
+  border-radius: 1rem;
+  box-shadow: var(--box-shadow);
+  margin-bottom: 0.5rem;
+}
+
+.home .banner7 .card-wrapper .card h4 {
+  color: var(--rufous);
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.home .banner7 .card-wrapper .card h2 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.home .banner7 .card-wrapper .card h3 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.home .banner7 .card-wrapper .card p {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.home .banner7 .card-wrapper .card a {
+  font-weight: 500;
+  text-decoration: underline;
+  color: var(--rubyRed);
+}
+
+.home .banner7 .card-wrapper .card a:hover {
+  font-weight: 700;
+  transform: scale(105%);
+  text-decoration: none;
+  color: var(--blueSapphire);
 }
 
 /* banner 7 style ends */
 
 /* masterclass banner 1 starts */
 
-.masterclass2 {
+.home .masterclass2 {
   height: 100vh;
   background-color: var(--rubyRed);
+  background-image: url(/img/masterclass2.jpg);
+  background-repeat: no-repeat;
+  background-size: 43%;
+  background-attachment: fixed;
+  background-position: left top;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 0 4rem;
+  padding-right: 12rem;
+  gap: 1.2rem;
+}
+
+.home .masterclass2 h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--antiquewhite);
+  width: 40vw;
+}
+
+.home .masterclass2 h3 {
+  font-size: 1.5rem;
+  color: var(--antiquewhite);
+  width: 40vw;
+  font-weight: 300;
+}
+
+.home .masterclass2 h4 {
+  font-size: 1.8rem;
+  color: var(--antiquewhite);
+  width: 40vw;
+  font-weight: 500;
+}
+
+.home .masterclass2 h4 span {
+  background-color: var(--rufous);
+  padding: 1rem;
+  position: relative;
+  top: 1rem;
+}
+
+.home .masterclass2 p {
+  color: var(--antiquewhite);
+  font-weight: 500;
+  font-size: 1.3rem;
 }
 
 /* masterclass banner 1 ends */
 
 /* testimonials banner starts */
 
-.testimonials {
+.review {
   background-color: var(--middleBlueGreen);
   height: 80vh;
+  padding: 1rem;
+}
+
+.review h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--blueSapphire);
+  text-align: center;
+  padding: 1rem;
+}
+
+.review .review-slider {
+  padding: 1rem;
+  height: 80%;
+  width: 80%;
+}
+
+.review .review-slider .box {
+  background: var(--antiquewhite);
+  border-radius: 0.5rem;
+  text-align: center;
+  padding: 1.5rem;
+  outline-offset: -1rem;
+  outline: var(--outline);
+  box-shadow: var(--box-shadow);
+  transition: 0.2s linear;
+}
+
+.review .review-slider .box:hover {
+  outline: var(--outline-hover);
+  outline-offset: 0rem;
+}
+
+.review .review-slider .box img {
+  height: 10rem;
+  width: 10rem;
+  border-radius: 50%;
+}
+
+.review .review-slider .box p {
+  padding: 1rem 0;
+  line-height: 1.8;
+  color: var(--richBlack);
+  font-size: 1rem;
+}
+
+.review .review-slider .box h3 {
+  padding-bottom: 0.5rem;
+  color: var(--light-color);
+  font-size: 1.2rem;
+}
+
+.review .review-slider .box .stars i {
+  color: var(--alloyOrange);
+  font-size: 1rem;
 }
 
 /* testimonials banner starts */

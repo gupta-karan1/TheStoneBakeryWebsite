@@ -24,6 +24,12 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
     />
+
+    <!-- swiper slider CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
   </head>
 
   <body>
@@ -282,12 +288,9 @@
       <!-- banner 5 starts -->
 
       <section class="banner5">
-        <h2>We are here for you and</h2>
-        <h3>your home baking needs</h3>
-        <h4>
-          Get all kinds of baking ingredients, equipments, guidebooks, and
-          masterclasses right here!
-        </h4>
+        <h2>order our authentic & fresh bakery products</h2>
+        <h3>right from the comfort of your home</h3>
+        <h4>Taste our finest breads, pies, pastries, muffins and much more!</h4>
         <a href="/html/shop.html" class="tertiaryBtn"> Shop Now </a>
       </section>
 
@@ -306,19 +309,139 @@
 
       <!-- banner 7 starts -->
 
-      <section class="banner7"></section>
+      <section class="banner7">
+        <section class="card-wrapper">
+          <article class="card" id="productCard">
+            <img src="/img/products/breadBaguette.jpg" alt="baguettes" />
+            <h4>product category</h4>
+            <h2>product name</h2>
+            <h3>unique features</h3>
+            <p>
+              product description Lorem ipsum dolor sit, amet consectetur
+              adipisicing elit. Temporibus, quod.
+            </p>
+            <a href="#" id="knowMoreBtn">Know More </a>
+          </article>
+          <article class="card" id="productCard">
+            <img src="/img/products/oatMuffin.jpg" alt="oat Muffin" />
+            <h4>product category</h4>
+            <h2>product name</h2>
+            <h3>unique features</h3>
+            <p>
+              product description Lorem ipsum dolor sit, amet consectetur
+              adipisicing elit. Temporibus, quod.
+            </p>
+            <a href="#" id="knowMoreBtn">Know More </a>
+          </article>
+          <article class="card" id="productCard">
+            <img src="/img/products/bluePie.jpg" alt="blueberry pie" />
+            <h4>product category</h4>
+            <h2>product name</h2>
+            <h3>unique features</h3>
+            <p>
+              product description Lorem ipsum dolor sit, amet consectetur
+              adipisicing elit. Temporibus, quod.
+            </p>
+            <a href="#" id="knowMoreBtn">Know More </a>
+          </article>
+        </section>
+        <a href="/html/shop.html" class="secondaryBtn">
+          Shop Now <i class="fas fa-cart-arrow-down"></i>
+        </a>
+      </section>
 
       <!-- banner 7 ends -->
 
       <!-- masterclass banner 2 starts-->
 
-      <section class="masterclass2"></section>
+      <section class="masterclass2">
+        <h2>Book a one-on-one baking session with our personal trainers!</h2>
+        <h3>
+          Our bakers will drive to your home, and give you quick baking lessons.
+        </h3>
+        <h4>
+          Get 50% off before time runs out: <br />
+          <span class="timer" id="timer">01:15:35</span>
+        </h4>
+
+        <a href="#" class="tertiaryBtn"> Book Now </a>
+      </section>
 
       <!-- masterclass banner 2 ends-->
 
       <!-- testimonials banner starts -->
 
-      <section class="testimonials"></section>
+      <section class="review" id="review">
+        <h2>Hear it from our lovely customers</h2>
+        <article class="swiper review-slider">
+          <article class="swiper-wrapper">
+            <article title="customer1" class="swiper-slide box">
+              <img src="/img/profile_pics/profile1.jpg" alt="customer" />
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error
+                alias molestiae optio vel fuga soluta vitae doloremque,
+                dignissimos ipsum ullam.
+              </p>
+              <h3>mary megan</h3>
+              <article class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </article>
+            </article>
+            <article title="customer2" class="swiper-slide box">
+              <img src="/img/profile_pics/profile2.jpg" alt="customer" />
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error
+                alias molestiae optio vel fuga soluta vitae doloremque,
+                dignissimos ipsum ullam.
+              </p>
+              <h3>emilia mason</h3>
+              <article class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </article>
+            </article>
+            <article title="customer3" class="swiper-slide box">
+              <img src="/img/profile_pics/profile3.jpg" alt="customer" />
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error
+                alias molestiae optio vel fuga soluta vitae doloremque,
+                dignissimos ipsum ullam.
+              </p>
+              <h3>pepper johnson</h3>
+              <article class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </article>
+            </article>
+            <article title="customer4" class="swiper-slide box">
+              <img src="/img/profile_pics/profile4.jpg" alt="customer" />
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error
+                alias molestiae optio vel fuga soluta vitae doloremque,
+                dignissimos ipsum ullam.
+              </p>
+              <h3>emma cooper</h3>
+              <article class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </article>
+            </article>
+          </article>
+        </article>
+      </section>
 
       <!-- testimonials banner starts -->
 
@@ -354,6 +477,9 @@
     <footer class="footer" id="footer"></footer>
 
     <!-- footer section ends -->
+
+    <!-- javascript link to external cdn for swiping images action -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
     <!-- JavaScript file attached at the end to load content first and then the script -->
     <script src="/js/script.js"></script>
