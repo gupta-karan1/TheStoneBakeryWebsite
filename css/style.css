@@ -643,12 +643,12 @@ body {
 
 /* banner 3 style starts  */
 .home .banner3 {
-  height: 30vh;
-  background-color: var(--viridianGreen);
+  height: 20vh;
+  background-color: var(--middleBlueGreen);
   text-align: center;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
 }
 .home .banner3 h2 {
   font-weight: 700;
@@ -840,12 +840,12 @@ body {
 
 /* banner 6 style starts */
 .banner6 {
-  height: 30vh;
-  background-color: var(--alloyOrange);
+  height: 20vh;
+  background-color: var(--gamboge);
   text-align: center;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
 }
 
 .banner6 h2 {
@@ -1001,13 +1001,13 @@ body {
 
 /* testimonials banner starts */
 
-.review {
+.home .review {
   background-color: var(--middleBlueGreen);
   height: 80vh;
-  padding: 1rem;
+  padding: 0.1rem;
 }
 
-.review h2 {
+.home .review h2 {
   font-size: 3rem;
   font-weight: 700;
   color: var(--blueSapphire);
@@ -1015,48 +1015,50 @@ body {
   padding: 1rem;
 }
 
-.review .review-slider {
-  padding: 1rem;
+.home .review .review-slider {
+  padding: 2rem;
   height: 80%;
   width: 80%;
 }
 
-.review .review-slider .box {
+.home .review .review-slider .box {
   background: var(--antiquewhite);
   border-radius: 0.5rem;
   text-align: center;
-  padding: 1.5rem;
+  padding: 1.8rem;
   outline-offset: -1rem;
   outline: var(--outline);
+  outline-style: dashed;
   box-shadow: var(--box-shadow);
   transition: 0.2s linear;
 }
 
-.review .review-slider .box:hover {
+.home .review .review-slider .box:hover {
   outline: var(--outline-hover);
+  outline-color: var(--rufous);
   outline-offset: 0rem;
 }
 
-.review .review-slider .box img {
+.home .review .review-slider .box img {
   height: 10rem;
   width: 10rem;
   border-radius: 50%;
 }
 
-.review .review-slider .box p {
+.home .review .review-slider .box p {
   padding: 1rem 0;
-  line-height: 1.8;
+  line-height: 1.5;
   color: var(--richBlack);
   font-size: 1rem;
 }
 
-.review .review-slider .box h3 {
+.home .review .review-slider .box h3 {
   padding-bottom: 0.5rem;
   color: var(--light-color);
   font-size: 1.2rem;
 }
 
-.review .review-slider .box .stars i {
+.home .review .review-slider .box .stars i {
   color: var(--alloyOrange);
   font-size: 1rem;
 }
@@ -1065,18 +1067,91 @@ body {
 
 /* brandNumbers banner starts */
 
-.brandNumbers {
+.home .brandNumbers {
   background-color: var(--viridianGreen);
   height: 60vh;
+  padding: 2rem;
+}
+.home .brandNumbers h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--antiquewhite);
+  text-align: center;
+  padding: 1rem;
+}
+
+.home .brandNumbers .numBox-slider {
+  padding: 2rem;
+  height: 80%;
+  width: 80%;
+}
+
+.home .brandNumbers .numBox-slider .box {
+  background: var(--antiquewhite);
+  border-radius: 0.5rem;
+  text-align: center;
+  padding: 2rem;
+  outline-offset: -1rem;
+  outline: var(--outline);
+  outline-style: dashed;
+  box-shadow: var(--box-shadow);
+  transition: 0.2s linear;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home .brandNumbers .numBox-slider .box:hover {
+  outline: var(--outline-hover);
+  outline-color: var(--rufous);
+  outline-offset: 0rem;
+}
+
+.home .brandNumbers .numBox-slider .box p {
+  line-height: 1.8;
+  color: var(--blueSapphire);
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.home .brandNumbers .numBox-slider .box h3 {
+  color: var(--rufous);
+  font-size: 6rem;
+  margin-bottom: -1rem;
+  font-weight: 700;
 }
 
 /* brandNumbers banner starts */
 
 /* customerBrands banner starts */
 
-.customerBrands {
+.home .customerBrands {
   background-color: var(--blueSapphire);
   height: 40vh;
+  padding: 1rem;
+}
+
+.home .customerBrands h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--antiquewhite);
+  text-align: center;
+  padding: 1rem;
+}
+
+.home .customerBrands .brandBox-slider {
+  padding: 0 2rem;
+  width: 78%;
+}
+
+.home .customerBrands .brandBox-slider .box {
+  background: var(--middleBlueGreen);
+  border-radius: 0.5rem;
+  text-align: center;
+  padding: 2rem;
+  box-shadow: var(--box-shadow);
+  height: 10rem;
 }
 
 /* customerBrands banner starts */
