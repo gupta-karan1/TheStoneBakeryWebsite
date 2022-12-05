@@ -71,6 +71,7 @@ body {
   color: var(--rufous);
   background: var(--gamboge);
   box-shadow: 0rem 0.5rem var(--rufous);
+  border: var(--border);
 }
 
 .primaryBtn:active {
@@ -78,6 +79,7 @@ body {
   background-color: var(--gamboge);
   transform: translateY(0.5rem);
   box-shadow: none;
+  border: var(--border);
 }
 
 .secondaryBtn {
@@ -97,6 +99,7 @@ body {
 .secondaryBtn:hover {
   background-color: var(--gamboge);
   color: var(--rufous);
+  border-color: var(--richBlack);
   box-shadow: 0rem 0.5rem var(--richBlack);
 }
 .secondaryBtn:active {
@@ -104,11 +107,11 @@ body {
   color: var(--rufous);
   transform: translateY(0.5rem);
   box-shadow: none;
+  border-color: var(--richBlack);
 }
 
 .tertiaryBtn {
   margin-top: 1rem;
-  display: inline-block;
   padding: 0.8rem 3rem;
   font-size: 1.5rem;
   border-radius: 0.5rem;
@@ -124,6 +127,7 @@ body {
   background-color: var(--rufous);
   color: var(--antiquewhite);
   box-shadow: 0rem 0.5rem var(--richBlack);
+  border: var(--richBlack) solid 0.15rem;
 }
 
 .tertiaryBtn:active {
@@ -505,7 +509,7 @@ body {
 /* main section styles start  */
 
 /* hero section styles start  */
-.hero {
+.home .hero {
   background: url(/img/hero2.jpg) no-repeat;
   background-position: top;
   background-size: 100%;
@@ -518,7 +522,7 @@ body {
   padding: 5rem;
 }
 
-.hero .heroText {
+.home .hero .heroText {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -527,25 +531,25 @@ body {
   margin-bottom: 1rem;
 }
 
-.hero h4 {
+.home .hero h4 {
   color: var(--richBlack);
   font-size: 1.5rem;
   font-weight: 500;
 }
 
-.hero h1 {
+.home .hero h1 {
   font-size: 4rem;
   color: var(--richBlack);
   font-weight: 700;
 }
 
-.hero p {
+.home .hero p {
   color: var(--richBlack);
   font-size: 1.3rem;
   font-weight: 300;
 }
 
-.hero .heroBtns .secondaryBtn {
+.home .hero .heroBtns .secondaryBtn {
   margin-right: 1rem;
 }
 
@@ -1003,8 +1007,8 @@ body {
 
 .home .review {
   background-color: var(--middleBlueGreen);
-  height: 80vh;
-  padding: 0.1rem;
+  height: 90vh;
+  padding: 2.5rem;
 }
 
 .home .review h2 {
@@ -1012,7 +1016,7 @@ body {
   font-weight: 700;
   color: var(--blueSapphire);
   text-align: center;
-  padding: 1rem;
+  padding: 1.7rem;
 }
 
 .home .review .review-slider {
@@ -1069,7 +1073,7 @@ body {
 
 .home .brandNumbers {
   background-color: var(--viridianGreen);
-  height: 60vh;
+  height: 80vh;
   padding: 2rem;
 }
 .home .brandNumbers h2 {
@@ -1128,8 +1132,8 @@ body {
 
 .home .customerBrands {
   background-color: var(--blueSapphire);
-  height: 40vh;
-  padding: 1rem;
+  height: 50vh;
+  padding: 3rem;
 }
 
 .home .customerBrands h2 {
@@ -1156,21 +1160,59 @@ body {
 
 /* customerBrands banner starts */
 
-/* faqs banner starts */
-
-.faqs {
-  background-color: var(--rubyRed);
-  height: 100vh;
-}
-
-/* faqs banner starts */
-
 /* subscribeNews banner starts */
 
-.subscribeNews {
-  background-color: var(--rufous);
-  height: 20vh;
+.home .subscribeNews {
+  background-color: var(--alloyOrange);
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+
+.home .subscribeNews h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--richBlack);
+  text-align: center;
+}
+.home .subscribeNews h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--richBlack);
+  text-align: center;
+  margin: 1.5rem auto;
+}
+
+.home .subscribeNews .inputField {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+.home .subscribeNews .inputField label {
+  color: var(--richBlack);
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.home .subscribeNews .inputField .emailInput {
+  width: 40vw;
+  height: 4rem;
+  background-color: var(--antiquewhite);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+  border: var(--richBlack) 0.15rem solid;
+  font-size: 2rem;
+  text-transform: none;
+}
+
+.home .subscribeNews .inputField .tertiaryBtn {
+  margin-top: -0.5rem;
+}
+
 /* subscribeNews banner starts */
 
 /* main section styles end  */
@@ -1179,6 +1221,77 @@ body {
 .footer {
   background-color: var(--gamboge);
   height: 50vh;
+  padding: 1.5rem 3rem;
+}
+
+.footer .box-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+
+.footer .box-container .box h3 {
+  font-size: 2rem;
+  color: var(--richBlack);
+  padding: 1rem 0;
+  font-weight: 700;
+}
+
+.footer .box-container .box .links {
+  display: block;
+  font-size: 1.5rem;
+  color: var(--richBlack);
+  padding: 0.8rem 0;
+}
+
+.footer .box-container .box .links:hover {
+  text-decoration: underline;
+}
+
+.footer .box-container .box .links i {
+  color: var(--rufous);
+  padding-right: 0.5rem;
+}
+
+.footer .box-container .box p {
+  line-height: 1.5;
+  font-size: 1.3rem;
+  color: var(--richBlack);
+  padding: 1rem 0;
+}
+
+.footer .box-container .box .share a {
+  height: 3rem;
+  width: 3rem;
+  line-height: 3rem;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  color: var(--richBlack);
+  margin-left: 0.2rem;
+  background: var(--viridianGreen);
+  text-align: center;
+  color: var(--antiquewhite);
+  box-shadow: 0 0.5rem var(--blueSapphire);
+}
+
+.footer .box-container .box .share a:hover {
+  background: var(--blueSapphire);
+  box-shadow: 0 0.5rem var(--viridianGreen);
+}
+
+.footer .box-container .box .share a:active {
+  box-shadow: none;
+  transform: translateY(0.5rem);
+}
+
+.footer .credit {
+  text-align: center;
+
+  font-size: 1rem;
+  color: var(--richBlack);
+}
+.footer .credit span {
+  color: var(--rufous);
 }
 /* footer section styles ends */
 

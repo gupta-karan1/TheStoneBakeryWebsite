@@ -16,6 +16,9 @@
 
     <title>Bakery Shop: The Stone Bakery</title>
 
+    <!-- favicon link-->
+    <link rel="icon" type="image/x-icon" href="/img/favicon.png" />
+
     <!-- css stylesheet link -->
     <link rel="stylesheet" href="/css/style.css" />
 
@@ -24,6 +27,205 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
     />
+    <!-- swiper slider CDN -->
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
   </head>
-  <body></body>
+  <body>
+    <!-- header sections starts -->
+    <header class="header">
+      <!-- brand logo -->
+      <a href="/html/index.html" class="logo">
+        <img
+          src="/img/placeholder.jpg"
+          alt="the stone bakery logo"
+          title="the stone bakery logo"
+        />
+        The Stone Bakers</a
+      >
+
+      <!-- navigation menu starts -->
+      <nav class="navbar">
+        <a href="/html/index.html" title="home">Home</a>
+        <a href="/html/about.html" title="about us">About Us</a>
+        <a href="/html/shop.html" title="bakery shop">Bakery Shop</a>
+        <a href="/html/cart.html" title="shopping cart">Shopping Cart</a>
+      </nav>
+      <!-- navigation menu ends -->
+
+      <!-- nav menu icons start -->
+      <section class="icons">
+        <button
+          class="fas fa-user"
+          id="login-btn"
+          title="user login"
+          type="button"
+        ></button>
+        <button
+          class="fas fa-search"
+          id="search-btn"
+          title="search"
+          type="button"
+        ></button>
+        <button
+          class="fas fa-shopping-cart"
+          id="cart-btn"
+          title="shopping cart"
+          type="button"
+        ></button>
+        <button
+          class="fas fa-bars"
+          id="menu-btn"
+          title="menu"
+          type="button"
+        ></button>
+      </section>
+      <!-- nav menu icons ends -->
+
+      <!-- search input box starts -->
+      <form action="" class="search-form">
+        <input
+          type="search"
+          name="search"
+          id="search-box"
+          placeholder="search here..."
+        />
+        <label for="search-box" class="fas fa-search"></label>
+      </form>
+      <!-- search input box ends -->
+
+      <!-- shopping cart box starts  -->
+      <section class="shopping-cart">
+        <!-- shopping item 1 starts-->
+        <section class="box">
+          <article class="card">
+            <img src="/img/placeholder.jpg" alt="rolling pin" id="itemImage" />
+            <article class="content">
+              <h3 id="itemName">rolling pin</h3>
+              <p class="price">price: <span id="priceValue">$6.99</span></p>
+              <p class="quantity">quantity: <span id="itemQuantity">1</span></p>
+            </article>
+          </article>
+
+          <article class="counterIcons">
+            <i class="fas fa-minus-circle"></i>
+            <input
+              type="number"
+              name="quantity"
+              id="itemNum"
+              placeholder="0"
+              title="Number of Items"
+            />
+            <i class="fas fa-plus-circle"></i>
+          </article>
+        </section>
+        <!-- shopping item 1 ends-->
+        <p class="total">total: <span id="totalValue">$6.99</span></p>
+        <button class="primaryBtn" formaction="/html/cart.html" type="submit">
+          <i class="fas fa-shopping-cart"></i>
+          checkout
+        </button>
+      </section>
+
+      <!-- shopping cart box ends  -->
+
+      <!-- user login form box starts -->
+
+      <form action="" class="login-form">
+        <h3><i class="fas fa-user-circle"></i> login now</h3>
+        <p>
+          Email Address:
+          <input
+            type="email"
+            class="box"
+            title="email address"
+            placeholder="yourName@example.com"
+          />
+        </p>
+
+        <p>
+          Password:
+          <input
+            type="password"
+            class="box"
+            placeholder="your password"
+            title="password"
+          />
+        </p>
+
+        <p>forgot your password? <a href="#">click here</a></p>
+        <p>don't have an account? <a href="#">create now</a></p>
+        <input
+          type="submit"
+          class="primaryBtn"
+          id="loginBtn"
+          value="login now"
+        />
+      </form>
+      <!-- user login form box ends -->
+    </header>
+    <!-- header sections ends -->
+
+    <!-- home section starts -->
+    <main class="shop"></main>
+    <!-- home section ends -->
+    <!-- footer section starts -->
+
+    <footer class="footer" id="footer">
+      <section class="box-container">
+        <article class="box">
+          <h3><i class="fas fa-bread-slice"></i> The Stone bakers</h3>
+          <p>
+            Established In 1869, <br />
+            We Will Now Help You Bake-From-Home
+          </p>
+          <article class="share">
+            <a href="" class="fab fa-facebook" title="facebook"></a>
+            <a href="" class="fab fa-twitter" title="twitter"></a>
+            <a href="" class="fab fa-instagram" title="instagram"></a>
+            <a href="" class="fab fa-linkedin" title="linkedin"></a>
+          </article>
+        </article>
+        <article class="box">
+          <h3>contact info</h3>
+          <a href="" class="links" title="links">
+            <i class="fas fa-phone"></i> +123-456-7890
+          </a>
+          <a href="" class="links" title="links">
+            <i class="fas fa-envelope"></i> contact@email.com
+          </a>
+          <a href="" class="links" title="links">
+            <i class="fas fa-map-marker-alt"></i> dublin 7, ireland
+          </a>
+        </article>
+        <article class="box">
+          <h3>quick links</h3>
+          <a href="index.html" class="links" title="links">
+            <i class="fas fa-home"></i> home
+          </a>
+          <a href="shop.html" class="links" title="links">
+            <i class="fas fa-shop"></i> bakery shop
+          </a>
+          <a href="about.html" class="links" title="links">
+            <i class="fas fa-users"></i> about us
+          </a>
+          <a href="cart.html" class="links" title="links">
+            <i class="fas fa-cart-shopping"></i> shopping cart
+          </a>
+        </article>
+      </section>
+      <article class="credit">
+        design & dev by <span>karan gupta | D22124440 | TU Dublin</span> | all
+        rights reserved
+      </article>
+    </footer>
+
+    <!-- footer section ends -->
+
+    <!-- javascript link to external cdn for swiping images action -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+    <!-- JavaScript file attached at the end to load content first and then the script -->
+    <script src="/js/script.js"></script>
+  </body>
 </html>
