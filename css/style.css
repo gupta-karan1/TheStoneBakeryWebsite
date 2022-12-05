@@ -363,8 +363,9 @@ body {
 .header .shopping-cart .box .content #itemQuantity {
   font-weight: 500;
 }
-.header .shopping-cart .box .counterIcons {
+.counterIcons {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   gap: 0.5rem;
@@ -504,13 +505,15 @@ body {
 
 /* header section styles end  */
 
+/* -------------------home page style starts------------------- */
+
 /* ----------------------------------------------------- */
 
 /* main section styles start  */
 
 /* hero section styles start  */
 .home .hero {
-  background: url(/img/hero2.jpg) no-repeat;
+  background: url(/img/home-hero.jpg) no-repeat;
   background-position: top;
   background-size: 100%;
   height: 100vh;
@@ -559,7 +562,7 @@ body {
 .home .banner1 {
   background-color: var(--rubyRed);
   height: 100vh;
-  background-image: url(/img/christmasOffer1.jpg);
+  background-image: url(/img/home-christmas-banner.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 70%;
@@ -603,7 +606,7 @@ body {
 .home .banner2 {
   background-color: var(--blueSapphire);
   height: 100vh;
-  background-image: url(/img/banner2background.jpg);
+  background-image: url(/img/home-banner2.jpg);
   background-repeat: no-repeat;
   background-position: right;
   background-size: 55%;
@@ -748,7 +751,7 @@ body {
 .home .masterclass1 {
   height: 100vh;
   background-color: var(--rubyRed);
-  background-image: url(/img/masterclass1.jpg);
+  background-image: url(/img/home-masterclass1-banner.jpg);
   background-repeat: no-repeat;
   background-size: 55%;
   background-attachment: fixed;
@@ -802,7 +805,7 @@ body {
 .home .banner5 {
   background-color: var(--rust);
   height: 100vh;
-  background-image: url(/img/banner5.jpg);
+  background-image: url(/img/home-banner5.jpg);
   background-repeat: no-repeat;
   background-position: right bottom;
   background-size: 55%;
@@ -945,7 +948,7 @@ body {
 .home .masterclass2 {
   height: 100vh;
   background-color: var(--rubyRed);
-  background-image: url(/img/masterclass2.jpg);
+  background-image: url(/img/home-masterclass2-banner.jpg);
   background-repeat: no-repeat;
   background-size: 43%;
   background-attachment: fixed;
@@ -1208,6 +1211,318 @@ body {
 /* subscribeNews banner starts */
 
 /* main section styles end  */
+
+/* -------------------home page style ends------------------- */
+
+/* -------------------shop page style starts------------------- */
+/* ----------------------------------------------------- */
+
+/* shop page main section styles start  */
+
+/* shop page hero section styles start  */
+.shop .hero {
+  background: url(/img/shop-hero.jpg) no-repeat;
+  background-position: top;
+  background-size: cover;
+  height: 100vh;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 5rem;
+}
+
+.shop .hero .heroText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.shop .hero h4 {
+  color: var(--richBlack);
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.shop .hero h1 {
+  font-size: 4rem;
+  color: var(--richBlack);
+  font-weight: 700;
+}
+
+.shop .hero p {
+  color: var(--richBlack);
+  font-size: 1.3rem;
+  font-weight: 300;
+  width: 60%;
+  text-align: center;
+}
+
+.shop .hero .heroBtns {
+  margin-right: 1rem;
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* shop page hero section styles end  */
+
+/* shop page banner1 style starts */
+.shop .banner1 {
+  height: 20vh;
+  background-color: var(--alloyOrange);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.shop .banner1 h2 {
+  font-weight: 700;
+  font-size: 3.5rem;
+  color: var(--richBlack);
+}
+
+/* shop page banner1 style ends */
+
+/* shop page banner2 style starts */
+.shop .banner2 {
+  height: 100vh;
+  background-color: var(--gamboge);
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.shop .banner2 h2 {
+  font-size: 3rem;
+  font-weight: 500;
+  color: var(--richBlack);
+  margin: 1.5rem auto;
+}
+
+.shop .banner2 .card-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.shop .banner2 .card-wrapper .card {
+  background-color: var(--antiquewhite);
+  height: 70vh;
+  width: 50vh;
+  border-radius: 2rem;
+  box-shadow: var(--box-shadow);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+}
+
+.shop .banner2 .card-wrapper .card:hover {
+  border: var(--border);
+  box-shadow: 0rem 1rem var(--rufous);
+  cursor: pointer;
+  background-color: var(--antiquewhite);
+}
+
+.shop .banner2 .card-wrapper .card:active {
+  transform: translateY(1rem);
+  box-shadow: none;
+  background-color: var(--antiquewhite);
+}
+
+.shop .banner2 .card-wrapper .card img {
+  border-radius: 1rem;
+  box-shadow: var(--box-shadow);
+  width: 95%;
+}
+
+.shop .banner2 .card-wrapper .card h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0.5rem auto;
+  color: var(--richBlack);
+}
+
+.shop .banner2 .card-wrapper .card .content .price {
+  margin: 0.5rem auto;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--blueSapphire);
+}
+
+.shop .banner2 .card-wrapper .card .content .counterIcons input {
+  width: 6rem;
+  margin: 0.5rem;
+}
+/* banner2 style ends */
+
+/* banner3 style starts */
+.shop .banner3 {
+  height: 100vh;
+  background-color: var(--alloyOrange);
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.shop .banner3 h2 {
+  font-size: 3rem;
+  font-weight: 500;
+  color: var(--richBlack);
+  margin: 1.5rem auto;
+}
+
+.shop .banner3 .card-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.shop .banner3 .card-wrapper .card {
+  background-color: var(--antiquewhite);
+  height: 70vh;
+  width: 50vh;
+  border-radius: 2rem;
+  box-shadow: var(--box-shadow);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+}
+
+.shop .banner3 .card-wrapper .card:hover {
+  border: var(--border);
+  box-shadow: 0rem 1rem var(--rufous);
+  cursor: pointer;
+  background-color: var(--antiquewhite);
+}
+
+.shop .banner3 .card-wrapper .card:active {
+  transform: translateY(1rem);
+  box-shadow: none;
+  background-color: var(--antiquewhite);
+}
+
+.shop .banner3 .card-wrapper .card img {
+  border-radius: 1rem;
+  box-shadow: var(--box-shadow);
+  width: 95%;
+}
+
+.shop .banner3 .card-wrapper .card h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0.5rem auto;
+  color: var(--richBlack);
+}
+
+.shop .banner3 .card-wrapper .card .content .price {
+  margin: 0.5rem auto;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--blueSapphire);
+}
+
+.shop .banner3 .card-wrapper .card .content .counterIcons input {
+  width: 6rem;
+  margin: 0.5rem;
+}
+/* banner3 style ends */
+
+/* banner4 style starts */
+.shop .banner4 {
+  height: 100vh;
+  background-color: var(--rust);
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.shop .banner4 h2 {
+  font-size: 3rem;
+  font-weight: 500;
+  color: var(--richBlack);
+  margin: 1.5rem auto;
+}
+
+.shop .banner4 .card-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.shop .banner4 .card-wrapper .card {
+  background-color: var(--antiquewhite);
+  height: 70vh;
+  width: 50vh;
+  border-radius: 2rem;
+  box-shadow: var(--box-shadow);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+}
+
+.shop .banner4 .card-wrapper .card:hover {
+  border: var(--border);
+  box-shadow: 0rem 1rem var(--rufous);
+  cursor: pointer;
+  background-color: var(--antiquewhite);
+}
+
+.shop .banner4 .card-wrapper .card:active {
+  transform: translateY(1rem);
+  box-shadow: none;
+  background-color: var(--antiquewhite);
+}
+
+.shop .banner4 .card-wrapper .card img {
+  border-radius: 1rem;
+  box-shadow: var(--box-shadow);
+  width: 95%;
+}
+
+.shop .banner4 .card-wrapper .card h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0.5rem auto;
+  color: var(--richBlack);
+}
+
+.shop .banner4 .card-wrapper .card .content .price {
+  margin: 0.5rem auto;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--blueSapphire);
+}
+
+.shop .banner4 .card-wrapper .card .content .counterIcons input {
+  width: 6rem;
+  margin: 0.5rem;
+}
+/* banner3 style ends */
+/* shop page main section ends */
+
+/* -------------------shop page style ends------------------- */
 
 /* footer section styles starts */
 .footer {
