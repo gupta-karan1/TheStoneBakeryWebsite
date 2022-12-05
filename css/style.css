@@ -723,10 +723,6 @@ body {
   font-size: 2rem;
   font-weight: 700;
 }
-.home .banner4 .card-wrapper .card h3 {
-  font-size: 1rem;
-  font-weight: 500;
-}
 
 .home .banner4 .card-wrapper .card p {
   font-size: 1rem;
@@ -923,10 +919,6 @@ body {
   font-size: 2rem;
   font-weight: 700;
 }
-.home .banner7 .card-wrapper .card h3 {
-  font-size: 1rem;
-  font-weight: 500;
-}
 
 .home .banner7 .card-wrapper .card p {
   font-size: 1rem;
@@ -1007,8 +999,8 @@ body {
 
 .home .review {
   background-color: var(--middleBlueGreen);
-  height: 90vh;
-  padding: 2.5rem;
+  height: 95vh;
+  padding: 2rem;
 }
 
 .home .review h2 {
