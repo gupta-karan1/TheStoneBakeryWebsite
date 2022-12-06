@@ -1795,6 +1795,56 @@ select {
 .about .banner1 {
   height: 100vh;
   background-color: var(--alloyOrange);
+  background-image: url(/img/about-banner1.jpg);
+  background-repeat: no-repeat;
+  background-size: 70%;
+  background-attachment: fixed;
+  background-position: left 180%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  align-items: flex-end;
+  padding: 0 4rem;
+}
+
+.about .banner1 h2 {
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--richBlack);
+  background-color: var(--alloyOrange);
+  width: 45vw;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+.about .banner1 h3 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: var(--richBlack);
+  background-color: var(--alloyOrange);
+  width: 45vw;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+.about .banner1 h4 {
+  font-size: 2rem;
+  font-weight: 400;
+  text-transform: none;
+  color: var(--richBlack);
+  background-color: var(--alloyOrange);
+  width: 45vw;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+.about .banner1 p {
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-transform: none;
+  color: var(--richBlack);
+  background-color: var(--alloyOrange);
+  width: 45vw;
+  padding: 1rem;
+  border-radius: 0.5rem;
 }
 /* banner1 style ends */
 
@@ -1802,6 +1852,42 @@ select {
 .about .banner2 {
   height: 100vh;
   background-color: var(--rust);
+  background-image: url(/img/about-banner2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.about .banner2 .historyCard {
+  height: 40vh;
+  width: 50vw;
+  background-color: var(--antiquewhite);
+  opacity: 90%;
+  margin: 6rem auto;
+  border-radius: 0.5rem;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.about .banner2 .historyCard h2 {
+  font-size: 6rem;
+  font-weight: 700;
+  color: var(--rufous);
+}
+
+.about .banner2 .historyCard h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--richBlack);
+}
+.about .banner2 .historyCard p {
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: var(--richBlack);
 }
 /* banner2 style ends */
 
@@ -1809,6 +1895,11 @@ select {
 .about .banner3 {
   height: 100vh;
   background-color: var(--rubyRed);
+  background-image: url(/img/about-banner3.jpg);
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: 70%;
+  background-attachment: fixed;
 }
 /* banner3 style ends */
 
@@ -1816,13 +1907,54 @@ select {
 .about .banner4 {
   height: 100vh;
   background-color: var(--rufous);
+  background-image: url(/img/about-banner4.jpg);
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 70%;
+  background-attachment: fixed;
 }
 /* banner4 style ends */
 
 /* banner5 style starts */
 .about .banner5 {
-  height: 100vh;
+  height: max-content;
   background-color: var(--blueSapphire);
+  padding: 2rem 8rem;
+}
+
+.about .banner5 .team-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.about .banner5 .teamCard {
+  background-color: var(--middleBlueGreen);
+  height: 50vh;
+  width: 50vh;
+  border-radius: 1rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  border: solid 0.5rem var(--middleBlueGreen);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.about .banner5 .teamCard img {
+  width: 80%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.about .banner5 .teamCard h3 {
+  color: var(--richBlack);
+  font-size: 1.5rem;
+  font-weight: 700;
 }
 /* banner5 style ends */
 
