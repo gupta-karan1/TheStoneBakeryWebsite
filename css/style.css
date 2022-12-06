@@ -1208,7 +1208,7 @@ body {
   margin-top: -0.5rem;
 }
 
-/* subscribeNews banner starts */
+/* subscribeNews banner ends */
 
 /* main section styles end  */
 
@@ -1790,6 +1790,117 @@ select {
 .about .hero .heroBtns .secondaryBtn {
   margin-right: 1rem;
 }
+
+/* banner1 style starts */
+.about .banner1 {
+  height: 100vh;
+  background-color: var(--alloyOrange);
+}
+/* banner1 style ends */
+
+/* banner2 style starts */
+.about .banner2 {
+  height: 100vh;
+  background-color: var(--rust);
+}
+/* banner2 style ends */
+
+/* banner3 style starts */
+.about .banner3 {
+  height: 100vh;
+  background-color: var(--rubyRed);
+}
+/* banner3 style ends */
+
+/* banner4 style starts */
+.about .banner4 {
+  height: 100vh;
+  background-color: var(--rufous);
+}
+/* banner4 style ends */
+
+/* banner5 style starts */
+.about .banner5 {
+  height: 100vh;
+  background-color: var(--blueSapphire);
+}
+/* banner5 style ends */
+
+/* banner6 style starts */
+.about .banner6 {
+  height: 100vh;
+  background-color: var(--viridianGreen);
+}
+/* banner6 style ends */
+
+/* banner7 style starts */
+.about .banner7 {
+  height: 100vh;
+  background-color: var(--middleBlueGreen);
+}
+/* banner7 style ends */
+
+/* banner8 style starts */
+.about .banner8 {
+  height: 100vh;
+  background-color: var(--gamboge);
+}
+/* banner8 style ends */
+
+/* subscribeNews banner starts */
+
+.about .subscribeNews {
+  background-color: var(--alloyOrange);
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about .subscribeNews h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--richBlack);
+  text-align: center;
+}
+.about .subscribeNews h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--richBlack);
+  text-align: center;
+  margin: 1.5rem auto;
+}
+
+.about .subscribeNews .inputField {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+.about .subscribeNews .inputField label {
+  color: var(--richBlack);
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.about .subscribeNews .inputField .emailInput {
+  width: 40vw;
+  height: 4rem;
+  background-color: var(--antiquewhite);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+  border: var(--richBlack) 0.15rem solid;
+  font-size: 2rem;
+  text-transform: none;
+}
+
+.about .subscribeNews .inputField .tertiaryBtn {
+  margin-top: -0.5rem;
+}
+
+/* subscribeNews banner ends */
 
 /* about page hero section styles end  */
 
