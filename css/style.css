@@ -1317,7 +1317,7 @@ body {
   width: 50vh;
   border-radius: 2rem;
   box-shadow: var(--box-shadow);
-  padding: 2rem;
+  padding: 3rem;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -1345,7 +1345,7 @@ body {
 }
 
 .shop .banner2 .card-wrapper .card h2 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 700;
   margin: 0.5rem auto;
   color: var(--richBlack);
@@ -1395,7 +1395,7 @@ body {
   width: 50vh;
   border-radius: 2rem;
   box-shadow: var(--box-shadow);
-  padding: 2rem;
+  padding: 3rem;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -1423,7 +1423,7 @@ body {
 }
 
 .shop .banner3 .card-wrapper .card h2 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 700;
   margin: 0.5rem auto;
   color: var(--richBlack);
@@ -1473,7 +1473,7 @@ body {
   width: 50vh;
   border-radius: 2rem;
   box-shadow: var(--box-shadow);
-  padding: 2rem;
+  padding: 3rem;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -1501,7 +1501,7 @@ body {
 }
 
 .shop .banner4 .card-wrapper .card h2 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 700;
   margin: 0.5rem auto;
   color: var(--richBlack);
@@ -1603,19 +1603,20 @@ body {
 .shop .banner7 .section-center {
   width: 80vw;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 2.5rem 2.5rem;
+  margin: 0 auto;
 }
 
 .shop .banner7 .section-center .menu-item {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   gap: 1rem 2rem;
   max-width: 20rem;
   background-color: var(--antiquewhite);
-  padding: 1.5rem;
+  padding: 1.8rem;
   border-radius: 1rem;
   cursor: pointer;
 }
@@ -1806,7 +1807,7 @@ select {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   padding: 5rem;
 }
 
