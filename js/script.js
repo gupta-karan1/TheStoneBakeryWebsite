@@ -204,7 +204,7 @@ const bakeryProducts = [
   {
     id: 9,
     title: "oat roll bread",
-    category: "pies",
+    category: "breads",
     price: 6.99,
     img: "/img/product-oatroll-bread.jpg",
   },
@@ -224,8 +224,8 @@ const bakeryProducts = [
   },
   {
     id: 12,
-    title: "bison steak",
-    category: "breads",
+    title: "walnut pie",
+    category: "pies",
     price: 22.99,
     img: "/img/product-walnut-pie.jpg",
   },
