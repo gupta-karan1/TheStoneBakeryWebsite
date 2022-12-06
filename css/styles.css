@@ -1,0 +1,1084 @@
+/* Common Styles File for all HTML files index, about, shop, and cart */
+
+/* font import from google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300;400;500;600;700&display=swap");
+
+/* Root style variables for the complete document for reduction in code repetition */
+
+:root {
+  --rubyRed: #9b2226;
+  --rufous: #ae2012;
+  --rust: #bb3e03;
+  --alloyOrange: #ca6702;
+  --gamboge: #ee9b00;
+  --mediumChampagne: #e9d8a6;
+  --middleBlueGreen: #94d2bd;
+  --viridianGreen: #0a9396;
+  --blueSapphire: #005f73;
+  --richBlack: #001219;
+  --antiquewhite: #fff1c9;
+  --box-shadow: 0 0.5rem 1.5rem rgba(0, 18, 25, 0.1);
+  --border: var(--rufous) 0.15rem solid;
+  --border-small: var(--rufous) 0.05rem solid;
+  --outline: 0.1rem solid rgba(0, 18, 25, 0.1);
+  --outline-hover: 0.2rem solid var(--richBlack);
+}
+
+/* Standard root styles for the full body of html documents to reset box sizing and fonts */
+
+* {
+  font-family: "Signika Negative", sans-serif;
+  margin: 0;
+  box-sizing: border-box;
+  outline: 0;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all 0.2s linear;
+}
+
+/* remove scroll in x-direction, set scroll behavior and set scroll padding to avoid clash of header bar and content */
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 7rem;
+}
+
+/* set background color of body */
+
+body {
+  background: var(--mediumChampagne);
+}
+
+/* button style starts*/
+
+.primaryBtn {
+  margin: 1rem auto;
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  border-radius: 0.5rem;
+  border: var(--gamboge) 0.15rem solid;
+  color: var(--antiquewhite);
+  cursor: pointer;
+  background-color: var(--rufous);
+  font-weight: 700;
+  box-shadow: 0rem 0.5rem var(--gamboge);
+}
+
+.primaryBtn:active {
+  transform: translateY(0.5rem);
+  box-shadow: none;
+  background: var(--alloyOrange);
+}
+
+.primaryBtn:hover {
+  border-color: var(--richBlack);
+}
+
+.secondaryBtn {
+  margin: 1rem auto;
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  border-radius: 0.5rem;
+  border: var(--richBlack) 0.15rem solid;
+  color: var(--antiquewhite);
+  cursor: pointer;
+  background-color: var(--rufous);
+  font-weight: 700;
+  box-shadow: 0rem 0.5rem var(--richBlack);
+}
+
+.secondaryBtn:active {
+  transform: translateY(0.5rem);
+  box-shadow: none;
+  background-color: var(--alloyOrange);
+}
+
+.secondaryBtn:hover {
+  border-color: var(--gamboge);
+}
+
+.tertiaryBtn {
+  margin: 1rem auto;
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  border-radius: 0.5rem;
+  border: var(--richBlack) 0.15rem solid;
+  color: var(--rufous);
+  cursor: pointer;
+  background-color: var(--gamboge);
+  font-weight: 700;
+  box-shadow: 0rem 0.5rem var(--richBlack);
+}
+
+.tertiaryBtn:active {
+  transform: translateY(0.5rem);
+  box-shadow: none;
+  background-color: var(--alloyOrange);
+}
+
+.tertiaryBtn:hover {
+  border-color: var(--rufous);
+}
+
+/* button style ends*/
+
+/* header navigation styles start */
+
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0;
+  background-color: var(--gamboge);
+  box-shadow: var(--box-shadow);
+}
+
+.header .logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--rubyRed);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.header .logo img {
+  width: 4rem;
+  height: 4rem;
+}
+
+.header .navbar {
+  position: absolute;
+  top: 110%;
+  right: -110%;
+  width: 90%;
+  box-shadow: var(--box-shadow);
+  border-radius: 0.5rem;
+  background-color: var(--antiquewhite);
+  border: var(--border);
+}
+
+.header .navbar.active {
+  right: 1.5rem;
+  transition: 0.4s linear;
+}
+
+.header .navbar a {
+  font-weight: 500;
+  color: var(--rubyRed);
+  text-decoration: underline;
+  font-size: 2.5rem;
+  margin: 2rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.header .navbar a:active {
+  color: var(--blueSapphire);
+}
+
+.header .icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.header .icons button {
+  height: 4rem;
+  width: 4rem;
+  line-height: 4rem;
+  border-radius: 0.5rem;
+  background: var(--middleBlueGreen);
+  color: var(--blueSapphire);
+  font-size: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 0rem 0.5rem var(--viridianGreen);
+}
+
+/* .header .icons button:hover {
+  background: var(--viridianGreen);
+  color: var(--middleBlueGreen);
+  outline: none;
+  box-shadow: 0rem 0.5rem var(--blueSapphire);
+} */
+
+.header .icons button:active {
+  box-shadow: none;
+  transform: translateY(0.5rem);
+}
+
+.header .icons button:last-child {
+  border: none;
+  color: var(--antiquewhite);
+  cursor: pointer;
+  background-color: var(--rufous);
+  outline: none;
+  box-shadow: 0rem 0.5rem var(--richBlack);
+}
+/* .header .icons button:last-child:hover {
+  color: var(--antiquewhite);
+  background-color: var(--rust);
+  box-shadow: 0rem 0.5rem var(--richBlack);
+} */
+
+.header .icons button:last-child:active {
+  color: var(--antiquewhite);
+  background-color: var(--rust);
+  transform: translateY(0.5rem);
+  box-shadow: none;
+}
+
+/* search form in header style starts */
+
+.header .search-form {
+  position: absolute;
+  top: 110%;
+  right: -110%; /* change this to -110% to remove from screen */
+  width: 90%;
+  height: 4rem;
+  background-color: var(--antiquewhite);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  box-shadow: var(--box-shadow);
+  border: var(--rufous) 0.15rem solid;
+}
+
+.header .search-form.active {
+  right: 1.5rem;
+  transition: 0.4s linear;
+}
+
+.header .search-form input {
+  height: 100%;
+  width: 100%;
+  background: none;
+  text-transform: none;
+  font-size: 1.5rem;
+  color: var(--richBlack);
+  padding: 0 1.5rem;
+}
+
+.header .search-form label {
+  font-size: 2rem;
+  padding-right: 1.5rem;
+  color: var(--rufous);
+  cursor: pointer;
+}
+
+/* search form in header style ends */
+
+/* shopping cart box in header style starts */
+.header .shopping-cart {
+  position: absolute;
+  top: 110%;
+  right: -110%; /* change this to -110% to remove from screen */
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: var(--box-shadow);
+  width: 90%;
+  background: var(--antiquewhite);
+  border: var(--rufous) 0.15rem solid;
+}
+
+.header .shopping-cart.active {
+  right: 1.5rem;
+  transition: 0.4s linear;
+}
+
+.header .shopping-cart .box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  position: relative;
+  margin: 1rem 0;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: var(--box-shadow);
+  background-color: var(--antiquewhite);
+  border: var(--border-small);
+}
+
+.header .shopping-cart .box img {
+  height: 6rem;
+  border-radius: 0.5rem;
+}
+
+.header .shopping-cart .box .card {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+}
+
+.header .shopping-cart .box .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.header .shopping-cart .box .content h3 {
+  color: var(--richBlack);
+  font-size: 1.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.header .shopping-cart .box .content p {
+  color: var(--richBlack);
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+.header .shopping-cart .box .content .quantity {
+  margin-top: 0.1rem;
+}
+
+.header .shopping-cart .box .content #priceValue {
+  font-weight: 500;
+}
+
+.header .shopping-cart .box .content #itemQuantity {
+  font-weight: 500;
+}
+.counterIcons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.counterIcons input {
+  width: 4rem;
+  height: 4rem;
+  text-align: center;
+  font-size: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: inset 0 0 0.4rem grey;
+  border: var(--border);
+  background: var(--antiquewhite);
+}
+
+.counterIcons .fa-minus-circle {
+  font-size: 2.5rem;
+  cursor: pointer;
+  color: var(--rufous);
+}
+
+.counterIcons .fa-minus-circle:active {
+  color: var(--gamboge);
+  transform: scale(80%);
+}
+
+.counterIcons .fa-plus-circle {
+  font-size: 2.5rem;
+  cursor: pointer;
+  color: var(--rufous);
+}
+
+.counterIcons .fa-plus-circle:hover {
+  color: var(--rust);
+  transform: scale(120%);
+}
+
+.counterIcons .fa-plus-circle:active {
+  color: var(--gamboge);
+  transform: scale(80%);
+}
+
+.header .shopping-cart .total {
+  font-size: 2rem;
+  padding: 0.5rem 0;
+  text-align: center;
+  color: var(--rufous);
+  font-weight: 300;
+}
+
+.header .shopping-cart .total #totalValue {
+  font-weight: 700;
+}
+
+.header .shopping-cart .primaryBtn {
+  display: block;
+  text-align: center;
+  margin: 1rem auto;
+}
+/* shopping cart box in header style ends */
+
+/* user login form box style starts */
+
+.header .login-form {
+  position: absolute;
+  top: 110%;
+  right: -110%; /* change this to -110% to remove from screen*/
+  width: 90%;
+  box-shadow: var(--box-shadow);
+  border: var(--border);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: var(--antiquewhite);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.8rem;
+}
+
+.header .login-form.active {
+  right: 1.5rem;
+  transition: 0.4s linear;
+}
+
+.header .login-form h3 {
+  font-size: 2rem;
+  color: var(--rufous);
+  align-self: center;
+}
+
+.header .login-form .box {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  color: var(--black);
+  text-transform: none;
+  border: var(--border-small);
+  box-shadow: var(--box-shadow);
+}
+
+.header .login-form p {
+  font-size: 1.2rem;
+  padding: 0.4rem 0;
+  color: var(--richBlack);
+  text-align: left;
+}
+
+.header .login-form p a {
+  color: var(--rufous);
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.header .login-form p a:hover {
+  color: var(--blueSapphire);
+}
+
+.header .login-form p a:active {
+  color: var(--richBlack);
+}
+
+.header .login-form #loginBtn {
+  align-self: center;
+}
+
+/* user login form box style ends */
+
+/* header navigation styles ends */
+
+/* ------------------------------ */
+
+/* home page - hero section style starts */
+.home .hero {
+  background: url(/img/home-hero.jpg) no-repeat;
+  background-position: -140% 32%;
+  background-size: 80%;
+  background-color: var(--gamboge);
+  height: 100vh;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-start;
+  padding: 1.5rem;
+}
+
+.home .hero .heroText {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.home .hero h4 {
+  color: var(--richBlack);
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.home .hero h1 {
+  font-size: 2.4rem;
+  color: var(--richBlack);
+  font-weight: 700;
+}
+
+.home .hero p {
+  color: var(--richBlack);
+  font-size: 1.2rem;
+  font-weight: 300;
+  width: 90%;
+}
+
+/* home page - hero section style ends */
+
+/* home page - banner 1 style starts  */
+.home .banner1 {
+  background-color: var(--rubyRed);
+  height: 100vh;
+  background-image: url(/img/home-christmas-banner.jpg);
+  background-repeat: repeat-y;
+  background-attachment: fixed;
+  background-size: 120%;
+  background-position: bottom;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 0 1.5rem;
+  gap: 1rem;
+  text-align: center;
+}
+
+.home .banner1 h2 {
+  font-weight: 700;
+  color: var(--antiquewhite);
+  background-color: var(--rubyRed);
+  padding: 1rem;
+  font-size: 2.4rem;
+  border-radius: 0.5rem;
+  opacity: 90%;
+}
+
+.home .banner1 h2 span {
+  font-size: 3rem;
+  text-decoration: underline;
+  color: var(--antiquewhite);
+  opacity: 90%;
+}
+.home .banner1 h3 {
+  font-size: 1.8rem;
+  color: var(--antiquewhite);
+  font-weight: 500;
+  background-color: var(--rubyRed);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  opacity: 90%;
+}
+
+.home .banner1 h4 {
+  color: var(--antiquewhite);
+  font-weight: 300;
+  background-color: var(--rubyRed);
+  padding: 1rem;
+  font-size: 1.2rem;
+  border-radius: 0.5rem;
+  opacity: 90%;
+}
+
+/* banner 1 style ends  */
+
+/* banner 2 style starts */
+.home .banner2 {
+  background-color: var(--blueSapphire);
+  height: 100vh;
+  background-image: url(/img/home-banner2.jpg);
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+  background-repeat: repeat-y;
+  background-size: contain;
+  background-position: bottom;
+  padding: 0 1.5rem;
+  text-align: center;
+}
+.home .banner2 h2 {
+  background-color: var(--blueSapphire);
+  padding: 1rem;
+  font-size: 2.4rem;
+  border-radius: 0.5rem;
+  color: var(--antiquewhite);
+  opacity: 90%;
+}
+
+.home .banner2 h4 {
+  background-color: var(--blueSapphire);
+  padding: 1rem;
+  font-size: 1.2rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  color: var(--antiquewhite);
+  font-weight: 300;
+  opacity: 90%;
+}
+
+.home .banner2 h3 {
+  background-color: var(--blueSapphire);
+  padding: 1rem;
+  font-size: 1.8rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  color: var(--antiquewhite);
+  opacity: 90%;
+}
+
+/* home page - banner 2 style ends */
+
+/* home page - banner 3 style starts */
+.home .banner3 {
+  height: 20vh;
+  background-color: var(--middleBlueGreen);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home .banner3 h2 {
+  font-weight: 700;
+  font-size: 2.4rem;
+  color: var(--richBlack);
+}
+/* home page - banner 3 style ends */
+
+/* home page - banner 4 style starts */
+.home .banner4 {
+  background-color: var(--middleBlueGreen);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: max-content;
+  padding-bottom: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.home .banner4 .card-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  gap: 1.5rem;
+}
+
+.home .banner4 .card-wrapper .card {
+  width: 70vw;
+  background-color: var(--antiquewhite);
+  height: 70vh;
+  width: 85vw;
+  border-radius: 2rem;
+  box-shadow: var(--box-shadow);
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+}
+
+.home .banner4 .card-wrapper .card:hover {
+  border: var(--border);
+  box-shadow: 0rem 1rem var(--rufous);
+  cursor: pointer;
+  background-color: var(--antiquewhite);
+}
+
+.home .banner4 .card-wrapper .card:active {
+  transform: translateY(1rem);
+  box-shadow: none;
+  background-color: var(--antiquewhite);
+}
+
+.home .banner4 .card-wrapper .card img {
+  border-radius: 2rem;
+  margin-bottom: 0.5rem;
+  width: 90%;
+}
+
+.home .banner4 .card-wrapper .card h4 {
+  color: var(--rufous);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.home .banner4 .card-wrapper .card h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.home .banner4 .card-wrapper .card p {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.home .banner4 .card-wrapper .card a {
+  font-weight: 500;
+  text-decoration: underline;
+  color: var(--rubyRed);
+}
+/* home page - banner 4 style ends */
+
+/* home page - masterclass1 style starts */
+.home .masterclass1 {
+  height: 100vh;
+  background-color: var(--rubyRed);
+  background-image: url(/img/home-masterclass1-banner.jpg);
+  background-repeat: repeat;
+  background-size: contain;
+  background-attachment: fixed;
+  background-position: top;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 1.5rem;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.home .masterclass1 h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--antiquewhite);
+  background-color: var(--rufous);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  opacity: 90%;
+}
+
+.home .masterclass1 h3 {
+  font-size: 1.8rem;
+  color: var(--antiquewhite);
+  font-weight: 500;
+  background-color: var(--rufous);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  opacity: 90%;
+}
+
+.home .masterclass1 h4 {
+  font-size: 1.2rem;
+  color: var(--antiquewhite);
+  font-weight: 300;
+  background-color: var(--rufous);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  opacity: 90%;
+  width: 100%;
+}
+
+.home .masterclass1 .timer {
+  font-weight: 500;
+  font-size: 2.1rem;
+}
+
+/* home page - masterclass1 style ends */
+
+/* home page - banner5 style starts */
+.home .banner5 {
+  background-color: var(--rust);
+  height: 100vh;
+  background-image: url(/img/home-banner5.jpg);
+  background-repeat: repeat;
+
+  background-size: contain;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.2rem;
+  padding: 0 1.5rem;
+  text-align: center;
+}
+
+.home .banner5 h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--antiquewhite);
+  background-color: var(--rust);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  opacity: 90%;
+  width: 100%;
+}
+
+.home .banner5 h3 {
+  font-size: 1.8rem;
+  color: var(--antiquewhite);
+  font-weight: 500;
+  background-color: var(--rust);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  opacity: 90%;
+  width: 100%;
+}
+
+.home .banner5 h4 {
+  font-size: 1.2rem;
+  color: var(--antiquewhite);
+  font-weight: 300;
+  background-color: var(--rust);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  opacity: 90%;
+  width: 100%;
+}
+
+/* home page - banner5 style ends */
+
+/* home page - banner6 style starts */
+.home .banner6 {
+  height: 20vh;
+  background-color: var(--gamboge);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home .banner6 h2 {
+  font-weight: 700;
+  font-size: 2.4rem;
+  color: var(--richBlack);
+}
+/* home page - banner6 style ends */
+
+/* home page - banner7 style starts */
+.home .banner7 {
+  background-color: var(--gamboge);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: max-content;
+  padding-bottom: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.home .banner7 .card-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  gap: 1.5rem;
+}
+
+.home .banner7 .card-wrapper .card {
+  width: 70vw;
+  background-color: var(--antiquewhite);
+  height: 70vh;
+  width: 85vw;
+  border-radius: 2rem;
+  box-shadow: var(--box-shadow);
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+}
+
+.home .banner7 .card-wrapper .card:hover {
+  border: var(--border);
+  box-shadow: 0rem 1rem var(--rufous);
+  cursor: pointer;
+  background-color: var(--antiquewhite);
+}
+
+.home .banner7 .card-wrapper .card:active {
+  transform: translateY(1rem);
+  box-shadow: none;
+  background-color: var(--antiquewhite);
+}
+
+.home .banner7 .card-wrapper .card img {
+  border-radius: 2rem;
+  margin-bottom: 0.5rem;
+  width: 90%;
+}
+
+.home .banner7 .card-wrapper .card h4 {
+  color: var(--rufous);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.home .banner7 .card-wrapper .card h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.home .banner7 .card-wrapper .card p {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.home .banner7 .card-wrapper .card a {
+  font-weight: 500;
+  text-decoration: underline;
+  color: var(--rubyRed);
+}
+/* home page - banner7 style ends */
+
+/* home page - banner7 style starts */
+.home .masterclass2 {
+  height: 100vh;
+  background-color: var(--rubyRed);
+  background-image: url(/img/home-masterclass2-banner.jpg);
+  background-repeat: repeat-y;
+  background-size: 60%;
+  background-attachment: fixed;
+  background-position: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 1.5rem;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.home .masterclass2 h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--antiquewhite);
+  background-color: var(--rufous);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  opacity: 90%;
+}
+
+.home .masterclass2 h3 {
+  font-size: 1.8rem;
+  color: var(--antiquewhite);
+  font-weight: 500;
+  background-color: var(--rufous);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  opacity: 90%;
+}
+
+.home .masterclass2 h4 {
+  font-size: 1.2rem;
+  color: var(--antiquewhite);
+  font-weight: 300;
+  background-color: var(--rufous);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  opacity: 90%;
+  width: 100%;
+}
+
+.home .masterclass2 .timer {
+  font-weight: 500;
+  font-size: 2.1rem;
+}
+
+.home .masterclass2 p {
+  color: var(--antiquewhite);
+  font-weight: 500;
+  font-size: 1.3rem;
+}
+/* home page - banner7 style ends */
+
+/* home page - testimonials banner starts */
+
+.home .review {
+  background-color: var(--middleBlueGreen);
+  height: max-content;
+  padding: 2rem 1rem;
+}
+
+.home .review h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--blueSapphire);
+  text-align: center;
+  padding: 1rem;
+}
+
+.home .review .review-slider {
+  padding: 1.5rem;
+  height: 95%;
+  width: 95%;
+}
+
+.home .review .review-slider .box {
+  background: var(--antiquewhite);
+  border-radius: 0.5rem;
+  text-align: center;
+  padding: 1.5rem;
+  outline-offset: -0.5rem;
+  outline: var(--outline);
+  outline-style: dashed;
+  box-shadow: var(--box-shadow);
+  transition: 0.2s linear;
+  height: max-content;
+}
+
+.home .review .review-slider .box:hover {
+  outline: var(--outline-hover);
+  outline-color: var(--rufous);
+  outline-offset: 0rem;
+}
+
+.home .review .review-slider .box img {
+  height: 10rem;
+  width: 10rem;
+  border-radius: 50%;
+}
+
+.home .review .review-slider .box p {
+  padding: 0.8rem 0;
+  line-height: 1.5;
+  color: var(--richBlack);
+  font-size: 1rem;
+}
+
+.home .review .review-slider .box h3 {
+  padding-bottom: 0.8rem;
+  color: var(--light-color);
+  font-size: 1.2rem;
+}
+
+.home .review .review-slider .box .stars i {
+  color: var(--alloyOrange);
+  font-size: 1rem;
+}
+
+/*  home page - testimonials banner starts */

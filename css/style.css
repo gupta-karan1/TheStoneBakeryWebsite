@@ -2285,10 +2285,6 @@ select {
     top: -10rem;
   }
 
-  .home .hero .heroBtns .tertiaryBtn {
-    display: none;
-  }
-
   /* banner 1  styles starts */
   .home .banner1 {
     background-size: 120%;

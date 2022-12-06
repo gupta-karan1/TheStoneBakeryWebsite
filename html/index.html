@@ -20,7 +20,7 @@
     <link rel="icon" type="image/x-icon" href="/img/favicon.png" />
 
     <!-- css stylesheet link -->
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
 
     <!-- font awesome cdn link -->
     <link
@@ -104,7 +104,7 @@
         <section class="box">
           <article class="card">
             <img
-              src="/img/products/bakingTray.jpg"
+              src="/img/product-bakingTray.jpg"
               alt="baking tray"
               id="itemImage"
             />
@@ -130,8 +130,7 @@
         <!-- shopping item 1 ends-->
         <p class="total">total: <span id="totalValue">$6.99</span></p>
         <button class="primaryBtn" formaction="/html/cart.html" type="submit">
-          <i class="fas fa-shopping-cart"></i>
-          checkout
+          checkout <i class="fas fa-shopping-cart"></i>
         </button>
       </section>
 
@@ -163,12 +162,9 @@
 
         <p>forgot your password? <a href="#">click here</a></p>
         <p>don't have an account? <a href="#">create now</a></p>
-        <input
-          type="submit"
-          class="primaryBtn"
-          id="loginBtn"
-          value="login now"
-        />
+        <button class="primaryBtn" formaction="" type="submit">
+          login <i class="fas fa-user"></i>
+        </button>
       </form>
       <!-- user login form box ends -->
     </header>
@@ -181,13 +177,16 @@
       <section class="hero" id="hero">
         <article class="heroText">
           <h4>Established in 1869, we will now</h4>
-          <h1>Help you bake-from-home</h1>
+          <h1>
+            Help you <br />
+            bake-from-home
+          </h1>
           <p>Become a master baker right from the comfort of your kitchen.</p>
         </article>
         <article class="heroBtns">
-          <a href="" class="secondaryBtn">
+          <button type="button" href="" class="secondaryBtn">
             Bakery shop <i class="fas fa-bread-slice"></i>
-          </a>
+          </button>
         </article>
       </section>
 
@@ -201,9 +200,9 @@
           This Christmas, show off your baking skills with our online
           bake-from-home masterclasses!
         </h4>
-        <a href="" class="tertiaryBtn">
+        <button type="button" href="" class="tertiaryBtn">
           Grab Offer <i class="fas fa-cart-plus"></i>
-        </a>
+        </button>
       </section>
       <!-- banner 1 ends -->
 
@@ -215,9 +214,9 @@
           Get all kinds of baking ingredients, equipments, guidebooks, and
           masterclasses right here!
         </h4>
-        <a href="" class="secondaryBtn">
+        <button type="button" href="" class="secondaryBtn">
           Shop Now <i class="fas fa-cart-shopping"></i>
-        </a>
+        </button>
       </section>
       <!-- banner 2 ends -->
       <!-- banner 3 starts -->
@@ -238,9 +237,9 @@
             <h2>brown sugar</h2>
             <p>
               product description Lorem ipsum dolor sit, amet consectetur
-              adipisicing elit. Temporibus, quod.
+              adipisicing elit.
             </p>
-            <a href="" id="knowMoreBtn">Know More </a>
+            <a href="">Know More </a>
           </article>
           <article class="card" id="productCard">
             <img src="/img/product-bakingTray.jpg" alt="baking tray" />
@@ -249,9 +248,9 @@
 
             <p>
               product description Lorem ipsum dolor sit, amet consectetur
-              adipisicing elit. Temporibus, quod.
+              adipisicing elit.
             </p>
-            <a href="" id="knowMoreBtn">Know More </a>
+            <a href="">Know More </a>
           </article>
           <article class="card" id="productCard">
             <img src="/img/product-cookBook.jpg" alt="cook book" />
@@ -259,33 +258,28 @@
             <h2>Bake-from-home</h2>
             <p>
               product description Lorem ipsum dolor sit, amet consectetur
-              adipisicing elit. Temporibus, quod.
+              adipisicing elit.
             </p>
-            <a href="" id="knowMoreBtn">Know More </a>
+            <a href="">Know More </a>
           </article>
         </section>
-        <a href="" class="secondaryBtn">
+        <button type="button" href="" class="secondaryBtn">
           Shop Now <i class="fas fa-cart-arrow-down"></i>
-        </a>
+        </button>
       </section>
       <!-- banner 4 ends -->
 
       <!-- masterclass banner 1 starts -->
 
       <section class="masterclass1">
-        <h2>Join our weekly masterclass & become a master baker in 3 months</h2>
-        <h3>
-          Get step-by-step bakery lessons from our founders Henry & Mcguire,
-          both online and in-person!
-        </h3>
+        <h2>Join our masterclass & be a master baker</h2>
+        <h3>Get bakery lessons from our founders</h3>
         <h4>
-          Get 50% off before time runs out: <br />
-          <span class="timer" id="timer">01:15:35</span>
+          Get 50% off before: <span class="timer" id="joinTimer">01:15:35</span>
         </h4>
-        <p>Hurry! Only 5 seats left</p>
-        <a href="" class="tertiaryBtn">
+        <button href="" type="button" class="tertiaryBtn">
           Book Now <i class="fas fa-calendar-alt"></i>
-        </a>
+        </button>
       </section>
 
       <!-- masterclass banner 1 ends -->
@@ -293,12 +287,12 @@
       <!-- banner 5 starts -->
 
       <section class="banner5">
-        <h2>order our authentic & fresh bakery products</h2>
-        <h3>right from the comfort of your home</h3>
+        <h2>order our fresh bakery products</h2>
+        <h3>from the comfort of your home</h3>
         <h4>Taste our finest breads, pies, pastries, muffins and much more!</h4>
-        <a href="" class="tertiaryBtn">
+        <button type="button" href="" class="tertiaryBtn">
           Shop Now <f class="fas fa-cart-shopping"></f>
-        </a>
+        </button>
       </section>
 
       <!-- banner 5 ends -->
@@ -307,7 +301,7 @@
 
       <section class="banner6">
         <h2>
-          featured authentic bakery products
+          featured bakery products
           <f class="fas fa-cart-shopping"></f>
         </h2>
       </section>
@@ -326,7 +320,7 @@
               product description Lorem ipsum dolor sit, amet consectetur
               adipisicing elit. Temporibus, quod.
             </p>
-            <a href="" id="knowMoreBtn">Know More </a>
+            <a href="">Know More </a>
           </article>
           <article class="card" id="productCard">
             <img src="/img/product-oatMuffin.jpg" alt="oat Muffin" />
@@ -336,7 +330,7 @@
               product description Lorem ipsum dolor sit, amet consectetur
               adipisicing elit. Temporibus, quod.
             </p>
-            <a href="" id="knowMoreBtn">Know More </a>
+            <a href="">Know More </a>
           </article>
           <article class="card" id="productCard">
             <img src="/img/product-bluePie.jpg" alt="blueberry pie" />
@@ -346,12 +340,12 @@
               product description Lorem ipsum dolor sit, amet consectetur
               adipisicing elit. Temporibus, quod.
             </p>
-            <a href="" id="knowMoreBtn">Know More </a>
+            <a href="">Know More </a>
           </article>
         </section>
-        <a href="" class="secondaryBtn">
+        <button type="button" href="" class="secondaryBtn">
           Shop Now <i class="fas fa-cart-arrow-down"></i>
-        </a>
+        </button>
       </section>
 
       <!-- banner 7 ends -->
@@ -359,18 +353,15 @@
       <!-- masterclass banner 2 starts-->
 
       <section class="masterclass2">
-        <h2>Book a one-on-one baking session with our personal trainers!</h2>
-        <h3>
-          Our bakers will drive to your home, and give you quick baking lessons.
-        </h3>
+        <h2>Book a baking session with us</h2>
+        <h3>Our bakers will give you baking lessons.</h3>
         <h4>
-          Get 50% off before time runs out: <br />
+          Get 50% off before: <br />
           <span class="timer" id="timer">01:15:35</span>
         </h4>
-
-        <a href="" class="tertiaryBtn">
+        <button type="button" href="" class="tertiaryBtn">
           Book Now <i class="fas fa-calendar-alt"></i>
-        </a>
+        </button>
       </section>
 
       <!-- masterclass banner 2 ends-->
@@ -378,15 +369,14 @@
       <!-- testimonials banner starts -->
 
       <section class="review" id="review">
-        <h2>Hear it from our lovely customers</h2>
+        <h2>Hear from our customers</h2>
         <article class="swiper review-slider">
           <article class="swiper-wrapper">
             <article title="customer1" class="swiper-slide box">
               <img src="/img/home-profile1.jpg" alt="customer" />
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
-                natus architecto repellat ea aut numquam voluptatibus nam porro
-                necessitatibus voluptate.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem
+                ipsum dolor sit amet consectetur adipisicing elit.
               </p>
               <h3>mary megan</h3>
               <article class="stars">
@@ -400,9 +390,8 @@
             <article title="customer2" class="swiper-slide box">
               <img src="/img/home-profile2.jpg" alt="customer" />
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
-                natus architecto repellat ea aut numquam voluptatibus nam porro
-                necessitatibus voluptate.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem
+                ipsum dolor sit amet consectetur adipisicing elit.
               </p>
               <h3>emilia mason</h3>
               <article class="stars">
@@ -416,9 +405,8 @@
             <article title="customer3" class="swiper-slide box">
               <img src="/img/home-profile3.jpg" alt="customer" />
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
-                natus architecto repellat ea aut numquam voluptatibus nam porro
-                necessitatibus voluptate.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem
+                ipsum dolor sit amet consectetur adipisicing elit.
               </p>
               <h3>pepper johnson</h3>
               <article class="stars">
@@ -432,9 +420,8 @@
             <article title="customer4" class="swiper-slide box">
               <img src="/img/home-profile4.jpg" alt="customer" />
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
-                natus architecto repellat ea aut numquam voluptatibus nam porro
-                necessitatibus voluptate.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem
+                ipsum dolor sit amet consectetur adipisicing elit.
               </p>
               <h3>emma cooper</h3>
               <article class="stars">
