@@ -50,11 +50,20 @@
         <a href="/html/about.html" title="about us">About Us</a>
         <a href="/html/shop.html" title="bakery shop">Bakery Shop</a>
         <a href="/html/cart.html" title="shopping cart">Shopping Cart</a>
+        <button type="button" id="unitBtn" title="unit convertor">
+          unit convertor
+        </button>
+        <button type="button" id="groceryBtn" title="my grocery list">
+          my grocery list
+        </button>
       </nav>
       <!-- navigation menu ends -->
 
       <!-- nav menu icons start -->
       <section class="icons">
+        <button class="close-btn" title="close" type="button">
+          <i class="fas fa-times"></i>
+        </button>
         <button
           class="fas fa-user"
           id="login-btn"
@@ -87,10 +96,139 @@
         <input
           type="search"
           name="search"
-          id="search-box"
-          placeholder="search here..."
+          id="filterInput"
+          placeholder="search from menu..."
         />
-        <label for="search-box" class="fas fa-search"></label>
+
+        <ul id="names" class="collection with-header">
+          <li class="collection-item">
+            <a href="">flat bread</a>
+          </li>
+
+          <li class="collection-item">
+            <a href="">brown bread</a>
+          </li>
+
+          <li class="collection-item">
+            <a href="">multigrain</a>
+          </li>
+
+          <li class="collection-item">
+            <a href="">soda bread</a>
+          </li>
+
+          <li class="collection-item">
+            <a href="">sourdough</a>
+          </li>
+
+          <li class="collection-item">
+            <a href="">whole wheat</a>
+          </li>
+
+          <li class="collection-item">
+            <a href="">yeast</a>
+          </li>
+
+          <li class="collection-item">
+            <a href="">eggs</a>
+          </li>
+
+          <li class="collection-item">
+            <a href="">flour</a>
+          </li>
+
+          <li class="collection-item">
+            <a href="">sugar</a>
+          </li>
+
+          <li class="collection-item">
+            <a href="">bread pan</a>
+          </li>
+
+          <li class="collection-item">
+            <a href="">apple pie</a>
+          </li>
+
+          <li class="collection-item">
+            <a href="">walnut pie</a>
+          </li>
+
+          <li class="collection-item">
+            <a href="">date pie</a>
+          </li>
+
+          <li class="collection-item">
+            <a href="">bear claw</a>
+          </li>
+
+          <li class="collection-item">
+            <a href="">cheese cake</a>
+          </li>
+
+          <li class="collection-item">
+            <a href="">rolling pin</a>
+          </li>
+
+          <li class="collection-item">
+            <a href="">banana bread</a>
+          </li>
+
+          <li class="collection-item">
+            <a href="">fig cake</a>
+          </li>
+
+          <li class="collection-item">
+            <a href="">apple cake</a>
+          </li>
+
+          <li class="collection-item">
+            <a href="">swiss roll</a>
+          </li>
+
+          <li class="collection-item">
+            <a href="">carrot cake</a>
+          </li>
+
+          <li class="collection-item">
+            <a href="">pineapple pastry</a>
+          </li>
+
+          <li class="collection-item">
+            <a href="">butterscotch pastry</a>
+          </li>
+
+          <li class="collection-item">
+            <a href="">cream</a>
+          </li>
+
+          <li class="collection-item">
+            <a href="">butter</a>
+          </li>
+
+          <li class="collection-item">
+            <a href="">baking soda</a>
+          </li>
+
+          <li class="collection-item">
+            <a href="">raisins</a>
+          </li>
+
+          <li class="collection-item">
+            <a href="">mixing bowls</a>
+          </li>
+
+          <li class="collection-item">
+            <a href="">whipper</a>
+          </li>
+
+          <li class="collection-item">
+            <a href="">baking paper</a>
+          </li>
+
+          <li class="collection-item">
+            <a href="">berries</a>
+          </li>
+        </ul>
       </form>
       <!-- search input box ends -->
 
@@ -167,6 +305,71 @@
         />
       </form>
       <!-- user login form box ends -->
+      <!-- weight convertor modal box starts -->
+      <form action="" class="convertor-form">
+        <h3><i class="fas fa-spoon"></i> Unit Convertor</h3>
+        <p>Quantity:</p>
+        <article class="input-wrapper">
+          <label for="cups">cups: </label>
+          <input type="number" id="cups" value="1" />
+        </article>
+
+        <article class="input-wrapper">
+          <label for="tbsp">tablespoon (tbsp): </label>
+          <input type="number" id="tbsp" />
+        </article>
+
+        <article class="input-wrapper">
+          <label for="tsp">teaspoon (tsp): </label>
+          <input type="number" id="tsp" />
+        </article>
+
+        <article class="input-wrapper">
+          <label for="oz">ounces (oz): </label>
+          <input type="number" id="oz" />
+        </article>
+
+        <article class="input-wrapper">
+          <label for="gms">grams (gms): </label>
+          <input type="number" id="gms" />
+        </article>
+
+        <article class="input-wrapper">
+          <label for="ml">milliliters (ml): </label>
+          <input type="number" id="ml" />
+        </article>
+
+        <p>Temperature:</p>
+        <article class="input-wrapper">
+          <label for="degC">deg celsius (deg C): </label>
+          <input type="number" id="degC" value="1" />
+        </article>
+
+        <article class="input-wrapper">
+          <label for="degF">deg fahrenheit (deg F):</label>
+          <input type="number" id="degF" />
+        </article>
+
+        <button class="primaryBtn" id="close-convertor" type="submit">
+          Close <i class="fas fa-close"></i>
+        </button>
+      </form>
+      <!-- weight convertor modal box ends -->
+
+      <!-- my grocery list modal box starts -->
+      <section class="groceryList">
+        <button class="tertiaryBtn" id="close-grocery" type="submit">
+          Close <i class="fas fa-close"></i>
+        </button>
+        <h2>My grocery list</h2>
+        <article id="newTask">
+          <input type="text" placeholder="add item here..." />
+          <button type="button" class="secondaryBtn" id="push">Add</button>
+        </article>
+
+        <div id="tasks"></div>
+      </section>
+      <!-- my grocery list modal box ends -->
     </header>
     <!-- header sections ends -->
 
