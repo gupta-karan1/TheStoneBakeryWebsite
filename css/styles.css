@@ -2397,9 +2397,45 @@ select {
   padding: 1rem;
 }
 
-#yourEmail {
+#email-id {
   text-transform: none;
 }
+
+#yourName {
+  text-transform: none;
+}
+
+#yourMessage {
+  text-transform: none;
+}
+
+#email-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.2rem;
+  width: 100%;
+}
+
+/* #email-id {
+  width: 90%;
+} */
+
+#tickIcon {
+  justify-self: flex-end;
+  flex-direction: row;
+  height: 1.5rem;
+  font-size: 1.5rem;
+  color: var(--blueSapphire);
+}
+
+#error-msg {
+  color: var(--rubyRed);
+  font-weight: 500;
+  margin-left: 0.5rem;
+  display: none;
+}
+
 /* about page - banner5 style ends */
 
 /*  about page - subscribe news starts */
@@ -2440,16 +2476,39 @@ select {
   font-weight: 300;
 }
 
-.about .subscribeNews .inputField .emailInput {
-  width: 90vw;
+#email-id-subscribe {
+  width: 85vw;
   height: 4rem;
   background-color: var(--antiquewhite);
   border-radius: 0.5rem;
-  overflow: hidden;
+
   box-shadow: var(--box-shadow);
   border: var(--border);
   font-size: 1.2rem;
   text-transform: none;
+}
+
+#email-wrapper-subscribe {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.2rem;
+  width: 100%;
+}
+
+#tickIcon-subscribe {
+  justify-self: flex-end;
+  flex-direction: row;
+  height: 1.5rem;
+  font-size: 1.5rem;
+  color: var(--blueSapphire);
+}
+
+#error-msg-subscribe {
+  color: var(--richBlack);
+  font-weight: 500;
+  display: none;
 }
 
 .about .subscribeNews .inputField .tertiaryBtn {

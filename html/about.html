@@ -246,7 +246,7 @@
             />
             <article class="content">
               <h3 id="itemName">baking tray</h3>
-              <p class="price">price: <span id="priceValue">$6.99</span></p>
+              <p class="price">price: <span id="priceValue">6</span></p>
               <p class="quantity">quantity: <span id="itemQuantity">1</span></p>
             </article>
           </article>
@@ -574,22 +574,32 @@
               type="text"
               name="yourName"
               id="yourName"
-              pattern="^[a-z0-9_-]{3,15}$"
+              pattern="^[a-zA-Z]{3,15}$"
             />
           </article>
+
+          <!-- email address has JS input validation -->
           <article class="contact-wrapper">
             <label for="yourEmail">Email (required):</label>
-            <input
-              required
-              placeholder="eg. johnWatson@gmail.com"
-              type="text"
-              name="yourEmail"
-              id="yourEmail"
-              pattern="[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+"
-            />
+            <div id="email-wrapper">
+              <input
+                required
+                placeholder="eg. john@gmail.com"
+                type="email"
+                name="yourEmail"
+                id="email-id"
+                oninput="validityChecker(emailId, errorMsg, tickIcon)"
+              />
+              <div id="tickIcon">
+                <!-- <i class="fas fa-check-circle"></i> -->
+              </div>
+            </div>
+            <p id="error-msg">please enter a valid email address!</p>
+            <!-- pattern="[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+" -->
           </article>
           <article class="contact-wrapper">
             <label for="yourNumber">Phone (not required):</label>
+
             <input
               pattern="^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$"
               placeholder="your phone number"
@@ -630,17 +640,29 @@
         <h3>subscribe to our newsletter</h3>
         <article class="inputField">
           <label for="email">Type in your email address:</label>
+          <div id="email-wrapper-subscribe">
+            <input
+              type="email"
+              class="emailInput"
+              name="email"
+              id="email-id-subscribe"
+              required
+              title="enter your email"
+              placeholder="you@contact.com"
+              oninput="validityChecker(emailIdSub, errorMsgSub, tickIconSub)"
+            />
+            <!-- pattern="[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+" -->
+            <div id="tickIcon-subscribe">
+              <!-- <i class="fas fa-check-circle"></i> -->
+            </div>
+          </div>
+          <p id="error-msg-subscribe">please enter a valid email address!</p>
           <input
-            type="email"
-            class="emailInput"
-            name="email"
-            id="emailInput"
-            required
-            title="enter your email"
-            placeholder="yourEmail@contact.com"
-            pattern="[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+"
+            type="submit"
+            id="subscribeNewsletter"
+            value="submit"
+            class="tertiaryBtn"
           />
-          <input type="submit" value="submit" class="tertiaryBtn" />
         </article>
       </section>
       <!-- banner9 ends -->

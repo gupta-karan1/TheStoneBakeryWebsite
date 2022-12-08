@@ -152,17 +152,39 @@ function filterNames() {
 
 // script for increasing and decreasing count of item numbers with plus and minus buttons
 // feature found in shopping cart modal box that appears by clicking on cart icon on top nav bar
-const plus = document.querySelector(".fa-plus-circle");
-const minus = document.querySelector(".fa-minus-circle");
+let plus = document.querySelector(".fa-plus-circle");
+let minus = document.querySelector(".fa-minus-circle");
 let itemQuantity = document.getElementById("itemQuantity");
 let itemNum = document.getElementById("itemNum");
-let a = 0;
+let itemPrice = document.getElementById("priceValue");
+let priceOfItem = 6;
+console.log(priceOfItem);
+let a = 1;
+
 plus.addEventListener("click", function () {
   a++;
+
+  // ternary operator used
   a = a < 10 ? "0" + a : a;
 
   itemQuantity.innerText = a;
   itemNum.value = a;
+  itemPrice.innerText = priceOfItem * a;
+});
+
+minus.addEventListener("click", () => {
+  if (a == 0) {
+    itemQuantity.innerText = 0;
+    itemNum.value = 0;
+    itemPrice.innerText = 0;
+    a = 0;
+  } else {
+    a--;
+    a = a < 10 ? "0" + a : a;
+    itemQuantity.innerText = a;
+    itemNum.value = a;
+    itemPrice.innerText = priceOfItem * a;
+  }
 });
 
 // end of script for increasing and decreasing count
@@ -694,3 +716,50 @@ for (let i = 0; i < toggles.length; i++) {
 // about page - FAQs toggle feature under the 'frequently asked questions' section -- Ends Here
 
 // --------------------------------
+
+// about page - contact form - email input validation starts
+
+// 1. get elements from contact form and store in variables
+let emailId = document.getElementById("email-id");
+let errorMsg = document.getElementById("error-msg");
+let tickIcon = document.getElementById("tickIcon");
+
+//2. store email regex pattern in a variable to match with input
+let mailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+// 3. create function that runs when user inputs in the email field
+function validityChecker(emailId, errorMsg, tickIcon) {
+  tickIcon.style.display = "inline-block";
+
+  // if statement to check if value of email matches the regex pattern using match method
+  if (emailId.value.match(mailRegex)) {
+    // tick icons appears on right
+    tickIcon.innerHTML = ' <i class="fas fa-check-circle"></i> ';
+    tickIcon.style.color = "#005f73";
+    errorMsg.style.display = "none";
+    emailId.style.border = "0.2rem solid #005f73";
+  }
+  // if user puts nothing in input field, remove the tick
+  else if (emailId.value == "") {
+    tickIcon.style.display = "none";
+    emailId.style.border = "0.05rem solid #9b2226";
+    errorMsg.style.display = "none";
+  }
+  // if user writes in invalid email format
+  else {
+    // exclamation mark appears
+    tickIcon.innerHTML = ' <i class="fas fa-exclamation-circle"></i> ';
+    tickIcon.style.color = "#9b2226";
+    errorMsg.style.display = "inline-block";
+    emailId.style.border = "0.2rem solid #9b2226";
+  }
+}
+
+// End of email input validation within the contact form
+
+// Reuse the above function to check email input validity in the newsletter subscribe section at the bottom of about page
+
+// 1. get elements from contact form and store in variables
+let emailIdSub = document.getElementById("email-id-subscribe");
+let errorMsgSub = document.getElementById("error-msg-subscribe");
+let tickIconSub = document.getElementById("tickIcon-subscribe");
