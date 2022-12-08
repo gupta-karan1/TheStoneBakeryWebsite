@@ -571,11 +571,12 @@ function displayMenuItems(menuItems) {
           placeholder="0"
           title="Number of Items"
         />
-        <i class="fas fa-plus-circle"></i>
+        <i class="fas fa-plus-circle" ></i>
       </article>
     </div>
   </article>`;
   });
+  // add this to plus button: id="${item.id}onclick = "${addItemToCart(item)}"
   displayMenu = displayMenu.join("");
   // console.log(displayMenu);
 

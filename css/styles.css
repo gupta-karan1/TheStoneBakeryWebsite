@@ -2520,55 +2520,71 @@ select {
 /* -------------------cart page style starts------------------- */
 
 /* cart page hero section styles start  */
-/* .cart .hero {
+.cart .hero {
   background: url(/img/cart-hero.jpg) no-repeat;
-  background-position: top;
-  background-size: cover;
+  background-color: var(--box-shadow);
+  background-position: -10% 20%;
+  background-size: 85%;
+  background-color: var(--gamboge);
   height: 100vh;
   background-attachment: fixed;
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 5rem;
+  justify-content: start;
+  align-items: flex-end; */
+  padding: 1.5rem;
 }
 
 .cart .hero .heroText {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 1rem;
+  align-items: flex-end;
+  gap: 0.5rem;
+  margin-bottom: 10rem;
+  margin-top: 3rem;
 }
 
-.cart .hero h4 {
+.cart .hero .heroText h4 {
   color: var(--richBlack);
   font-size: 1.5rem;
   font-weight: 500;
+  background-color: var(--gamboge);
+  text-align: right;
 }
 
-.cart .hero h1 {
-  font-size: 4rem;
+.cart .hero .heroText h1 {
+  font-size: 2.4rem;
   color: var(--richBlack);
   font-weight: 700;
+  background-color: var(--gamboge);
+  width: 60%;
+  text-align: right;
 }
 
-.cart .hero p {
+.cart .hero .heroText p {
   color: var(--richBlack);
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 300;
-  width: 60%;
-  text-align: center;
+  width: 40%;
+  text-align: right;
+  background-color: var(--gamboge);
 }
 
 .cart .hero .heroBtns {
-  margin-right: 1rem;
   text-align: center;
   margin: 0 auto;
-} */
+}
 
 /* cart page hero section styles end  */
+
+/* cart page banner1 cart-products styles starts  */
+.cart .banner1 {
+  height: 100vh;
+  /* change height to max-content to accept products added to cart and expand with JS array */
+  background-color: var(--mediumChampagne);
+}
+/* cart page banner1 cart-products styles ends  */
 
 /* -------------------cart page style ends------------------- */
 
