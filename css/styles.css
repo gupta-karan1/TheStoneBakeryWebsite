@@ -1985,6 +1985,534 @@ select {
 
 /* -------------------shop page style ends------------------- */
 
+/* -------------------about page style starts------------------- */
+/* about page - hero section styles start  */
+.about .hero {
+  background: url(/img/about-hero.jpg) no-repeat;
+  background-color: var(--box-shadow);
+  background-position: -130% 22%;
+  background-size: 90%;
+  background-color: var(--gamboge);
+  height: 100vh;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-start;
+  padding: 2rem;
+}
+
+.about .hero .heroText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-bottom: 10rem;
+  margin-top: 3rem;
+}
+
+.about .hero h4 {
+  color: var(--richBlack);
+  font-size: 1.2rem;
+  font-weight: 500;
+  background-color: var(--gamboge);
+}
+
+.about .hero h1 {
+  font-size: 2.4rem;
+  color: var(--richBlack);
+  font-weight: 700;
+  background-color: var(--gamboge);
+  width: 60%;
+}
+
+.about .hero p {
+  color: var(--richBlack);
+  font-size: 1.2rem;
+  font-weight: 300;
+  width: 60%;
+  text-align: left;
+  background-color: var(--gamboge);
+}
+
+.about .hero .heroBtns {
+  text-align: center;
+  margin: 0 auto;
+}
+/* about page - hero section styles end  */
+/* about page -  banner1 INTRO style starts */
+.about .banner1 {
+  height: 100vh;
+  background-color: var(--alloyOrange);
+  background-image: url(/img/about-banner1.jpg);
+  background-repeat: repeat;
+  background-size: contain;
+  background-attachment: fixed;
+  background-position: -30vw 32%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 1rem;
+  align-items: center;
+  padding: 2rem;
+}
+
+.about .banner1 h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--richBlack);
+  background-color: var(--alloyOrange);
+
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.about .banner1 h4 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-transform: none;
+  color: var(--richBlack);
+  background-color: var(--alloyOrange);
+
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+.about .banner1 p {
+  font-size: 1.2rem;
+  font-weight: 300;
+  text-transform: none;
+  color: var(--richBlack);
+  background-color: var(--alloyOrange);
+
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+/* about page - banner1 style ends */
+
+/* about page - banner2 HISTORY style starts */
+.about .banner2 {
+  height: 100vh;
+  background-color: var(--rust);
+  background-image: url(/img/about-banner2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.about .banner2 .historyCard {
+  height: max-content;
+  width: 80vw;
+  background-color: var(--antiquewhite);
+  opacity: 90%;
+  margin: 2rem auto;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.about .banner2 .historyCard h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--rufous);
+  margin: 0rem auto;
+}
+
+.about .banner2 .historyCard h3 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: var(--richBlack);
+}
+.about .banner2 .historyCard p {
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: var(--richBlack);
+}
+
+/* about page - banner2 style ends */
+
+/* about page - banner3 WE SUPPORT style starts */
+.about .banner3 {
+  height: 100vh;
+  background-color: var(--rubyRed);
+  padding: 1rem 1rem;
+}
+.about .banner3 h2 {
+  margin: 1rem auto;
+  font-weight: 700;
+  color: var(--antiquewhite);
+  font-size: 2.4rem;
+  text-align: center;
+}
+
+.about .banner3 .container {
+  width: 90%;
+  position: absolute;
+  background-color: var(--mediumChampagne);
+  border-radius: 0.5rem;
+  box-shadow: var(--box-shadow);
+}
+
+.about .tabs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0.8rem 0.5rem;
+}
+
+.about .tabs h3 {
+  background-color: var(--antiquewhite);
+  text-align: center;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: var(--box-shadow);
+  border: var(--border-small);
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--richBlack);
+}
+
+.about .banner3 h3:active {
+  border-color: var(--viridianGreen);
+  background-color: var(--rubyRed);
+  color: var(--antiquewhite);
+}
+
+.about .banner3 .singleTab {
+  padding: 1.2rem;
+}
+
+.about .banner3 .singleTab h4 {
+  font-size: 1.5rem;
+
+  font-weight: 700;
+}
+.about .banner3 .singleTab img {
+  width: 75%;
+  border-radius: 1rem;
+  margin: 0.5rem auto;
+}
+
+.about .banner3 .singleTab p {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+.about .banner3 .tab-content article {
+  display: none;
+}
+
+.about .banner3 .tab-content .active {
+  display: block;
+}
+
+.about .banner3 .tabs .active {
+  background-color: var(--rufous);
+  color: var(--antiquewhite);
+  transform: translateY(0.5rem);
+}
+
+/* about page - banner3 style ends */
+
+/* about page - banner4 TEAM style starts */
+.about .banner4 {
+  height: max-content;
+  background-color: var(--blueSapphire);
+  padding: 2rem;
+}
+
+.about .banner4 h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  text-align: center;
+  padding: 1rem;
+  color: var(--antiquewhite);
+}
+
+.about .banner4 .team-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.about .banner4 .teamCard {
+  background-color: var(--middleBlueGreen);
+  height: 50vh;
+  width: 90vw;
+  border-radius: 2rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  border: solid 0.5rem var(--middleBlueGreen);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  box-shadow: var(--box-shadow);
+}
+
+.about .banner4 .teamCard img {
+  width: 80%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 0.1rem solid var(--antiquewhite);
+}
+.about .banner4 .teamCard h3 {
+  color: var(--richBlack);
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+/* about page - banner4 style ends */
+
+/* about page - banner5 FAQs style starts */
+.about .banner5 {
+  height: max-content;
+  /* change height value if JS doesn't work properly */
+  background-color: var(--viridianGreen);
+  padding: 2rem;
+}
+
+.about .banner5 h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  text-align: center;
+
+  color: var(--antiquewhite);
+}
+
+.about .banner5 .container {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about .banner5 .wrapper {
+  box-shadow: var(--box-shadow);
+  background-color: var(--antiquewhite);
+  margin-top: 1.5rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.about .banner5 .wrapper .toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  font-size: 1.5rem;
+  background: none;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  outline: 0;
+  border: none;
+}
+
+.about .banner5 .wrapper .contents {
+  position: relative;
+  font-size: 1.2rem;
+  height: 0;
+  overflow: hidden;
+  transition: all 1s;
+}
+
+/* about page - banner5 style ends */
+
+/* about page - banner6 style starts */
+.about .banner6 {
+  height: max-content;
+  background-color: var(--middleBlueGreen);
+  padding: 2rem;
+}
+
+.about .banner6 h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  text-align: center;
+  padding: 1rem;
+  color: var(--blueSapphire);
+}
+
+.about .banner6 form {
+  background-color: var(--antiquewhite);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  box-shadow: var(--box-shadow);
+  border-radius: 1rem;
+  height: max-content;
+  padding: 1.2rem;
+  gap: 1.5rem;
+}
+
+.about .banner6 .contact-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  gap: 0.2rem;
+}
+
+.about .banner6 .contact-wrapper input {
+  height: 4rem;
+  border: var(--border-small);
+  border-radius: 1rem;
+  width: 100%;
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 0rem 1rem;
+  background-color: #fff;
+}
+
+.about .banner6 .contact-wrapper label {
+  margin-left: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.about .banner6 .contact-wrapper textarea {
+  height: 8rem;
+  border: var(--border-small);
+  box-shadow: var(--box-shadow);
+  border-radius: 1rem;
+  width: 100%;
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 1rem;
+}
+
+#yourEmail {
+  text-transform: none;
+}
+/* about page - banner5 style ends */
+
+/*  about page - subscribe news starts */
+.about .subscribeNews {
+  background-color: var(--alloyOrange);
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 1.5rem;
+}
+
+.about .subscribeNews h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--richBlack);
+  text-align: center;
+}
+.about .subscribeNews h3 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: var(--richBlack);
+  text-align: center;
+  margin: 1rem auto;
+}
+
+.about .subscribeNews .inputField {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+.about .subscribeNews .inputField label {
+  color: var(--richBlack);
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+.about .subscribeNews .inputField .emailInput {
+  width: 90vw;
+  height: 4rem;
+  background-color: var(--antiquewhite);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+  border: var(--border);
+  font-size: 1.2rem;
+  text-transform: none;
+}
+
+.about .subscribeNews .inputField .tertiaryBtn {
+  margin-top: -0.5rem;
+}
+/*  about page - subscribe news ends */
+/* -------------------about page style ends------------------- */
+
+/* -------------------cart page style starts------------------- */
+
+/* cart page hero section styles start  */
+/* .cart .hero {
+  background: url(/img/cart-hero.jpg) no-repeat;
+  background-position: top;
+  background-size: cover;
+  height: 100vh;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem;
+}
+
+.cart .hero .heroText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.cart .hero h4 {
+  color: var(--richBlack);
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.cart .hero h1 {
+  font-size: 4rem;
+  color: var(--richBlack);
+  font-weight: 700;
+}
+
+.cart .hero p {
+  color: var(--richBlack);
+  font-size: 1.3rem;
+  font-weight: 300;
+  width: 60%;
+  text-align: center;
+}
+
+.cart .hero .heroBtns {
+  margin-right: 1rem;
+  text-align: center;
+  margin: 0 auto;
+} */
+
+/* cart page hero section styles end  */
+
+/* -------------------cart page style ends------------------- */
+
 /* footer section styles starts */
 .footer {
   background-color: var(--gamboge);
