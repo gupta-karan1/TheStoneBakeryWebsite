@@ -455,6 +455,7 @@ const bakeryProducts = [
     category: "muffins",
     price: 5.99,
     img: "/img/product-oatMuffin.jpg",
+    quantity: 1,
   },
   {
     id: 2,
@@ -462,6 +463,7 @@ const bakeryProducts = [
     category: "breads",
     price: 3.99,
     img: "/img/product-breadBaguette.jpg",
+    quantity: 1,
   },
   {
     id: 3,
@@ -469,6 +471,7 @@ const bakeryProducts = [
     category: "pies",
     price: 6.99,
     img: "/img/product-bluePie.jpg",
+    quantity: 1,
   },
   {
     id: 4,
@@ -476,6 +479,7 @@ const bakeryProducts = [
     category: "pies",
     price: 4.99,
     img: "/img/product-apple-pie.jpg",
+    quantity: 1,
   },
   {
     id: 5,
@@ -483,6 +487,7 @@ const bakeryProducts = [
     category: "pastries",
     price: 2.99,
     img: "/img/product-butterscotch-pastry.jpg",
+    quantity: 1,
   },
   {
     id: 6,
@@ -490,6 +495,7 @@ const bakeryProducts = [
     category: "pastries",
     price: 8.99,
     img: "/img/product-chococoffee-pastry.jpg",
+    quantity: 1,
   },
   {
     id: 7,
@@ -497,6 +503,7 @@ const bakeryProducts = [
     category: "muffins",
     price: 7.99,
     img: "/img/product-darkchocolate-muffin.jpg",
+    quantity: 1,
   },
   {
     id: 8,
@@ -504,6 +511,7 @@ const bakeryProducts = [
     category: "breads",
     price: 3.99,
     img: "/img/product-multigrain-bread.jpg",
+    quantity: 1,
   },
   {
     id: 9,
@@ -511,6 +519,7 @@ const bakeryProducts = [
     category: "breads",
     price: 6.99,
     img: "/img/product-oatroll-bread.jpg",
+    quantity: 1,
   },
   {
     id: 10,
@@ -518,6 +527,7 @@ const bakeryProducts = [
     category: "breads",
     price: 4.99,
     img: "/img/product-soda-bread.jpg",
+    quantity: 1,
   },
   {
     id: 11,
@@ -525,6 +535,7 @@ const bakeryProducts = [
     category: "breads",
     price: 5.99,
     img: "/img/product-sourdough-bread.jpg",
+    quantity: 1,
   },
   {
     id: 12,
@@ -532,6 +543,7 @@ const bakeryProducts = [
     category: "pies",
     price: 22.99,
     img: "/img/product-walnut-pie.jpg",
+    quantity: 1,
   },
 ];
 
@@ -551,6 +563,10 @@ function displayMenuItems(menuItems) {
   let displayMenu = menuItems.map(function (item) {
     // console.log(item);
     // used map method to write html from js file into shop page
+    // let itemNumber = item.quantity;
+    function itemQuantityIncrease() {
+      item.quantity += 1;
+    }
     return `<article class="menu-item">
     <img
       src=${item.img}
@@ -568,10 +584,10 @@ function displayMenuItems(menuItems) {
           type="number"
           name="quantity"
           id="itemNum"
-          placeholder="0"
+          value = "${item.quantity}"
           title="Number of Items"
         />
-        <i class="fas fa-plus-circle" ></i>
+        <i class="fas fa-plus-circle onclick = "${itemQuantityIncrease()}" ></i>
       </article>
     </div>
   </article>`;
