@@ -49,6 +49,7 @@ html {
 
 body {
   background: var(--mediumChampagne);
+  overflow-x: hidden;
 }
 
 /* button style starts*/
@@ -160,9 +161,14 @@ body {
 }
 
 .header .navbar {
+  display: none;
+}
+
+.header .navbar.active {
   position: absolute;
   top: 110%;
-  right: -110%;
+  right: 1.2rem;
+
   width: 90%;
   box-shadow: var(--box-shadow);
   border-radius: 0.5rem;
@@ -174,11 +180,6 @@ body {
   gap: 1.2rem;
   align-items: flex-start;
   padding: 2rem;
-}
-
-.header .navbar.active {
-  right: 1.5rem;
-  transition: 0.4s linear;
 }
 
 .header .navbar a {
@@ -283,9 +284,13 @@ body {
 /* search form in header style starts */
 
 .header .search-form {
+  display: none;
+}
+
+.header .search-form.active {
   position: absolute;
   top: 110%;
-  right: -110%; /* change this to -110% to remove from screen */
+  right: 1.2rem;
   width: 90%;
   height: max-content;
   background-color: var(--antiquewhite);
@@ -298,11 +303,6 @@ body {
   gap: 1rem;
   box-shadow: var(--box-shadow);
   border: var(--rufous) 0.15rem solid;
-}
-
-.header .search-form.active {
-  right: 1.2rem;
-  transition: 0.4s linear;
 }
 
 .header .search-form input {
@@ -339,9 +339,17 @@ body {
 
 /* shopping cart box in header style starts */
 .header .shopping-cart {
+  display: none;
+}
+
+.header .shopping-cart.active {
   position: absolute;
   top: 110%;
-  right: -110%; /* change this to -110% to remove from screen */
+  right: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   padding: 1rem;
   border-radius: 0.5rem;
   box-shadow: var(--box-shadow);
@@ -349,11 +357,6 @@ body {
   background: var(--antiquewhite);
   border: var(--rufous) 0.15rem solid;
   height: max-content;
-}
-
-.header .shopping-cart.active {
-  right: 1.5rem;
-  transition: 0.4s linear;
 }
 
 .header .shopping-cart .box {
@@ -481,9 +484,13 @@ body {
 /* user login form box style starts */
 
 .header .login-form {
+  display: none;
+}
+
+.header .login-form.active {
   position: absolute;
   top: 110%;
-  right: -110%; /* change this to -110% to remove from screen*/
+  right: 1.2rem;
   width: 90%;
   box-shadow: var(--box-shadow);
   border: var(--border);
@@ -496,11 +503,6 @@ body {
   justify-content: space-between;
   align-items: flex-start;
   gap: 0.8rem;
-}
-
-.header .login-form.active {
-  right: 1.5rem;
-  transition: 0.4s linear;
 }
 
 .header .login-form h3 {
@@ -551,9 +553,13 @@ body {
 /* user unit convertor box style starts */
 
 .header .convertor-form {
+  display: none;
+}
+
+.header .convertor-form.active {
   position: absolute;
   top: 110%;
-  right: -110%; /* change this to -110% to remove from screen*/
+  right: 1.2rem;
   width: 90vw;
   box-shadow: var(--box-shadow);
   border: var(--border);
@@ -564,11 +570,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-
-.header .convertor-form.active {
-  right: 1.2rem;
-  transition: 0.4s linear;
 }
 
 .header .convertor-form h3 {
@@ -611,9 +612,13 @@ body {
 
 /* grocery list modal box style starts */
 .header .groceryList {
+  display: none;
+}
+
+.header .groceryList.active {
   position: absolute;
   top: 110%;
-  right: -110%; /* change this to -110% to remove from screen*/
+  right: 1.2rem;
   width: 90vw;
   box-shadow: var(--box-shadow);
   border: var(--border);
@@ -629,15 +634,9 @@ body {
   overflow-y: scroll;
 }
 
-.header .groceryList.active {
-  right: 1.2rem;
-  transition: 0.4s linear;
-}
-
 .header .groceryList h2 {
-  font-size: 2.4rem;
+  font-size: 2rem;
   color: var(--blueSapphire);
-  text-align: center;
 }
 
 .header .groceryList input {
@@ -715,12 +714,13 @@ body {
 
 /* home page - hero section style starts */
 .home .hero {
-  background: url(/img/home-hero.jpg) no-repeat;
-  background-position: -140% 32%;
-  background-size: 80%;
+  background: url(img/home-hero.jpg) no-repeat;
+  background-position: right bottom;
+  background-position-y: 45%;
+  background-size: 150%;
   background-color: var(--gamboge);
   height: 100vh;
-  background-attachment: fixed;
+  background-attachment: scroll;
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -741,19 +741,27 @@ body {
   color: var(--richBlack);
   font-size: 1.2rem;
   font-weight: 500;
+  background-color: var(--gamboge);
 }
 
 .home .hero h1 {
   font-size: 2.4rem;
   color: var(--richBlack);
   font-weight: 700;
+  background-color: var(--gamboge);
 }
 
 .home .hero p {
   color: var(--richBlack);
   font-size: 1.2rem;
   font-weight: 300;
-  width: 90%;
+  width: 60%;
+  background-color: var(--gamboge);
+}
+
+.home .hero .heroBtns {
+  margin-top: 25rem;
+  align-self: center;
 }
 
 /* home page - hero section style ends */
@@ -762,18 +770,17 @@ body {
 .home .banner1 {
   background-color: var(--rubyRed);
   height: 100vh;
-  background-image: url(/img/home-christmas-banner.jpg);
-  background-repeat: repeat-y;
-  background-attachment: fixed;
+  background-image: url(img/home-christmas-banner.jpg);
+  background-repeat: no-repeat;
+  background-attachment: scroll;
   background-size: 120%;
-  background-position: bottom;
+  background-position: left top;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-end;
-  padding: 0 1.5rem;
+  justify-content: flex-end;
   gap: 1rem;
   text-align: center;
+  padding: 1.5rem;
 }
 
 .home .banner1 h2 {
@@ -783,15 +790,16 @@ body {
   padding: 1rem;
   font-size: 2.4rem;
   border-radius: 0.5rem;
-  opacity: 90%;
+
+  box-shadow: var(--box-shadow);
 }
 
 .home .banner1 h2 span {
   font-size: 3rem;
   text-decoration: underline;
   color: var(--antiquewhite);
-  opacity: 90%;
 }
+
 .home .banner1 h3 {
   font-size: 1.8rem;
   color: var(--antiquewhite);
@@ -799,7 +807,8 @@ body {
   background-color: var(--rubyRed);
   padding: 1rem;
   border-radius: 0.5rem;
-  opacity: 90%;
+
+  box-shadow: var(--box-shadow);
 }
 
 .home .banner1 h4 {
@@ -809,7 +818,8 @@ body {
   padding: 1rem;
   font-size: 1.2rem;
   border-radius: 0.5rem;
-  opacity: 90%;
+
+  box-shadow: var(--box-shadow);
 }
 
 /* banner 1 style ends  */
@@ -818,17 +828,16 @@ body {
 .home .banner2 {
   background-color: var(--blueSapphire);
   height: 100vh;
-  background-image: url(/img/home-banner2.jpg);
-  background-attachment: fixed;
+  background-image: url(img/home-banner2.jpg);
+  background-attachment: scroll;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+  justify-content: flex-end;
   gap: 1rem;
-  background-repeat: repeat-y;
-  background-size: contain;
-  background-position: bottom;
-  padding: 0 1.5rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  padding: 1.5rem;
   text-align: center;
 }
 .home .banner2 h2 {
@@ -867,16 +876,14 @@ body {
 .home .banner3 {
   height: 20vh;
   background-color: var(--middleBlueGreen);
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 1.5rem;
 }
 
 .home .banner3 h2 {
   font-weight: 700;
   font-size: 2.4rem;
   color: var(--richBlack);
+  text-align: center;
 }
 /* home page - banner 3 style ends */
 
@@ -885,12 +892,8 @@ body {
   background-color: var(--middleBlueGreen);
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   height: max-content;
-  padding-bottom: 1rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding-bottom: 1.5rem;
 }
 
 .home .banner4 .card-wrapper {
@@ -898,22 +901,22 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
 .home .banner4 .card-wrapper .card {
   background-color: var(--antiquewhite);
-  height: 70vh;
-  width: 85vw;
+  max-height: min-content;
+  max-width: min-content;
   border-radius: 2rem;
   box-shadow: var(--box-shadow);
-  padding: 1.2rem;
+  padding: 1.5rem;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
   text-align: center;
+  gap: 0.5rem;
 }
 
 .home .banner4 .card-wrapper .card:hover {
@@ -932,7 +935,6 @@ body {
 .home .banner4 .card-wrapper .card img {
   border-radius: 2rem;
   margin-bottom: 0.5rem;
-  width: 90%;
 }
 
 .home .banner4 .card-wrapper .card h4 {
@@ -952,60 +954,53 @@ body {
   font-weight: 300;
 }
 
-.home .banner4 .card-wrapper .card a {
-  font-weight: 500;
-  text-decoration: underline;
-  color: var(--rubyRed);
-}
 /* home page - banner 4 style ends */
 
 /* home page - masterclass1 style starts */
 .home .masterclass1 {
   height: 100vh;
   background-color: var(--rubyRed);
-  background-image: url(/img/home-masterclass1-banner.jpg);
-  background-repeat: repeat;
+  background-image: url(img/home-masterclass1-banner.jpg);
+  background-repeat: no-repeat;
   background-size: contain;
-  background-attachment: fixed;
-  background-position: top;
+  background-attachment: scroll;
+  background-position: left top;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 0 1.5rem;
-  gap: 1.5rem;
+  justify-content: flex-end;
+  padding: 1.5rem;
   text-align: center;
+  gap: 1rem;
 }
 
 .home .masterclass1 h2 {
   font-size: 2.4rem;
   font-weight: 700;
   color: var(--antiquewhite);
-  background-color: var(--rufous);
+  background-color: var(--rubyRed);
   border-radius: 0.5rem;
   padding: 1rem;
-  opacity: 90%;
+  box-shadow: var(--box-shadow);
 }
 
 .home .masterclass1 h3 {
   font-size: 1.8rem;
   color: var(--antiquewhite);
   font-weight: 500;
-  background-color: var(--rufous);
+  background-color: var(--rubyRed);
   border-radius: 0.5rem;
   padding: 1rem;
-  opacity: 90%;
+  box-shadow: var(--box-shadow);
 }
 
 .home .masterclass1 h4 {
   font-size: 1.2rem;
   color: var(--antiquewhite);
   font-weight: 300;
-  background-color: var(--rufous);
+  background-color: var(--rubyRed);
   border-radius: 0.5rem;
   padding: 1rem;
-  opacity: 90%;
-  width: 100%;
+  box-shadow: var(--box-shadow);
 }
 
 .home .masterclass1 .timer {
@@ -1019,17 +1014,16 @@ body {
 .home .banner5 {
   background-color: var(--rust);
   height: 100vh;
-  background-image: url(/img/home-banner5.jpg);
-  background-repeat: repeat;
-
+  background-image: url(img/home-banner5.jpg);
+  background-repeat: no-repeat;
   background-size: contain;
-  background-attachment: fixed;
+  background-attachment: scroll;
+  background-position: center top;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 1.2rem;
-  padding: 0 1.5rem;
+  justify-content: flex-end;
+  gap: 1rem;
+  padding: 1.5rem;
   text-align: center;
 }
 
@@ -1040,8 +1034,7 @@ body {
   background-color: var(--rust);
   border-radius: 0.5rem;
   padding: 1rem;
-  opacity: 90%;
-  width: 100%;
+  box-shadow: var(--box-shadow);
 }
 
 .home .banner5 h3 {
@@ -1051,8 +1044,7 @@ body {
   background-color: var(--rust);
   border-radius: 0.5rem;
   padding: 1rem;
-  opacity: 90%;
-  width: 100%;
+  box-shadow: var(--box-shadow);
 }
 
 .home .banner5 h4 {
@@ -1062,8 +1054,7 @@ body {
   background-color: var(--rust);
   border-radius: 0.5rem;
   padding: 1rem;
-  opacity: 90%;
-  width: 100%;
+  box-shadow: var(--box-shadow);
 }
 
 /* home page - banner5 style ends */
@@ -1073,9 +1064,7 @@ body {
   height: 20vh;
   background-color: var(--gamboge);
   text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 1.5rem;
 }
 
 .home .banner6 h2 {
@@ -1090,12 +1079,8 @@ body {
   background-color: var(--gamboge);
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   height: max-content;
-  padding-bottom: 1rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding-bottom: 1.5rem;
 }
 
 .home .banner7 .card-wrapper {
@@ -1103,23 +1088,22 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
 .home .banner7 .card-wrapper .card {
-  width: 70vw;
   background-color: var(--antiquewhite);
-  height: 70vh;
-  width: 85vw;
+  max-height: min-content;
+  max-width: min-content;
   border-radius: 2rem;
   box-shadow: var(--box-shadow);
-  padding: 1.2rem;
+  padding: 1.5rem;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
   text-align: center;
+  gap: 0.5rem;
 }
 
 .home .banner7 .card-wrapper .card:hover {
@@ -1138,7 +1122,6 @@ body {
 .home .banner7 .card-wrapper .card img {
   border-radius: 2rem;
   margin-bottom: 0.5rem;
-  width: 90%;
 }
 
 .home .banner7 .card-wrapper .card h4 {
@@ -1157,29 +1140,22 @@ body {
   font-size: 1rem;
   font-weight: 300;
 }
-
-.home .banner7 .card-wrapper .card a {
-  font-weight: 500;
-  text-decoration: underline;
-  color: var(--rubyRed);
-}
 /* home page - banner7 style ends */
 
 /* home page - banner7 style starts */
 .home .masterclass2 {
   height: 100vh;
   background-color: var(--rubyRed);
-  background-image: url(/img/home-masterclass2-banner.jpg);
-  background-repeat: repeat-y;
-  background-size: 60%;
-  background-attachment: fixed;
-  background-position: left;
+  background-image: url(img/home-masterclass2-banner.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-attachment: scroll;
+  background-position: center top;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 0 1.5rem;
-  gap: 1.5rem;
+  justify-content: flex-end;
+  padding: 1.5rem;
+  gap: 1rem;
   text-align: center;
 }
 
@@ -1187,31 +1163,30 @@ body {
   font-size: 2.4rem;
   font-weight: 700;
   color: var(--antiquewhite);
-  background-color: var(--rufous);
+  background-color: var(--rubyRed);
   border-radius: 0.5rem;
   padding: 1rem;
-  opacity: 90%;
+  box-shadow: var(--box-shadow);
 }
 
 .home .masterclass2 h3 {
   font-size: 1.8rem;
   color: var(--antiquewhite);
   font-weight: 500;
-  background-color: var(--rufous);
+  background-color: var(--rubyRed);
   border-radius: 0.5rem;
   padding: 1rem;
-  opacity: 90%;
+  box-shadow: var(--box-shadow);
 }
 
 .home .masterclass2 h4 {
   font-size: 1.2rem;
   color: var(--antiquewhite);
   font-weight: 300;
-  background-color: var(--rufous);
+  background-color: var(--rubyRed);
   border-radius: 0.5rem;
   padding: 1rem;
-  opacity: 90%;
-  width: 100%;
+  box-shadow: var(--box-shadow);
 }
 
 .home .masterclass2 .timer {
@@ -1219,11 +1194,6 @@ body {
   font-size: 2.1rem;
 }
 
-.home .masterclass2 p {
-  color: var(--antiquewhite);
-  font-weight: 500;
-  font-size: 1.3rem;
-}
 /* home page - banner7 style ends */
 
 /* home page - testimonials banner starts */
@@ -1450,8 +1420,7 @@ body {
 
 /* shop page hero section styles start  */
 .shop .hero {
-  background: url(/img/shop-hero.jpg) no-repeat;
-  background-color: var(--box-shadow);
+  background: url(img/shop-hero.jpg) no-repeat;
   background-position: -15% 18%;
   background-size: 90%;
   background-color: var(--gamboge);
@@ -1988,18 +1957,18 @@ select {
 /* -------------------about page style starts------------------- */
 /* about page - hero section styles start  */
 .about .hero {
-  background: url(/img/about-hero.jpg) no-repeat;
-  background-color: var(--box-shadow);
-  background-position: -130% 22%;
-  background-size: 90%;
+  background: url(img/about-hero.jpg) no-repeat;
+  background-position: center bottom;
+  background-position-y: 45%;
+  background-size: 150%;
   background-color: var(--gamboge);
   height: 100vh;
-  background-attachment: fixed;
+  background-attachment: scroll;
   display: flex;
   flex-direction: column;
   justify-content: start;
   align-items: flex-start;
-  padding: 2rem;
+  padding: 1.5rem;
 }
 
 .about .hero .heroText {
@@ -2007,9 +1976,8 @@ select {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  gap: 0.5rem;
-  margin-bottom: 10rem;
-  margin-top: 3rem;
+  gap: 1rem;
+  margin-bottom: 1rem;
 }
 
 .about .hero h4 {
@@ -2024,7 +1992,6 @@ select {
   color: var(--richBlack);
   font-weight: 700;
   background-color: var(--gamboge);
-  width: 60%;
 }
 
 .about .hero p {
@@ -2032,30 +1999,31 @@ select {
   font-size: 1.2rem;
   font-weight: 300;
   width: 60%;
-  text-align: left;
+
   background-color: var(--gamboge);
 }
 
 .about .hero .heroBtns {
   text-align: center;
-  margin: 0 auto;
+  margin-top: 25rem;
+  align-self: center;
 }
 /* about page - hero section styles end  */
 /* about page -  banner1 INTRO style starts */
 .about .banner1 {
   height: 100vh;
   background-color: var(--alloyOrange);
-  background-image: url(/img/about-banner1.jpg);
-  background-repeat: repeat;
-  background-size: contain;
-  background-attachment: fixed;
-  background-position: -30vw 32%;
+  background-image: url(img/about-banner1.jpg);
+  background-repeat: no-repeat;
+  background-size: 200%;
+  background-attachment: scroll;
+  background-position: center top;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   gap: 1rem;
-  align-items: center;
-  padding: 2rem;
+  text-align: center;
+  padding: 1.5rem;
 }
 
 .about .banner1 h2 {
@@ -2063,7 +2031,7 @@ select {
   font-weight: 700;
   color: var(--richBlack);
   background-color: var(--alloyOrange);
-
+  box-shadow: var(--box-shadow);
   padding: 1rem;
   border-radius: 0.5rem;
 }
@@ -2074,7 +2042,7 @@ select {
   text-transform: none;
   color: var(--richBlack);
   background-color: var(--alloyOrange);
-
+  box-shadow: var(--box-shadow);
   padding: 1rem;
   border-radius: 0.5rem;
 }
@@ -2084,7 +2052,7 @@ select {
   text-transform: none;
   color: var(--richBlack);
   background-color: var(--alloyOrange);
-
+  box-shadow: var(--box-shadow);
   padding: 1rem;
   border-radius: 0.5rem;
 }
@@ -2095,11 +2063,11 @@ select {
 .about .banner2 {
   height: 100vh;
   background-color: var(--rust);
-  background-image: url(/img/about-banner2.jpg);
+  background-image: url(img/about-banner2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
-  overflow-x: hidden;
+  background-attachment: scroll;
+
   overflow-y: scroll;
 }
 
@@ -2140,8 +2108,9 @@ select {
 .about .banner3 {
   height: 100vh;
   background-color: var(--rubyRed);
-  padding: 1rem 1rem;
+  padding: 1.5rem;
 }
+
 .about .banner3 h2 {
   margin: 1rem auto;
   font-weight: 700;
@@ -2151,25 +2120,22 @@ select {
 }
 
 .about .banner3 .container {
-  width: 90%;
-  position: absolute;
   background-color: var(--mediumChampagne);
   border-radius: 0.5rem;
   box-shadow: var(--box-shadow);
+  padding: 1rem;
 }
 
 .about .tabs {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  width: 100%;
   padding: 0.8rem 0.5rem;
 }
 
 .about .tabs h3 {
   background-color: var(--antiquewhite);
   text-align: center;
-  padding: 1rem;
+  padding: 1rem 0.6rem;
   border-radius: 0.5rem;
   box-shadow: var(--box-shadow);
   border: var(--border-small);
@@ -2186,18 +2152,18 @@ select {
 }
 
 .about .banner3 .singleTab {
-  padding: 1.2rem;
+  padding: 1rem;
 }
 
 .about .banner3 .singleTab h4 {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
 
   font-weight: 700;
 }
 .about .banner3 .singleTab img {
-  width: 75%;
+  width: 100%;
   border-radius: 1rem;
-  margin: 0.5rem auto;
+  margin: 1rem auto;
 }
 
 .about .banner3 .singleTab p {
@@ -2225,14 +2191,14 @@ select {
 .about .banner4 {
   height: max-content;
   background-color: var(--blueSapphire);
-  padding: 2rem;
+  padding: 1.5rem;
 }
 
 .about .banner4 h2 {
   font-size: 2.4rem;
   font-weight: 700;
   text-align: center;
-  padding: 1rem;
+  padding: 1.5rem 0;
   color: var(--antiquewhite);
 }
 
@@ -2256,9 +2222,16 @@ select {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   gap: 1rem;
   box-shadow: var(--box-shadow);
+}
+
+.about .banner4 .teamCard:hover {
+  border: var(--border);
+}
+.about .banner4 .teamCard:active {
+  border: var(--border);
 }
 
 .about .banner4 .teamCard img {
@@ -2276,16 +2249,18 @@ select {
 
 /* about page - banner5 FAQs style starts */
 .about .banner5 {
-  height: max-content;
+  height: min-content;
   /* change height value if JS doesn't work properly */
   background-color: var(--viridianGreen);
-  padding: 2rem;
+  padding: 1.5rem;
+  padding-bottom: 3rem;
+  text-align: center;
 }
 
 .about .banner5 h2 {
   font-size: 2.4rem;
   font-weight: 700;
-  text-align: center;
+  padding: 1.5rem 0;
 
   color: var(--antiquewhite);
 }
@@ -2327,6 +2302,8 @@ select {
   height: 0;
   overflow: hidden;
   transition: all 1s;
+  text-align: left;
+  padding-top: 1rem;
 }
 
 /* about page - banner5 style ends */
@@ -2521,7 +2498,7 @@ select {
 
 /* cart page hero section styles start  */
 .cart .hero {
-  background: url(/img/cart-hero.jpg) no-repeat;
+  background: url(img/cart-hero.jpg) no-repeat;
   background-color: var(--box-shadow);
   background-position: -10% 20%;
   background-size: 85%;

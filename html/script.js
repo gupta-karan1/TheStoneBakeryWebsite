@@ -454,7 +454,7 @@ const bakeryProducts = [
     title: "vegan oats muffin",
     category: "muffins",
     price: 5.99,
-    img: "/img/product-oatMuffin.jpg",
+    img: "img/product-oatMuffin.jpg",
     quantity: 1,
   },
   {
@@ -462,7 +462,7 @@ const bakeryProducts = [
     title: "french baguette",
     category: "breads",
     price: 3.99,
-    img: "/img/product-breadBaguette.jpg",
+    img: "img/product-breadBaguette.jpg",
     quantity: 1,
   },
   {
@@ -470,7 +470,7 @@ const bakeryProducts = [
     title: "blueberry pie",
     category: "pies",
     price: 6.99,
-    img: "/img/product-bluePie.jpg",
+    img: "img/product-bluePie.jpg",
     quantity: 1,
   },
   {
@@ -478,7 +478,7 @@ const bakeryProducts = [
     title: "apple pie",
     category: "pies",
     price: 4.99,
-    img: "/img/product-apple-pie.jpg",
+    img: "img/product-apple-pie.jpg",
     quantity: 1,
   },
   {
@@ -486,7 +486,7 @@ const bakeryProducts = [
     title: "butterscotch pastry",
     category: "pastries",
     price: 2.99,
-    img: "/img/product-butterscotch-pastry.jpg",
+    img: "img/product-butterscotch-pastry.jpg",
     quantity: 1,
   },
   {
@@ -494,7 +494,7 @@ const bakeryProducts = [
     title: "chococoffee pastry",
     category: "pastries",
     price: 8.99,
-    img: "/img/product-chococoffee-pastry.jpg",
+    img: "img/product-chococoffee-pastry.jpg",
     quantity: 1,
   },
   {
@@ -502,7 +502,7 @@ const bakeryProducts = [
     title: "dark chocolate muffin",
     category: "muffins",
     price: 7.99,
-    img: "/img/product-darkchocolate-muffin.jpg",
+    img: "img/product-darkchocolate-muffin.jpg",
     quantity: 1,
   },
   {
@@ -510,7 +510,7 @@ const bakeryProducts = [
     title: "multigrain bread",
     category: "breads",
     price: 3.99,
-    img: "/img/product-multigrain-bread.jpg",
+    img: "img/product-multigrain-bread.jpg",
     quantity: 1,
   },
   {
@@ -518,7 +518,7 @@ const bakeryProducts = [
     title: "oat roll bread",
     category: "breads",
     price: 6.99,
-    img: "/img/product-oatroll-bread.jpg",
+    img: "img/product-oatroll-bread.jpg",
     quantity: 1,
   },
   {
@@ -526,7 +526,7 @@ const bakeryProducts = [
     title: "soda bread",
     category: "breads",
     price: 4.99,
-    img: "/img/product-soda-bread.jpg",
+    img: "img/product-soda-bread.jpg",
     quantity: 1,
   },
   {
@@ -534,7 +534,7 @@ const bakeryProducts = [
     title: "sourdough bread",
     category: "breads",
     price: 5.99,
-    img: "/img/product-sourdough-bread.jpg",
+    img: "img/product-sourdough-bread.jpg",
     quantity: 1,
   },
   {
@@ -542,7 +542,7 @@ const bakeryProducts = [
     title: "walnut pie",
     category: "pies",
     price: 22.99,
-    img: "/img/product-walnut-pie.jpg",
+    img: "img/product-walnut-pie.jpg",
     quantity: 1,
   },
 ];
