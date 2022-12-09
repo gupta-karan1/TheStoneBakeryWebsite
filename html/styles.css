@@ -1421,16 +1421,15 @@ body {
 /* shop page hero section styles start  */
 .shop .hero {
   background: url(img/shop-hero.jpg) no-repeat;
-  background-position: center bottom;
-  background-position-y: 15%;
-  background-size: 150%;
+  background-position: left top;
+  background-size: 180%;
   background-color: var(--gamboge);
   height: 100vh;
   background-attachment: scroll;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: flex-end;
   padding: 1.5rem;
 }
 
@@ -1438,11 +1437,11 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   gap: 0.5rem;
   margin-bottom: 10rem;
   margin-top: 3rem;
-  text-align: center;
+  text-align: right;
 }
 
 .shop .hero h4 {
@@ -1482,6 +1481,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 1.5rem;
 }
 .shop .banner1 h2 {
   font-weight: 700;
@@ -1494,7 +1494,6 @@ body {
 .shop .banner2 {
   height: max-content;
   background-color: var(--gamboge);
-  background-attachment: fixed;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1659,7 +1658,7 @@ body {
 .shop .banner4 h2 {
   font-size: 2.4rem;
   font-weight: 700;
-  color: var(--richBlack);
+  color: var(--antiquewhite);
   margin: 1.5rem auto;
 }
 
@@ -1685,7 +1684,7 @@ body {
   text-align: center;
 }
 
-.shop .banner4 .card-wrapper .card:hover {
+/* .shop .banner4 .card-wrapper .card:hover {
   border: var(--border);
   box-shadow: 0rem 1rem var(--rufous);
   cursor: pointer;
@@ -1696,7 +1695,7 @@ body {
   transform: translateY(1rem);
   box-shadow: none;
   background-color: var(--antiquewhite);
-}
+} */
 
 .shop .banner4 .card-wrapper .card img {
   border-radius: 2rem;
@@ -1744,7 +1743,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
+  padding: 1.5rem;
 }
 .shop .banner6 h2 {
   font-weight: 700;
@@ -2492,16 +2491,15 @@ select {
 /* cart page hero section styles start  */
 .cart .hero {
   background: url(img/cart-hero.jpg) no-repeat;
-  background-color: var(--box-shadow);
-  background-position: -10% 20%;
-  background-size: 85%;
+  background-position: left top;
+  background-size: 180%;
   background-color: var(--gamboge);
   height: 100vh;
-  background-attachment: fixed;
-  /* display: flex;
+  background-attachment: scroll;
+  display: flex;
   flex-direction: column;
-  justify-content: start;
-  align-items: flex-end; */
+  justify-content: flex-start;
+  align-items: flex-end;
   padding: 1.5rem;
 }
 
@@ -2511,16 +2509,16 @@ select {
   justify-content: center;
   align-items: flex-end;
   gap: 0.5rem;
-  margin-bottom: 10rem;
+  margin-bottom: 15rem;
   margin-top: 3rem;
+  text-align: right;
 }
 
 .cart .hero .heroText h4 {
   color: var(--richBlack);
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 500;
   background-color: var(--gamboge);
-  text-align: right;
 }
 
 .cart .hero .heroText h1 {
@@ -2528,16 +2526,13 @@ select {
   color: var(--richBlack);
   font-weight: 700;
   background-color: var(--gamboge);
-  width: 60%;
-  text-align: right;
 }
 
 .cart .hero .heroText p {
   color: var(--richBlack);
   font-size: 1.2rem;
   font-weight: 300;
-  width: 40%;
-  text-align: right;
+  width: 60%;
   background-color: var(--gamboge);
 }
 
@@ -2548,13 +2543,79 @@ select {
 
 /* cart page hero section styles end  */
 
-/* cart page banner1 cart-products styles starts  */
+/* cart page banner1 starts  */
 .cart .banner1 {
-  height: 100vh;
-  /* change height to max-content to accept products added to cart and expand with JS array */
-  background-color: var(--mediumChampagne);
+  height: 30vh;
+  background-color: var(--alloyOrange);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
 }
-/* cart page banner1 cart-products styles ends  */
+
+.cart .banner1 h2 {
+  font-weight: 700;
+  font-size: 2.4rem;
+  color: var(--richBlack);
+}
+/* cart page banner1 ends  */
+
+/* cart page banner2 - product list starts  */
+.cart .banner2 {
+  height: max-content;
+  /* change height to max-content */
+  background-color: var(--gamboge);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 1.5rem;
+}
+
+.cart .banner2 .card-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.cart .banner2 .card-wrapper .card {
+  background-color: var(--antiquewhite);
+  height: 70vh;
+  width: 85vw;
+  border-radius: 2rem;
+  box-shadow: var(--box-shadow);
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+}
+
+.cart .banner2 .card-wrapper .card img {
+  border-radius: 2rem;
+  box-shadow: var(--box-shadow);
+  margin-bottom: 0.5rem;
+  width: 90%;
+}
+
+.cart .banner2 .card-wrapper .card h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0rem auto;
+  color: var(--richBlack);
+}
+
+.cart .banner2 .card-wrapper .card .content .price {
+  margin: 0.5rem auto;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--blueSapphire);
+}
+/* cart page banner2 - product list ends  */
 
 /* -------------------cart page style ends------------------- */
 
