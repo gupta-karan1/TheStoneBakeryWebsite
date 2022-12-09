@@ -1421,14 +1421,15 @@ body {
 /* shop page hero section styles start  */
 .shop .hero {
   background: url(img/shop-hero.jpg) no-repeat;
-  background-position: -15% 18%;
-  background-size: 90%;
+  background-position: center bottom;
+  background-position-y: 15%;
+  background-size: 150%;
   background-color: var(--gamboge);
   height: 100vh;
-  background-attachment: fixed;
+  background-attachment: scroll;
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: flex-start;
   padding: 1.5rem;
 }
@@ -1437,10 +1438,11 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
   gap: 0.5rem;
   margin-bottom: 10rem;
   margin-top: 3rem;
+  text-align: center;
 }
 
 .shop .hero h4 {
@@ -1462,7 +1464,6 @@ body {
   font-size: 1.2rem;
   font-weight: 300;
   width: 60%;
-  text-align: right;
   background-color: var(--gamboge);
 }
 
@@ -1530,7 +1531,7 @@ body {
   text-align: center;
 }
 
-.shop .banner2 .card-wrapper .card:hover {
+/* .shop .banner2 .card-wrapper .card:hover {
   border: var(--border);
   box-shadow: 0rem 1rem var(--rufous);
   cursor: pointer;
@@ -1541,7 +1542,7 @@ body {
   transform: translateY(1rem);
   box-shadow: none;
   background-color: var(--antiquewhite);
-}
+} */
 
 .shop .banner2 .card-wrapper .card img {
   border-radius: 2rem;
@@ -1564,10 +1565,6 @@ body {
   color: var(--blueSapphire);
 }
 
-.shop .banner2 .card-wrapper .card .content .counterIcons input {
-  width: 6rem;
-  margin: 0.5rem;
-}
 /* banner2 style ends */
 
 /* banner3 style starts */
@@ -1611,7 +1608,7 @@ body {
   text-align: center;
 }
 
-.shop .banner3 .card-wrapper .card:hover {
+/* .shop .banner3 .card-wrapper .card:hover {
   border: var(--border);
   box-shadow: 0rem 1rem var(--rufous);
   cursor: pointer;
@@ -1622,7 +1619,7 @@ body {
   transform: translateY(1rem);
   box-shadow: none;
   background-color: var(--antiquewhite);
-}
+} */
 
 .shop .banner3 .card-wrapper .card img {
   border-radius: 2rem;
@@ -1645,10 +1642,6 @@ body {
   color: var(--blueSapphire);
 }
 
-.shop .banner3 .card-wrapper .card .content .counterIcons input {
-  width: 6rem;
-  margin: 0.5rem;
-}
 /* banner3 style ends */
 
 /* banner4 style starts */
@@ -1822,44 +1815,44 @@ body {
 }
 
 .shop .banner7 .section-center .menu-item {
+  background-color: var(--antiquewhite);
+  height: 70vh;
+  width: 85vw;
+  border-radius: 2rem;
+  box-shadow: var(--box-shadow);
+  padding: 1.2rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 0.5rem;
+  justify-content: space-evenly;
   align-items: center;
-  width: 90vw;
-  height: 60vh;
-  background-color: var(--antiquewhite);
-  padding: 2rem;
-  border-radius: 1rem;
-  cursor: pointer;
+  text-align: center;
 }
 
-.shop .banner7 .section-center .menu-item:active {
+/* .shop .banner7 .section-center .menu-item:active {
   border: var(--border);
   box-shadow: none;
   transform: translateY(0.5rem);
-}
+} */
 .shop .banner7 .section-center .menu-item .photo {
-  height: 70%;
-  border-radius: 0.5rem;
+  width: 90%;
+  border-radius: 2rem;
+  box-shadow: var(--box-shadow);
+  margin-bottom: 0.5rem;
 }
-.shop .banner7 .section-center .menu-item .item-info header {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  gap: 1.2rem;
-}
-.shop .banner7 .section-center .menu-item .item-info header h4 {
-  font-size: 1.5rem;
-}
-.shop .banner7 .section-center .menu-item .item-info .price {
-  color: var(--blueSapphire);
+
+.shop .banner7 .section-center .menu-item .item-info .description h4 {
   font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0rem auto;
+  color: var(--richBlack);
 }
-.shop .counterIcons {
-  margin-top: 1rem;
+.shop .banner7 .section-center .menu-item .item-info .description .price {
+  margin: 0.5rem auto;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--blueSapphire);
 }
+
 /* banner7 ends */
 
 /* banner8 starts */
@@ -2106,7 +2099,7 @@ select {
 
 /* about page - banner3 WE SUPPORT style starts */
 .about .banner3 {
-  height: 100vh;
+  height: max-content;
   background-color: var(--rubyRed);
   padding: 1.5rem;
 }

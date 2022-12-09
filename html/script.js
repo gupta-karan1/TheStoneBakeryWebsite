@@ -448,14 +448,13 @@ var swiper = new Swiper(".brandBox-slider", {
 // shop page menu items in banner7 authentic bakery products starts
 
 // created array of bakery items to be fed into html
-const bakeryProducts = [
+let bakeryProducts = [
   {
     id: 1,
     title: "vegan oats muffin",
     category: "muffins",
     price: 5.99,
     img: "img/product-oatMuffin.jpg",
-    quantity: 1,
   },
   {
     id: 2,
@@ -463,7 +462,6 @@ const bakeryProducts = [
     category: "breads",
     price: 3.99,
     img: "img/product-breadBaguette.jpg",
-    quantity: 1,
   },
   {
     id: 3,
@@ -471,7 +469,6 @@ const bakeryProducts = [
     category: "pies",
     price: 6.99,
     img: "img/product-bluePie.jpg",
-    quantity: 1,
   },
   {
     id: 4,
@@ -479,7 +476,6 @@ const bakeryProducts = [
     category: "pies",
     price: 4.99,
     img: "img/product-apple-pie.jpg",
-    quantity: 1,
   },
   {
     id: 5,
@@ -487,7 +483,6 @@ const bakeryProducts = [
     category: "pastries",
     price: 2.99,
     img: "img/product-butterscotch-pastry.jpg",
-    quantity: 1,
   },
   {
     id: 6,
@@ -495,7 +490,6 @@ const bakeryProducts = [
     category: "pastries",
     price: 8.99,
     img: "img/product-chococoffee-pastry.jpg",
-    quantity: 1,
   },
   {
     id: 7,
@@ -503,7 +497,6 @@ const bakeryProducts = [
     category: "muffins",
     price: 7.99,
     img: "img/product-darkchocolate-muffin.jpg",
-    quantity: 1,
   },
   {
     id: 8,
@@ -511,7 +504,6 @@ const bakeryProducts = [
     category: "breads",
     price: 3.99,
     img: "img/product-multigrain-bread.jpg",
-    quantity: 1,
   },
   {
     id: 9,
@@ -519,7 +511,6 @@ const bakeryProducts = [
     category: "breads",
     price: 6.99,
     img: "img/product-oatroll-bread.jpg",
-    quantity: 1,
   },
   {
     id: 10,
@@ -527,7 +518,6 @@ const bakeryProducts = [
     category: "breads",
     price: 4.99,
     img: "img/product-soda-bread.jpg",
-    quantity: 1,
   },
   {
     id: 11,
@@ -535,7 +525,6 @@ const bakeryProducts = [
     category: "breads",
     price: 5.99,
     img: "img/product-sourdough-bread.jpg",
-    quantity: 1,
   },
   {
     id: 12,
@@ -543,7 +532,6 @@ const bakeryProducts = [
     category: "pies",
     price: 22.99,
     img: "img/product-walnut-pie.jpg",
-    quantity: 1,
   },
 ];
 
@@ -563,10 +551,7 @@ function displayMenuItems(menuItems) {
   let displayMenu = menuItems.map(function (item) {
     // console.log(item);
     // used map method to write html from js file into shop page
-    // let itemNumber = item.quantity;
-    function itemQuantityIncrease() {
-      item.quantity += 1;
-    }
+
     return `<article class="menu-item">
     <img
       src=${item.img}
@@ -574,25 +559,14 @@ function displayMenuItems(menuItems) {
       class="photo"
     />
     <div class="item-info">
-      <header>
+      <article class="description">
         <h4>${item.title}</h4>
         <h4 class="price">$${item.price}</h4>
-      </header>
-      <article class="counterIcons">
-        <i class="fas fa-minus-circle"></i>
-        <input
-          type="number"
-          name="quantity"
-          id="itemNum"
-          value = "${item.quantity}"
-          title="Number of Items"
-        />
-        <i class="fas fa-plus-circle onclick = "${itemQuantityIncrease()}" ></i>
       </article>
+      <button class="primaryBtn" type="button" id="${item.id}">Add to cart <i class="fas fa-cart-plus"></i></button>
     </div>
   </article>`;
   });
-  // add this to plus button: id="${item.id}onclick = "${addItemToCart(item)}"
   displayMenu = displayMenu.join("");
   // console.log(displayMenu);
 
@@ -645,6 +619,171 @@ function displayMenuButtons() {
 
 // shop page menu items in banner7 authentic bakery products ends
 
+// home-baking products array - baking ingredients
+let bakingIngredients = [
+  {
+    id: 1,
+    title: "brown sugar",
+    category: "baking ingredients",
+    price: 3.99,
+    img: "img/product-brownSugar.jpg",
+  },
+  {
+    id: 2,
+    title: "icing sugar",
+    category: "baking ingredients",
+    price: 4.99,
+    img: "img/product-icingSugar.jpg",
+  },
+  {
+    id: 3,
+    title: "chocolate powder",
+    category: "baking ingredients",
+    price: 5.99,
+    img: "img/product-chocolate-powder.jpg",
+  },
+];
+
+const ingredientsSection = document.querySelector(".ingredients");
+
+window.addEventListener("DOMContentLoaded", function () {
+  displayIngredients(bakingIngredients);
+});
+
+function displayIngredients(menuItems) {
+  let displayMenu = menuItems.map(function (item) {
+    // console.log(item);
+    // used map method to write html from js file into shop page
+
+    return `
+    <article class="card" id="productCard">
+            <img src=${item.img} alt=${item.title} />
+            <h2>${item.title}</h2>
+            <article class="content">
+              <p class="price">price: <span id="priceValue">$${item.price}</span></p>
+            </article>
+            <button class="primaryBtn" type="button" id="${item.id}">Add to cart <i class="fas fa-cart-plus"></i></button>
+          </article>
+    `;
+  });
+  displayMenu = displayMenu.join("");
+  // console.log(displayMenu);
+
+  //write bakery menu into html file using innerHtml method
+  ingredientsSection.innerHTML = displayMenu;
+}
+
+// home-baking products array -  baking utensils
+let bakingUtensils = [
+  {
+    id: 1,
+    title: "mixing bowl",
+    category: "baking utensils",
+    price: 3.99,
+    img: "img/product-mixing-bowl.jpg",
+  },
+  {
+    id: 2,
+    title: "baking tray",
+    category: "baking utensils",
+    price: 4.99,
+    img: "img/product-bakingTray.jpg",
+  },
+  {
+    id: 3,
+    title: "rolling pin",
+    category: "baking utensils",
+    price: 5.99,
+    img: "img/product-rolling-pin.jpg",
+  },
+];
+
+const utensilSection = document.querySelector(".utensils");
+
+window.addEventListener("DOMContentLoaded", function () {
+  displayUtensils(bakingUtensils);
+});
+
+function displayUtensils(menuItems) {
+  let displayMenu = menuItems.map(function (item) {
+    // console.log(item);
+    // used map method to write html from js file into shop page
+
+    return `
+    <article class="card" id="productCard">
+            <img src=${item.img} alt=${item.title} />
+            <h2>${item.title}</h2>
+            <article class="content">
+              <p class="price">price: <span id="priceValue">$${item.price}</span></p>
+            </article>
+            <button class="primaryBtn" type="button" id="${item.id}">Add to cart <i class="fas fa-cart-plus"></i></button>
+          </article>
+    `;
+  });
+  displayMenu = displayMenu.join("");
+  // console.log(displayMenu);
+
+  //write bakery menu into html file using innerHtml method
+  utensilSection.innerHTML = displayMenu;
+}
+
+// home-baking products array -  baking guidebooks
+let bakingGuidebooks = [
+  {
+    id: 1,
+    title: "baking guide",
+    category: "baking guidebooks",
+    price: 3.99,
+    img: "img/product-baking-guide.jpg",
+  },
+  {
+    id: 2,
+    title: "baking cookbook",
+    category: "baking guidebooks",
+    price: 4.99,
+    img: "img/product-bakingTray.jpg",
+  },
+  {
+    id: 3,
+    title: "recipe book",
+    category: "baking guidebooks",
+    price: 5.99,
+    img: "img/product-recipebook.jpg",
+  },
+];
+
+const guidebooksSection = document.querySelector(".guidebooks");
+
+window.addEventListener("DOMContentLoaded", function () {
+  displayGuidebooks(bakingGuidebooks);
+});
+
+function displayGuidebooks(menuItems) {
+  let displayMenu = menuItems.map(function (item) {
+    // console.log(item);
+    // used map method to write html from js file into shop page
+
+    return `
+    <article class="card" id="productCard">
+            <img src=${item.img} alt=${item.title} />
+            <h2>${item.title}</h2>
+            <article class="content">
+              <p class="price">price: <span id="priceValue">$${item.price}</span></p>
+            </article>
+            <button class="primaryBtn" type="button" id="${item.id}">Add to cart <i class="fas fa-cart-plus"></i></button>
+          </article>
+    `;
+  });
+  displayMenu = displayMenu.join("");
+  // console.log(displayMenu);
+
+  //write bakery menu into html file using innerHtml method
+  guidebooksSection.innerHTML = displayMenu;
+}
+
+// home-baking products array -  baking guidebooks - ends
+
+// shop page js ends here
 // --------------------------------
 
 // about page - tabs display feature under the 'We Support' section
