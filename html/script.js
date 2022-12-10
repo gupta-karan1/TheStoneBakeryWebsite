@@ -445,9 +445,6 @@ var swiper = new Swiper(".brandBox-slider", {
 
 // ---------------------------
 
-// create an empty array to be used to add items to cart on cart page from shop page on click
-let cartItems = new Array();
-
 // shop page menu items in banner7 authentic bakery products starts
 
 // created array of bakery items to be fed into html
@@ -663,13 +660,9 @@ function displayIngredients(menuItems) {
             <img src=${item.img} alt=${item.title} />
             <h2>${item.title}</h2>
             <article class="content">
-              <p class="price">price: <span id="priceValue">$${
-                item.price
-              }</span></p>
+              <p class="price">price: <span id="priceValue">$${item.price}</span></p>
             </article>
-            <button class="primaryBtn addCartBtn" type="button" id="${
-              item.id
-            }" onclick="${cartItems.push(item)}">Add to cart <i class="fas fa-cart-plus"></i></button>
+            <button class="primaryBtn addCartBtn" type="button" id="${item.id}">Add to cart <i class="fas fa-cart-plus"></i></button>
           </article>
     `;
   });
@@ -679,8 +672,6 @@ function displayIngredients(menuItems) {
   //write bakery menu into html file using innerHtml method
   ingredientsSection.innerHTML = displayMenu;
 }
-
-// onclick ="${itemAddedToCart(item)}
 
 // home-baking products array -  baking utensils
 let bakingUtensils = [
@@ -800,47 +791,8 @@ function displayGuidebooks(menuItems) {
 
 // when a user clicks on add to cart button on the shop page, it should display on the cart page
 
-// let cartItems = new Array();
-
-const shoppingCartSection = document.querySelector(".cartSection");
-
-window.addEventListener("DOMContentLoaded", function () {
-  displayCartItems(cartItems);
-});
-
-function displayCartItems(menuItems) {
-  let displayMenu = menuItems.map(function (item) {
-    console.log(item);
-    // used map method to write html from js file into shop page
-
-    return `
-    <article class="card">
-            <img src=${item.img} alt=${item.title} />
-            <h2>${item.title}</h2>
-            <article class="content">
-              <p class="price">price: <span id="priceValue">$${item.price}</span></p>
-            </article>
-            <h4>quantity:</h4>
-            <article class="counterIcons">
-              <i class="fas fa-minus-circle"></i>
-              <input
-                type="number"
-                name="quantity"
-                placeholder="0"
-                value="0",
-                title="Number of Items"
-              />
-              <i class="fas fa-plus-circle"></i>
-            </article>
-          </article>
-    `;
-  });
-  displayMenu = displayMenu.join("");
-  // console.log(displayMenu);
-
-  //write bakery menu into html file using innerHtml method
-  shoppingCartSection.innerHTML = displayMenu;
-}
+// create an empty array to be used to add items to cart on cart page from shop page on click
+let cartItems = new Array();
 
 // --------------------------------
 
