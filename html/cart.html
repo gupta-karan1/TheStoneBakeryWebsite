@@ -46,15 +46,23 @@
 
       <!-- navigation menu starts -->
       <nav class="navbar">
-        <a href="index.html" title="home">Home</a>
-        <a href="about.html" title="about us">About Us</a>
-        <a href="shop.html" title="bakery shop">Bakery Shop</a>
-        <a href="cart.html" title="shopping cart">Shopping Cart</a>
+        <a href="index.html" title="home">
+          <i class="fas fa-home-lg"></i> Home</a
+        >
+        <a href="about.html" title="about us">
+          <i class="fas fa-users"></i> About Us</a
+        >
+        <a href="shop.html" title="bakery shop">
+          <i class="fas fa-shop"></i> Bakery Shop</a
+        >
+        <a href="cart.html" title="shopping cart">
+          <i class="fas fa-cart-shopping"></i> Shopping Cart</a
+        >
         <button type="button" id="unitBtn" title="unit convertor">
-          unit convertor
+          <i class="fas fa-weight"></i> unit convertor
         </button>
         <button type="button" id="groceryBtn" title="my grocery list">
-          my grocery list
+          <i class="fas fa-list-check"></i> my grocery list
         </button>
       </nav>
       <!-- navigation menu ends -->
@@ -81,7 +89,9 @@
           id="cart-btn"
           title="shopping cart"
           type="button"
-        ></button>
+        >
+          <div class="itemNumIndicator"><p id="headerItemCount">00</p></div>
+        </button>
         <button
           class="fas fa-bars"
           id="menu-btn"
@@ -251,13 +261,7 @@
 
           <article class="counterIcons">
             <i class="fas fa-minus-circle"></i>
-            <input
-              type="number"
-              name="quantity"
-              id="itemNum"
-              placeholder="0"
-              title="Number of Items"
-            />
+            <p class="quantity">00</p>
             <i class="fas fa-plus-circle"></i>
           </article>
         </section>
@@ -401,7 +405,7 @@
       <!-- banner2 cart - product list starts-->
       <section class="banner2">
         <article class="card-wrapper cartSection">
-          <article class="card">
+          <!-- <article class="card">
             <img src="img/product-brownSugar.jpg" alt="brown sugar" />
             <h2>brown sugar</h2>
 
@@ -411,15 +415,10 @@
             <h4>quantity:</h4>
             <article class="counterIcons">
               <i class="fas fa-minus-circle"></i>
-              <input
-                type="number"
-                name="quantity"
-                placeholder="0"
-                title="Number of Items"
-              />
+              <p class="quantity">00</p>
               <i class="fas fa-plus-circle"></i>
             </article>
-          </article>
+          </article> -->
         </article>
       </section>
       <!-- banner2 cart - product list ends-->

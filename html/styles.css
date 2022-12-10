@@ -168,7 +168,6 @@ body {
   position: absolute;
   top: 110%;
   right: 1.2rem;
-
   width: 90%;
   box-shadow: var(--box-shadow);
   border-radius: 0.5rem;
@@ -185,21 +184,32 @@ body {
 .header .navbar a {
   font-weight: 500;
   color: var(--rubyRed);
-  text-decoration: underline;
-  font-size: 2.4rem;
+  font-size: 2.1rem;
+}
+
+.header .navbar i {
+  font-size: 1.8rem;
+  margin: 0.8rem 0.5rem;
+  margin-left: 0;
+  width: 1.8rem;
+  height: 1.8rem;
 }
 
 .header .navbar button {
   font-weight: 500;
   color: var(--blueSapphire);
-  text-decoration: underline;
-  font-size: 2.4rem;
+  font-size: 2.1rem;
   padding: 0;
   background: none;
 }
 
 .header .navbar a:active {
   color: var(--richBlack);
+  text-decoration: underline;
+}
+.header .navbar button:active {
+  color: var(--richBlack);
+  text-decoration: underline;
 }
 
 .header .icons {
@@ -222,6 +232,26 @@ body {
   cursor: pointer;
   outline: none;
   box-shadow: 0rem 0.5rem var(--viridianGreen);
+}
+
+#cart-btn {
+  position: relative;
+}
+
+.header .icons .itemNumIndicator {
+  position: absolute;
+  background-color: var(--rufous);
+  color: var(--antiquewhite);
+  font-size: 0.8rem;
+  top: -0.7rem;
+  right: -0.7rem;
+
+  height: 1.6rem;
+  width: 1.6rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .header .icons .close-btn {
@@ -419,20 +449,19 @@ body {
 .counterIcons {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  gap: 0.5rem;
+  gap: 1rem;
 }
 
-.counterIcons input {
-  width: 4rem;
-  height: 4rem;
+.counterIcons .quantity {
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.8rem;
   border-radius: 0.5rem;
   box-shadow: inset 0 0 0.4rem grey;
   border: var(--border);
   background: var(--antiquewhite);
+  padding: 1rem;
 }
 
 .counterIcons .fa-minus-circle {
@@ -1518,8 +1547,8 @@ body {
 
 .shop .banner2 .card-wrapper .card {
   background-color: var(--antiquewhite);
-  height: 70vh;
-  width: 85vw;
+  /* height: 70vh;
+  width: 85vw; */
   border-radius: 2rem;
   box-shadow: var(--box-shadow);
   padding: 1.2rem;
@@ -1528,6 +1557,7 @@ body {
   justify-content: space-evenly;
   align-items: center;
   text-align: center;
+  gap: 0.5rem;
 }
 
 /* .shop .banner2 .card-wrapper .card:hover {
@@ -1595,8 +1625,8 @@ body {
 
 .shop .banner3 .card-wrapper .card {
   background-color: var(--antiquewhite);
-  height: 70vh;
-  width: 85vw;
+  /* height: 70vh;
+  width: 85vw; */
   border-radius: 2rem;
   box-shadow: var(--box-shadow);
   padding: 1.2rem;
@@ -1605,6 +1635,7 @@ body {
   justify-content: space-evenly;
   align-items: center;
   text-align: center;
+  gap: 0.5rem;
 }
 
 /* .shop .banner3 .card-wrapper .card:hover {
@@ -1672,8 +1703,8 @@ body {
 
 .shop .banner4 .card-wrapper .card {
   background-color: var(--antiquewhite);
-  height: 70vh;
-  width: 85vw;
+  /* height: 70vh;
+  width: 85vw; */
   border-radius: 2rem;
   box-shadow: var(--box-shadow);
   padding: 1.2rem;
@@ -1682,6 +1713,7 @@ body {
   justify-content: space-evenly;
   align-items: center;
   text-align: center;
+  gap: 0.5rem;
 }
 
 /* .shop .banner4 .card-wrapper .card:hover {
@@ -1718,10 +1750,6 @@ body {
   color: var(--blueSapphire);
 }
 
-.shop .banner4 .card-wrapper .card .content .counterIcons input {
-  width: 6rem;
-  margin: 0.5rem;
-}
 /* banner4 style ends */
 
 /* banner5 style starts */
@@ -1815,16 +1843,17 @@ body {
 
 .shop .banner7 .section-center .menu-item {
   background-color: var(--antiquewhite);
-  height: 70vh;
-  width: 85vw;
+  /* height: 70vh;
+  width: 85vw; */
   border-radius: 2rem;
   box-shadow: var(--box-shadow);
-  padding: 1.2rem;
+  padding: 1.5rem;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
   text-align: center;
+  gap: 0.5rem;
 }
 
 /* .shop .banner7 .section-center .menu-item:active {
@@ -1850,6 +1879,11 @@ body {
   font-size: 1.5rem;
   font-weight: 500;
   color: var(--blueSapphire);
+}
+
+.shop .banner7 .section-center .menu-item .item-info h5 {
+  padding: 0.5rem 0;
+  font-size: 1rem;
 }
 
 /* banner7 ends */
