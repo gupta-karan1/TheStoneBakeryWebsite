@@ -803,7 +803,7 @@ let tabs = document.querySelectorAll(".tabs h3 ");
 
 // 2. get individual card the tab
 let tabContents = document.querySelectorAll(".tab-content article");
-//! check if article tag works or else use class name of singleTab
+// check if article tag works or else use class name of singleTab
 
 // loop through each tab with its index number using forEach method and add an event listener within it
 
