@@ -327,3 +327,5 @@ closeGroceryBtn.addEventListener("click", function () {
 });
 
 // script for my grocery list feature ends here
+
+// -----------------------------------

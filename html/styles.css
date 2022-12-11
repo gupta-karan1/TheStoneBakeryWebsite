@@ -389,63 +389,19 @@ body {
   height: max-content;
 }
 
-.header .shopping-cart .box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  position: relative;
-  margin: 1rem 0;
-  padding: 1rem;
-  border-radius: 1rem;
-  box-shadow: var(--box-shadow);
-  background-color: var(--antiquewhite);
-  border: var(--border-small);
-}
-
-.header .shopping-cart .box img {
-  height: 6rem;
-  border-radius: 0.5rem;
-}
-
-.header .shopping-cart .box .card {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 0.5rem;
-}
-
-.header .shopping-cart .box .content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-}
-
-.header .shopping-cart .box .content h3 {
-  color: var(--richBlack);
+.header .shopping-cart h3 {
   font-size: 1.5rem;
-  padding-bottom: 0.5rem;
-}
-
-.header .shopping-cart .box .content p {
+  font-weight: 500;
   color: var(--richBlack);
-  font-size: 1.2rem;
-  font-weight: 300;
 }
 
-.header .shopping-cart .box .content .quantity {
-  margin-top: 0.1rem;
+.header .shopping-cart h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--rubyRed);
+  margin-bottom: 1rem;
 }
 
-.header .shopping-cart .box .content #priceValue {
-  font-weight: 500;
-}
-
-.header .shopping-cart .box .content #itemQuantity {
-  font-weight: 500;
-}
 .counterIcons {
   display: flex;
   flex-direction: row;
@@ -1577,7 +1533,6 @@ body {
   border-radius: 2rem;
   box-shadow: var(--box-shadow);
   margin-bottom: 0.5rem;
-  width: 90%;
 }
 
 .shop .banner2 .card-wrapper .card h2 {
@@ -1655,7 +1610,6 @@ body {
   border-radius: 2rem;
   box-shadow: var(--box-shadow);
   margin-bottom: 0.5rem;
-  width: 90%;
 }
 
 .shop .banner3 .card-wrapper .card h2 {
@@ -1733,7 +1687,6 @@ body {
   border-radius: 2rem;
   box-shadow: var(--box-shadow);
   margin-bottom: 0.5rem;
-  width: 90%;
 }
 
 .shop .banner4 .card-wrapper .card h2 {
@@ -1857,7 +1810,6 @@ body {
   border-radius: 2rem;
   box-shadow: var(--box-shadow);
   margin-bottom: 0.5rem;
-  width: 90%;
 }
 
 .shop .banner7 .card-wrapper .card h2 {
@@ -2120,9 +2072,12 @@ select {
 
 /* about page - banner3 WE SUPPORT style starts */
 .about .banner3 {
-  height: max-content;
+  /* height: max-content; */
   background-color: var(--rubyRed);
   padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .about .banner3 h2 {
@@ -2143,6 +2098,7 @@ select {
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  width: min-content;
 }
 
 .about .tabs {
@@ -2179,7 +2135,7 @@ select {
   font-weight: 700;
 }
 .about .banner3 .singleTab img {
-  width: ;
+  /* width: 100%; */
   border-radius: 1rem;
   margin: 1rem auto;
 }
@@ -2194,7 +2150,10 @@ select {
 }
 
 .about .banner3 .tab-content .active {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .about .banner3 .tabs .active {
@@ -2209,7 +2168,6 @@ select {
 .about .banner4 {
   height: max-content;
   background-color: var(--blueSapphire);
-  padding: 1.5rem;
 }
 
 .about .banner4 h2 {
@@ -2226,12 +2184,13 @@ select {
   justify-content: center;
   align-items: center;
   gap: 2rem;
+  padding: 1.5rem;
 }
 
 .about .banner4 .teamCard {
   background-color: var(--middleBlueGreen);
-  height: 50vh;
-  width: 90vw;
+  /* height: 50vh;
+  width: 90vw; */
   border-radius: 2rem;
   background-repeat: no-repeat;
   background-size: cover;
@@ -2243,6 +2202,7 @@ select {
   justify-content: space-evenly;
   gap: 1rem;
   box-shadow: var(--box-shadow);
+  padding: 1rem;
 }
 
 .about .banner4 .teamCard:hover {
@@ -2253,7 +2213,7 @@ select {
 }
 
 .about .banner4 .teamCard img {
-  width: 80%;
+  width: 90%;
   border-radius: 50%;
   object-fit: cover;
   border: 0.1rem solid var(--antiquewhite);
@@ -2599,6 +2559,37 @@ select {
   padding: 3rem 1.5rem;
 }
 
+.cart .banner2 .text-center {
+  background-color: var(--gamboge);
+  box-shadow: var(--box-shadow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.cart .banner2 .text-center h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--richBlack);
+}
+
+.cart .banner2 .text-center h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--richBlack);
+}
+
+.cart .banner2 .text-center h4 {
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: var(--richBlack);
+}
+
 .cart .banner2 .card-wrapper {
   display: flex;
   flex-direction: column;
@@ -2609,8 +2600,7 @@ select {
 
 .cart .banner2 .card-wrapper .card {
   background-color: var(--antiquewhite);
-  height: 70vh;
-  width: 85vw;
+
   border-radius: 2rem;
   box-shadow: var(--box-shadow);
   padding: 1.2rem;
@@ -2619,13 +2609,18 @@ select {
   justify-content: space-evenly;
   align-items: center;
   text-align: center;
+  position: relative;
+}
+
+.cart .banner2 .card-wrapper .card .totalEach {
+  margin-top: 1rem;
+  color: var(--blueSapphire);
 }
 
 .cart .banner2 .card-wrapper .card img {
   border-radius: 2rem;
   box-shadow: var(--box-shadow);
   margin-bottom: 0.5rem;
-  width: 90%;
 }
 
 .cart .banner2 .card-wrapper .card h2 {
@@ -2641,6 +2636,29 @@ select {
   font-weight: 500;
   color: var(--blueSapphire);
 }
+
+#deleteItem {
+  background-color: var(--rufous);
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 0.8rem 1rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 0.6rem;
+  right: 0.6rem;
+  box-shadow: var(--box-shadow);
+}
+
+#deleteItem:hover {
+  transform: scale(90%);
+  background-color: var(--blueSapphire);
+}
+
+#deleteItem:active {
+  transform: scale(100%);
+  background-color: var(--blueSapphire);
+}
+
 /* cart page banner2 - product list ends  */
 
 /* -------------------cart page style ends------------------- */

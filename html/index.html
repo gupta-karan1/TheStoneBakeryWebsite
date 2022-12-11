@@ -249,32 +249,14 @@
 
       <!-- shopping cart box starts  -->
       <section class="shopping-cart">
-        <!-- shopping item 1 starts-->
-        <section class="box">
-          <article class="card">
-            <img
-              src="img/product-bakingTray.jpg"
-              alt="baking tray"
-              id="itemImage"
-            />
-            <article class="content">
-              <h3 id="itemName">baking tray</h3>
-              <p class="price">price: <span id="priceValue">$6.99</span></p>
-              <p class="quantity">quantity: <span id="itemQuantity">1</span></p>
-            </article>
-          </article>
-
-          <article class="counterIcons">
-            <i class="fas fa-minus-circle"></i>
-            <p class="quantity">00</p>
-            <i class="fas fa-plus-circle"></i>
-          </article>
-        </section>
-        <!-- shopping item 1 ends-->
-        <p class="total">total: <span id="totalValue">$6.99</span></p>
-        <button class="primaryBtn" formaction="cart.html" type="submit">
-          checkout <i class="fas fa-shopping-cart"></i>
-        </button>
+        <h3>Total Items in Your Cart:</h3>
+        <h2 id="headerCartQuantity">00</h2>
+        <h3>Your Total Bill:</h3>
+        <h2 id="headerCartPrice">00</h2>
+        <a href="cart.html"
+          ><button type="button" class="tertiaryBtn">
+            View Your Cart <i class="fas fa-cart-shopping"></i></button
+        ></a>
       </section>
 
       <!-- shopping cart box ends  -->
@@ -773,6 +755,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
     <!-- JavaScript file attached at the end to load content first and then the script -->
+    <script src="products.js"></script>
     <script src="header.js"></script>
     <script src="index.js"></script>
   </body>
