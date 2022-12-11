@@ -72,7 +72,7 @@ let generateCartItems = () => {
       <img src="img/cart-emptyCart.png" alt="empty cart">
       <h3>Let's get you to the bakery shop where you can buy all our awesome products!</h3>
       <a href="shop.html"><button type="button" class="secondaryBtn">Visit Shop</button></a>
-      <h4>or scroll down for some of our recommended products...</h4>
+      <h4>Happy Shopping!</h4>
       `;
   }
 };
@@ -274,3 +274,5 @@ let updateHeaderQuantity = () => {
 };
 
 updateHeaderQuantity();
+
+// ----------------

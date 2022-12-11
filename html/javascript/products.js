@@ -1,5 +1,6 @@
 // A single JS File for all arrays used to display, store and transfer products as objects in and between shop and cart page
 
+// baking products array for bakery products section on shop page
 let bakeryProducts = [
   {
     id: "veganOats",
@@ -87,6 +88,7 @@ let bakeryProducts = [
   },
 ];
 
+// baking ingredients array for home baking products section on shop page
 let bakingIngredients = [
   {
     id: "brown",
@@ -111,6 +113,7 @@ let bakingIngredients = [
   },
 ];
 
+// baking utensils array for home baking products section on shop page
 let bakingUtensils = [
   {
     id: "mixing",
@@ -135,6 +138,7 @@ let bakingUtensils = [
   },
 ];
 
+// baking guidebooks array for home baking products section on shop page
 let bakingGuidebooks = [
   {
     id: "guide",

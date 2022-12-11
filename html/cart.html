@@ -390,6 +390,215 @@
         <article class="card-wrapper" id="shopping-cart"></article>
       </section>
       <!-- banner2 cart - product list ends-->
+
+      <!-- banner 3 forms starts -->
+      <section class="banner3">
+        <h3>Let's proceed with checkout...</h3>
+        <form class="loginNew">
+          <h2>Login</h2>
+          <label for="username">username:</label>
+          <input
+            type="text"
+            placeholder="john-watson1996"
+            title="user name"
+            name="username"
+          />
+          <br />
+
+          <label for="email">E-mail <em> (required)</em>: </label>
+          <input
+            type="email"
+            name="email"
+            id="email-address"
+            title="email address"
+            placeholder="john-watson@gmail.com"
+            required
+          />
+          <br />
+
+          <label for="password">Password <em> (required)</em>: </label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            title="password"
+            placeholder="your password"
+            required
+          />
+          <br />
+
+          <label for="password">
+            <input
+              type="checkbox"
+              title="remember me"
+              checked="checked"
+              name="remember"
+            />
+            : Remember Me
+          </label>
+          <input type="submit" class="secondaryBtn" value="login" />
+
+          <span class="psw">Forgot <a href="">password?</a></span>
+
+          <p id="toggle-sign-up">
+            Don't have an account? <br />
+            Sign Up below
+            <i class="fas fa-arrow-down"></i>
+          </p>
+        </form>
+
+        <form class="signUp">
+          <h2>Sign Up</h2>
+
+          <label for="first-name">first name <em> (required)</em>: </label>
+          <input
+            type="text"
+            name="first-name"
+            id="first-name"
+            placeholder="john"
+            required
+          />
+          <br />
+
+          <label for="last-name">last name: </label>
+          <input
+            type="text"
+            name="last-name"
+            id="last-name"
+            placeholder="watson"
+          />
+          <br />
+
+          <label for="username">username:</label>
+          <input
+            type="text"
+            placeholder="john-watson1996"
+            title="user name"
+            name="username"
+            id="user-name"
+          />
+          <br />
+
+          <label for="email-sign">E-mail <em> (required)</em>: </label>
+          <input
+            type="email"
+            name="email-sign"
+            id="email-address-signUp"
+            title="email address"
+            placeholder="john-watson@gmail.com"
+            required
+          />
+          <br />
+
+          <label for="birth-date">your birth date: </label>
+          <input type="date" name="birth-date" id="birth-date" />
+          <br />
+
+          <label for="create-password"
+            >Create Password <em> (required)</em>:
+          </label>
+          <input
+            type="password"
+            name="create-password"
+            id="create-password"
+            title="create-password"
+            placeholder="create a strong password"
+            required
+          />
+          <br />
+          <label for="re-password"
+            >Re-enter Password <em> (required)</em>:
+          </label>
+          <input
+            type="password"
+            name="re-password"
+            id="re-password"
+            title="re-password"
+            placeholder="re-enter password"
+            required
+          />
+          <br />
+          <p>
+            By creating an account you agree to our
+            <a href="">Terms & Privacy</a>.
+          </p>
+          <input type="submit" class="secondaryBtn" value="sign up" />
+          <input type="reset" class="tertiaryBtn" value="reset" />
+        </form>
+
+        <form class="payment">
+          <h2>Payment Details</h2>
+
+          <label for="cardNumber">Card Number: </label>
+          <input
+            type="number"
+            name="cardNumber"
+            id="cardNumber"
+            placeholder="000-0000-0000-0000"
+            required
+            pattern="^4[0-9]{12}(?:[0-9]{3})?$"
+          />
+          <br />
+
+          <label for="expireMM">Expiry Month: </label>
+          <select name="expireMM" id="expireMM">
+            <option value="">Month</option>
+            <option value="01">January</option>
+            <option value="02">February</option>
+            <option value="03">March</option>
+            <option value="04">April</option>
+            <option value="05">May</option>
+            <option value="06">June</option>
+            <option value="07">July</option>
+            <option value="08">August</option>
+            <option value="09">September</option>
+            <option value="10">October</option>
+            <option value="11">November</option>
+            <option value="12">December</option>
+          </select>
+
+          <label for="expireYY">Expiry Year: </label>
+          <select name="expireYY" id="expireYY">
+            <option value="">Year</option>
+            <option value="20">2020</option>
+            <option value="21">2021</option>
+            <option value="22">2022</option>
+            <option value="23">2023</option>
+            <option value="24">2024</option>
+          </select>
+
+          <label for="cvv">CVV: </label>
+          <input
+            type="password"
+            name="cvv"
+            id="cvv"
+            placeholder="CVV"
+            pattern="^[0-9]{3, 4}$"
+          />
+          <br />
+
+          <label for="address">Street Address: </label>
+          <input
+            placeholder="43, montpelier hill, dublin-7"
+            type="text"
+            name="address"
+            id="address"
+          />
+          <br />
+
+          <label for="pincode">Pin-code: </label>
+          <input
+            type="number"
+            name="pincode"
+            id="pincode"
+            placeholder="D07XT61"
+          />
+          <br />
+          <input type="submit" class="secondaryBtn" value="pay now" />
+          <input type="reset" class="tertiaryBtn" value="reset" />
+        </form>
+      </section>
+      <!-- banner 3 forms ends -->
     </main>
 
     <!-- home section ends -->
@@ -450,8 +659,9 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
     <!-- JavaScript file attached at the end to load content first and then the script -->
-    <script src="products.js"></script>
-    <script src="header.js"></script>
-    <script src="cart.js"></script>
+
+    <script src="javascript/products.js"></script>
+    <script src="javascript/header.js"></script>
+    <script src="javascript/cart.js"></script>
   </body>
 </html>
