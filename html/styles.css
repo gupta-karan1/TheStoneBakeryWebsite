@@ -1830,10 +1830,7 @@ body {
   transform: translateY(0.5rem);
 }
 
-.shop .banner7 .section-center {
-  /* display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 2.5rem 2.5rem; */
+.shop .banner7 .card-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1841,13 +1838,13 @@ body {
   gap: 2rem;
 }
 
-.shop .banner7 .section-center .menu-item {
+.shop .banner7 .card-wrapper .card {
   background-color: var(--antiquewhite);
   /* height: 70vh;
   width: 85vw; */
   border-radius: 2rem;
   box-shadow: var(--box-shadow);
-  padding: 1.5rem;
+  padding: 1.2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -1856,34 +1853,25 @@ body {
   gap: 0.5rem;
 }
 
-/* .shop .banner7 .section-center .menu-item:active {
-  border: var(--border);
-  box-shadow: none;
-  transform: translateY(0.5rem);
-} */
-.shop .banner7 .section-center .menu-item .photo {
-  width: 90%;
+.shop .banner7 .card-wrapper .card img {
   border-radius: 2rem;
   box-shadow: var(--box-shadow);
   margin-bottom: 0.5rem;
+  width: 90%;
 }
 
-.shop .banner7 .section-center .menu-item .item-info .description h4 {
+.shop .banner7 .card-wrapper .card h2 {
   font-size: 1.8rem;
   font-weight: 700;
   margin: 0rem auto;
   color: var(--richBlack);
 }
-.shop .banner7 .section-center .menu-item .item-info .description .price {
+
+.shop .banner7 .card-wrapper .card .content .price {
   margin: 0.5rem auto;
   font-size: 1.5rem;
   font-weight: 500;
   color: var(--blueSapphire);
-}
-
-.shop .banner7 .section-center .menu-item .item-info h5 {
-  padding: 0.5rem 0;
-  font-size: 1rem;
 }
 
 /* banner7 ends */
@@ -2150,18 +2138,22 @@ select {
   border-radius: 0.5rem;
   box-shadow: var(--box-shadow);
   padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
 
 .about .tabs {
   display: flex;
-  justify-content: space-between;
-  padding: 0.8rem 0.5rem;
+  gap: 1rem;
 }
 
 .about .tabs h3 {
   background-color: var(--antiquewhite);
   text-align: center;
-  padding: 1rem 0.6rem;
+  padding: 0.8rem 0.4rem;
   border-radius: 0.5rem;
   box-shadow: var(--box-shadow);
   border: var(--border-small);
@@ -2187,7 +2179,7 @@ select {
   font-weight: 700;
 }
 .about .banner3 .singleTab img {
-  width: 100%;
+  width: ;
   border-radius: 1rem;
   margin: 1rem auto;
 }
