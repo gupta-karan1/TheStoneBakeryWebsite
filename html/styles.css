@@ -1878,8 +1878,9 @@ body {
   background-color: var(--antiquewhite);
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: flex-start;
+
   padding: 1.5rem;
 }
 
@@ -2039,7 +2040,7 @@ select {
 }
 
 .about .banner2 .historyCard {
-  height: max-content;
+  /* height: max-content; */
   /* width: 80vw; */
   background-color: var(--antiquewhite);
   opacity: 90%;
@@ -2103,12 +2104,12 @@ select {
   width: min-content;
 }
 
-.about .tabs {
+.about .banner3 .tabs {
   display: flex;
   gap: 1rem;
 }
 
-.about .tabs h3 {
+.about .banner3 .tabs h3 {
   background-color: var(--antiquewhite);
   text-align: center;
   padding: 0.8rem 0.4rem;
@@ -2133,7 +2134,6 @@ select {
 
 .about .banner3 .singleTab h4 {
   font-size: 1.8rem;
-
   font-weight: 700;
 }
 .about .banner3 .singleTab img {
@@ -2436,7 +2436,6 @@ select {
   height: 4rem;
   background-color: var(--antiquewhite);
   border-radius: 0.5rem;
-
   box-shadow: var(--box-shadow);
   border: var(--border);
   font-size: 1.2rem;
@@ -2446,7 +2445,7 @@ select {
 #email-wrapper-subscribe {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   gap: 0.2rem;
   width: 100%;
@@ -2910,6 +2909,7 @@ select {
   .home .hero {
     background-size: contain;
     background-attachment: fixed;
+    background-position: right center;
     background-position-y: 6rem;
     padding: 3rem;
     height: 100vh;
@@ -3014,7 +3014,7 @@ select {
   }
 
   .home .banner3 {
-    height: 20vh;
+    /* height: 20vh; */
     padding: 3rem;
   }
 
@@ -3124,7 +3124,7 @@ select {
   }
 
   .home .banner6 {
-    height: 20vh;
+    /* height: 20vh; */
     padding: 3rem;
   }
 
@@ -3271,7 +3271,8 @@ select {
   }
 
   .home .subscribeNews {
-    padding: 3rem;
+    padding: 6rem 3rem;
+    gap: 1.5rem;
   }
 
   .home .subscribeNews h2 {
@@ -3334,7 +3335,7 @@ select {
   }
 
   .shop .banner1 {
-    height: 20vh;
+    /* height: 20vh; */
     padding: 3rem;
   }
 
@@ -3428,5 +3429,382 @@ select {
   .shop .banner4 .card-wrapper .card:hover {
     outline: 0.2rem solid var(--rufous);
   }
+
+  .shop .banner5 {
+    padding: 3rem;
+  }
+
+  .shop .banner6 {
+    /* height: 20vh; */
+    padding: 3rem;
+  }
+
+  .shop .banner6 h2 {
+    font-size: 3.6rem;
+  }
+
+  .shop .banner7 {
+    padding: 3rem;
+  }
+
+  .shop .banner7 .card-wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 3rem;
+  }
+
+  .shop .banner7 .card-wrapper .card {
+    padding: 1.8rem;
+    max-width: min-content;
+    max-height: min-content;
+    border-radius: 2.4rem;
+    text-align: center;
+  }
+
+  .shop .banner7 .card-wrapper .card:hover {
+    outline: 0.2rem solid var(--rufous);
+  }
+
+  .shop .banner8 {
+    padding: 3rem;
+  }
+
+  .shop .banner9 {
+    /* height: 20vh; */
+    padding: 3rem;
+  }
+
+  .shop .banner9 h2 {
+    font-size: 3.6rem;
+  }
+
+  .shop .banner10 {
+    padding: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .shop .banner10 .customForm {
+    width: 60%;
+    padding: 3rem;
+  }
   /* shop page style ends */
+
+  /* ------------------------------ */
+
+  /* about page style starts */
+
+  .about .hero {
+    background-size: contain;
+    background-attachment: fixed;
+    background-position: right center;
+    background-position-y: 6rem;
+    padding: 3rem;
+    height: 100vh;
+  }
+
+  .about .hero h4 {
+    font-size: 1.2rem;
+  }
+
+  .about .hero h1 {
+    font-size: 4.2rem;
+  }
+
+  .about .hero p {
+    font-size: 1.5rem;
+  }
+
+  .about .hero .heroBtns {
+    margin-top: 1.2rem;
+    align-self: flex-start;
+  }
+
+  .about .banner1 {
+    background-size: contain;
+    background-attachment: fixed;
+    background-position: left;
+    align-items: flex-end;
+    justify-content: center;
+    text-align: left;
+    padding: 3rem;
+    height: 100vh;
+    gap: 1.2rem;
+  }
+
+  .about .banner1 h2 {
+    font-size: 3.6rem;
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+    margin: 0;
+    width: 40%;
+  }
+
+  .about .banner1 h4 {
+    font-size: 2.4rem;
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+    width: 40%;
+  }
+
+  .about .banner1 p {
+    font-size: 1.5rem;
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+    width: 40%;
+  }
+
+  .about .banner2 {
+    padding: 3rem;
+    background-size: contain;
+    background-position: right center;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: flex-start;
+  }
+
+  .about .banner2 .historyCard {
+    margin: 0;
+    padding: 3rem;
+    width: 40%;
+  }
+
+  .about .banner2 .historyCard h2 {
+    margin: 0;
+    font-size: 3.6rem;
+  }
+
+  .about .banner2 .historyCard h3 {
+    font-size: 2.4rem;
+  }
+  .about .banner2 .historyCard p {
+    font-size: 1.5rem;
+  }
+
+  .about .banner3 {
+    padding: 3rem;
+  }
+
+  .about .banner3 h2 {
+    font-size: 3.6rem;
+  }
+
+  .about .banner3 .container {
+    border-radius: 2.4rem;
+    padding: 3rem;
+    flex-direction: row;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about .banner3 .tabs {
+    flex-direction: column;
+    gap: 2.4rem;
+  }
+
+  .about .banner3 .tabs h3 {
+    text-align: left;
+    padding: 1.2rem;
+    font-size: 2.1rem;
+    border-radius: 1.5rem;
+  }
+
+  .about .banner4 {
+    padding: 3rem;
+  }
+
+  .about .banner4 h2 {
+    font-size: 3.6rem;
+  }
+
+  .about .banner4 .team-wrapper {
+    gap: 3rem;
+  }
+
+  .about .banner5 {
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about .banner5 h2 {
+    font-size: 3.6rem;
+  }
+
+  .about .banner5 .container {
+    width: 40%;
+  }
+
+  .about .banner6 {
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about .banner6 h2 {
+    font-size: 3.6rem;
+  }
+
+  .about .banner6 form {
+    width: 40%;
+    padding: 3rem;
+  }
+
+  .about .subscribeNews {
+    padding: 6rem 3rem;
+    gap: 1.5rem;
+  }
+
+  .about .subscribeNews h2 {
+    font-size: 3.6rem;
+  }
+
+  .about .subscribeNews h3 {
+    font-size: 2.4rem;
+  }
+
+  .about .subscribeNews .inputField {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #email-id-subscribe {
+    width: 50vw;
+  }
+
+  .about .subscribeNews .inputField .tertiaryBtn {
+    margin: 0;
+  }
+  /* about page style ends */
+
+  /* ------------------------------ */
+
+  /*cart page style starts */
+  .cart .hero {
+    background-size: contain;
+    background-attachment: fixed;
+    background-position: center;
+    padding: 3rem;
+    height: 100vh;
+    background-position-y: 6rem;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .cart .hero .heroText {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 0;
+  }
+
+  .cart .hero .heroText h4 {
+    font-size: 1.2rem;
+  }
+
+  .cart .hero .heroText h1 {
+    font-size: 4.2rem;
+  }
+
+  .cart .hero .heroText p {
+    font-size: 1.5rem;
+  }
+
+  .cart .hero .heroBtns {
+    margin: 1.5rem auto;
+  }
+
+  .cart .banner1 {
+    /* height: 20vh; */
+    padding: 3rem;
+  }
+
+  .cart .banner1 h2 {
+    font-size: 3.6rem;
+  }
+
+  .cart .banner2 {
+    padding: 3rem;
+    gap: 3rem;
+    background-color: var(--alloyOrange);
+  }
+
+  .cart .banner2 .text-center {
+    gap: 1.5rem;
+    padding: 3rem;
+    width: 60%;
+  }
+
+  .cart .banner2 .text-center h2 {
+    font-size: 3rem;
+  }
+
+  .cart .banner2 .text-center h3 {
+    font-size: 2.4rem;
+  }
+
+  .cart .banner2 .text-center h4 {
+    font-size: 1.5rem;
+  }
+
+  .cart .banner2 .card-wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 3rem;
+  }
+
+  .cart .banner2 .card-wrapper .card {
+    padding: 1.8rem;
+    max-width: min-content;
+    max-height: min-content;
+    border-radius: 2.4rem;
+    text-align: center;
+  }
+
+  .cart .banner2 .card-wrapper .card:hover {
+    outline: 0.2rem solid var(--rufous);
+  }
+
+  .cart .banner3 {
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .cart .banner3 h2 {
+    font-size: 3.6rem;
+  }
+
+  .cart .banner3 .loginNew,
+  .cart .banner3 .signUp,
+  .cart .banner3 .payment {
+    width: 50%;
+    border-radius: 2.4rem;
+  }
+  /*cart page style ends */
+
+  /* ----------------------- */
+
+  /*footer style starts */
+  .footer {
+    padding: 3rem;
+  }
+
+  .footer .box-container {
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: baseline;
+  }
+  /*footer style ends */
 }
