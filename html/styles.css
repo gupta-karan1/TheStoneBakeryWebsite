@@ -167,7 +167,6 @@ body {
 .header .navbar.active {
   position: absolute;
   top: 110%;
-
   box-shadow: var(--box-shadow);
   border-radius: 0.5rem;
   background-color: var(--antiquewhite);
@@ -517,6 +516,7 @@ body {
   padding: 0.4rem 0;
   color: var(--richBlack);
   text-align: left;
+  width: 100%;
 }
 
 .header .login-form p a {
@@ -548,11 +548,11 @@ body {
 .header .convertor-form.active {
   position: absolute;
   top: 110%;
-  right: 1.2rem;
-  width: 90vw;
+  /* right: 1.2rem; */
+  width: 90%;
   box-shadow: var(--box-shadow);
   border: var(--border);
-  padding: 1.5rem;
+  padding: 1.2rem;
   border-radius: 0.5rem;
   background-color: var(--antiquewhite);
   align-items: center;
@@ -607,11 +607,10 @@ body {
 .header .groceryList.active {
   position: absolute;
   top: 110%;
-  right: 1.2rem;
-  width: 90vw;
+  /* right: 1.2rem; */
+  width: 90%;
   box-shadow: var(--box-shadow);
   border: var(--border);
-  padding: 1.5rem;
   border-radius: 0.5rem;
   background-color: var(--antiquewhite);
   align-items: center;
@@ -619,8 +618,8 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   gap: 1rem;
+  padding: 1.2rem;
   height: 100vh;
-  overflow-y: scroll;
 }
 
 .header .groceryList h2 {
@@ -796,7 +795,6 @@ body {
   background-color: var(--rubyRed);
   padding: 1rem;
   border-radius: 0.5rem;
-
   box-shadow: var(--box-shadow);
 }
 
@@ -807,7 +805,6 @@ body {
   padding: 1rem;
   font-size: 1.2rem;
   border-radius: 0.5rem;
-
   box-shadow: var(--box-shadow);
 }
 
@@ -837,6 +834,7 @@ body {
   color: var(--antiquewhite);
   opacity: 90%;
   margin-top: 20rem;
+  box-shadow: var(--box-shadow);
 }
 
 .home .banner2 h4 {
@@ -848,6 +846,7 @@ body {
   color: var(--antiquewhite);
   font-weight: 300;
   opacity: 90%;
+  box-shadow: var(--box-shadow);
 }
 
 .home .banner2 h3 {
@@ -858,6 +857,7 @@ body {
   width: 100%;
   color: var(--antiquewhite);
   opacity: 90%;
+  box-shadow: var(--box-shadow);
 }
 
 /* home page - banner 2 style ends */
@@ -1221,7 +1221,6 @@ body {
   outline-style: dashed;
   box-shadow: var(--box-shadow);
   transition: 0.2s linear;
-  height: max-content;
 }
 
 .home .review .review-slider .box:hover {
@@ -1245,7 +1244,7 @@ body {
 
 .home .review .review-slider .box h3 {
   padding-bottom: 0.8rem;
-  color: var(--light-color);
+  color: var(--richBlack);
   font-size: 1.2rem;
 }
 
@@ -1364,6 +1363,7 @@ body {
   color: var(--richBlack);
   text-align: center;
 }
+
 .home .subscribeNews h3 {
   font-size: 1.8rem;
   font-weight: 500;
@@ -1397,9 +1397,6 @@ body {
   text-transform: none;
 }
 
-.home .subscribeNews .inputField .tertiaryBtn {
-  margin-top: -0.5rem;
-}
 /*  home page - subscribe news ends */
 
 /* home page - main section styles end  */
@@ -2835,3 +2832,601 @@ select {
 /* footer section styles ends */
 
 /* -------//////---- MOBILE FIRST STYLES ENDS HERE------- */
+
+/* ---------------------------------------------------------- */
+
+/* -------//////---- DESKTOP STYLES STARTS HERE------- */
+@media screen and (min-width: 768px) {
+  /* header styles starts */
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2.4rem;
+  }
+
+  .header .logo {
+    font-size: 2.4rem;
+    gap: 1.2rem;
+  }
+
+  .header .logo img {
+    width: 4.8rem;
+    height: 4.8rem;
+  }
+
+  .header .navbar.active {
+    right: 2.4rem;
+  }
+
+  .header .search-form.active {
+    right: 2.4rem;
+    overflow: hidden;
+    width: 60%;
+  }
+
+  .header .search-form ul {
+    font-size: 1.5rem;
+    gap: 0.9rem;
+  }
+
+  .header .search-form li {
+    padding: 0.6rem;
+  }
+
+  .header .search-form a:hover {
+    color: var(--blueSapphire);
+  }
+
+  .header .search-form a:active {
+    color: var(--rufous);
+  }
+
+  .header .shopping-cart.active {
+    right: 2.4rem;
+    width: auto;
+  }
+
+  .header .login-form.active {
+    right: 2.4rem;
+    width: auto;
+  }
+
+  .header .convertor-form.active {
+    right: 2.4rem;
+    width: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1.5rem;
+  }
+
+  .header .groceryList.active {
+    width: auto;
+    right: 2.4rem;
+  }
+  /* header styles ends */
+
+  /* home page styles starts */
+  .home .hero {
+    background-size: contain;
+    background-attachment: fixed;
+    background-position-y: 6rem;
+    padding: 3rem;
+    height: 100vh;
+  }
+
+  .home .hero h4 {
+    font-size: 1.2rem;
+  }
+
+  .home .hero h1 {
+    font-size: 4.2rem;
+  }
+
+  .home .hero p {
+    font-size: 1.5rem;
+  }
+
+  .home .hero .heroBtns {
+    margin-top: 1.2rem;
+    align-self: flex-start;
+  }
+
+  .home .banner1 {
+    background-size: contain;
+    background-attachment: fixed;
+    background-position: left;
+    align-items: flex-end;
+    justify-content: center;
+    text-align: left;
+    padding: 3rem;
+    height: 100vh;
+    gap: 1.2rem;
+  }
+
+  .home .banner1 .tertiaryBtn {
+    margin: 0 1.2rem;
+  }
+
+  .home .banner1 h2 {
+    font-size: 3.6rem;
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+    margin: 0;
+    width: 40%;
+  }
+
+  .home .banner1 h2 span {
+    font-size: 5.4rem;
+    padding: 1.5rem;
+  }
+
+  .home .banner1 h3 {
+    font-size: 2.4rem;
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+    width: 40%;
+  }
+
+  .home .banner1 h4 {
+    font-size: 1.5rem;
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+    width: 40%;
+  }
+
+  .home .banner2 {
+    background-size: 60%;
+    background-position: right top;
+    background-attachment: fixed;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    padding: 3rem;
+    text-align: left;
+    gap: 1.2rem;
+  }
+
+  .home .banner2 h2 {
+    font-size: 3.6rem;
+    padding: 1.5rem;
+    margin: 0;
+    border-radius: 1.5rem;
+    width: 35%;
+  }
+
+  .home .banner2 h4 {
+    font-size: 1.5rem;
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+    width: 35%;
+  }
+
+  .home .banner2 h3 {
+    font-size: 2.4rem;
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+    width: 35%;
+  }
+
+  .home .banner2 .secondaryBtn {
+    margin: 0 1.2rem;
+  }
+
+  .home .banner3 {
+    height: 20vh;
+    padding: 3rem;
+  }
+
+  .home .banner3 h2 {
+    font-size: 3.6rem;
+  }
+
+  .home .banner4 {
+    gap: 3rem;
+  }
+
+  .home .banner4 .card-wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .home .banner4 .card-wrapper .card {
+    padding: 1.8rem;
+    max-width: min-content;
+    max-height: min-content;
+    border-radius: 2.4rem;
+    gap: 1.2rem;
+    text-align: left;
+  }
+
+  .home .masterclass1 {
+    background-size: 60%;
+    background-position: right center;
+    background-attachment: fixed;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    padding: 3rem;
+    text-align: left;
+    gap: 1.2rem;
+  }
+
+  .home .masterclass1 h2 {
+    font-size: 3.6rem;
+    padding: 1.5rem;
+    margin: 0;
+    border-radius: 1.5rem;
+    width: 35%;
+  }
+
+  .home .masterclass1 h3 {
+    font-size: 2.4rem;
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+    width: 35%;
+  }
+
+  .home .masterclass1 h4 {
+    font-size: 1.5rem;
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+    width: 35%;
+  }
+
+  .home .masterclass1 .timer {
+    font-size: 3rem;
+  }
+
+  .home .masterclass1 .tertiaryBtn {
+    margin: 0 1.2rem;
+  }
+
+  .home .banner5 {
+    background-size: 60%;
+    background-position: left center;
+    background-attachment: fixed;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100vh;
+    padding: 3rem;
+    text-align: left;
+    gap: 1.2rem;
+  }
+
+  .home .banner5 h2 {
+    font-size: 3.6rem;
+    padding: 1.5rem;
+    margin: 0;
+    border-radius: 1.5rem;
+    width: 35%;
+  }
+
+  .home .banner5 h3 {
+    font-size: 2.4rem;
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+    width: 35%;
+  }
+
+  .home .banner5 h4 {
+    font-size: 1.5rem;
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+    width: 35%;
+  }
+
+  .home .banner5 .tertiaryBtn {
+    margin: 0 1.2rem;
+  }
+
+  .home .banner6 {
+    height: 20vh;
+    padding: 3rem;
+  }
+
+  .home .banner6 h2 {
+    font-size: 3.6rem;
+  }
+
+  .home .banner7 {
+    gap: 3rem;
+  }
+
+  .home .banner7 .card-wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .home .banner7 .card-wrapper .card {
+    padding: 1.8rem;
+    max-width: min-content;
+    max-height: min-content;
+    border-radius: 2.4rem;
+    gap: 1.2rem;
+    text-align: left;
+  }
+
+  .home .masterclass2 {
+    background-size: 60%;
+    background-position: right center;
+    background-attachment: fixed;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    padding: 3rem;
+    text-align: left;
+    gap: 1.2rem;
+  }
+
+  .home .masterclass2 h2 {
+    font-size: 3.6rem;
+    padding: 1.5rem;
+    margin: 0;
+    border-radius: 1.5rem;
+    width: 35%;
+  }
+
+  .home .masterclass2 h3 {
+    font-size: 2.4rem;
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+    width: 35%;
+  }
+
+  .home .masterclass2 h4 {
+    font-size: 1.5rem;
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+    width: 35%;
+  }
+
+  .home .masterclass2 .timer {
+    font-size: 3rem;
+  }
+
+  .home .masterclass2 .tertiaryBtn {
+    margin: 0 1.2rem;
+  }
+
+  .home .review {
+    padding: 3rem;
+  }
+
+  .home .review h2 {
+    font-size: 3.6rem;
+  }
+
+  .home .review .review-slider {
+    padding: 1.8rem;
+    height: 90%;
+    width: 90%;
+  }
+
+  .home .review .review-slider .box {
+    padding: 2.4rem;
+  }
+
+  .home .review .review-slider .box img {
+    height: 12rem;
+    width: 12rem;
+  }
+
+  .home .review .review-slider .box p {
+    font-size: 1.2rem;
+  }
+
+  .home .review .review-slider .box h3 {
+    font-size: 1.5rem;
+  }
+
+  .home .brandNumbers {
+    padding: 3rem;
+  }
+
+  .home .brandNumbers h2 {
+    font-size: 3.6rem;
+  }
+
+  .home .brandNumbers .numBox-slider {
+    padding: 1.8rem;
+    height: 90%;
+    width: 90%;
+  }
+
+  .home .brandNumbers .numBox-slider .box {
+    padding: 2.4rem;
+  }
+
+  .home .brandNumbers .numBox-slider .box p {
+    font-size: 1.8rem;
+  }
+
+  .home .brandNumbers .numBox-slider .box h3 {
+    font-size: 4.8rem;
+  }
+
+  .home .customerBrands {
+    padding: 3rem;
+  }
+
+  .home .customerBrands h2 {
+    font-size: 3.6rem;
+  }
+
+  .home .customerBrands .brandBox-slider {
+    padding: 1.8rem;
+    height: 90%;
+    width: 90%;
+  }
+
+  .home .customerBrands .brandBox-slider .box {
+    padding: 2.4rem;
+  }
+
+  .home .subscribeNews {
+    padding: 3rem;
+  }
+
+  .home .subscribeNews h2 {
+    font-size: 3.6rem;
+  }
+
+  .home .subscribeNews h3 {
+    font-size: 2.4rem;
+  }
+
+  .home .subscribeNews .inputField {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .home .subscribeNews .inputField .emailInput {
+    width: 50vw;
+  }
+
+  /* home page styles ends */
+
+  /* ------------------------------ */
+
+  /* shop page style starts */
+  .shop .hero {
+    background-size: contain;
+    background-attachment: fixed;
+    background-position: center;
+    padding: 3rem;
+    height: 100vh;
+    background-position-y: 6rem;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .shop .hero .heroText {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 0;
+  }
+
+  .shop .hero h4 {
+    font-size: 1.2rem;
+  }
+
+  .shop .hero h1 {
+    font-size: 4.2rem;
+  }
+
+  .shop .hero p {
+    font-size: 1.5rem;
+  }
+
+  .shop .hero .heroBtns {
+    display: flex;
+    gap: 1.2rem;
+    margin: 1.5rem 0;
+  }
+
+  .shop .banner1 {
+    height: 20vh;
+    padding: 3rem;
+  }
+
+  .shop .banner1 h2 {
+    font-size: 3.6rem;
+  }
+
+  .shop .banner2 {
+    padding: 3rem;
+  }
+
+  .shop .banner2 h2 {
+    font-size: 3.6rem;
+  }
+
+  .shop .banner2 .card-wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .shop .banner2 .card-wrapper .card {
+    padding: 1.8rem;
+    max-width: min-content;
+    max-height: min-content;
+    border-radius: 2.4rem;
+
+    text-align: center;
+  }
+
+  .shop .banner2 .card-wrapper .card:hover {
+    outline: 0.2rem solid var(--rufous);
+  }
+
+  .shop .banner3 {
+    padding: 3rem;
+  }
+
+  .shop .banner3 h2 {
+    font-size: 3.6rem;
+  }
+
+  .shop .banner3 .card-wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .shop .banner3 .card-wrapper .card {
+    padding: 1.8rem;
+    max-width: min-content;
+    max-height: min-content;
+    border-radius: 2.4rem;
+
+    text-align: center;
+  }
+
+  .shop .banner3 .card-wrapper .card:hover {
+    outline: 0.2rem solid var(--rufous);
+  }
+
+  .shop .banner4 {
+    padding: 3rem;
+  }
+
+  .shop .banner4 h2 {
+    font-size: 3.6rem;
+  }
+
+  .shop .banner4 .card-wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .shop .banner4 .card-wrapper .card {
+    padding: 1.8rem;
+    max-width: min-content;
+    max-height: min-content;
+    border-radius: 2.4rem;
+
+    text-align: center;
+  }
+
+  .shop .banner4 .card-wrapper .card:hover {
+    outline: 0.2rem solid var(--rufous);
+  }
+  /* shop page style ends */
+}
