@@ -329,3 +329,21 @@ closeGroceryBtn.addEventListener("click", function () {
 // script for my grocery list feature ends here
 
 // -----------------------------------
+
+// script for login form input validation on header starts
+
+let headerInputEmail = document.getElementById("header-login-email");
+let UserEmailRegex = /[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/;
+let output = document.getElementById("email-output");
+
+function validateEmail(input, output) {
+  if (input !== "" && UserEmailRegex.test(input)) {
+    output.innerHTML = "Yay! E-mail is valid!";
+  } else if (input !== "") {
+    output.innerHTML = "Please enter you e-mail!";
+  } else {
+    output.innerHTML = "E-mail not valid!";
+  }
+}
+
+validateEmail(headerInputEmail, output);
