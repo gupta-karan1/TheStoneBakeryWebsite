@@ -263,8 +263,11 @@
             class="box"
             title="email address"
             placeholder="yourName@example.com"
+            id="header-login-email"
+            oninput="emailValidityCheck(headerInputEmail, headerOutputEmail)"
           />
         </p>
+        <div id="email-output">required</div>
 
         <p>
           Password:
@@ -273,8 +276,11 @@
             class="box"
             placeholder="your password"
             title="password"
+            id="header-login-psw"
+            oninput="passwordValidityCheck(headerInputPsw, headerOutputPsw)"
           />
         </p>
+        <div id="header-psw-output">required</div>
 
         <p>forgot your password? <a href="#">click here</a></p>
         <p>don't have an account? <a href="#">create now</a></p>
@@ -388,97 +394,20 @@
       <!-- banner2 starts -->
       <section class="banner2">
         <h2>baking ingredients</h2>
-        <section class="card-wrapper ingredients">
-          <!-- <article class="card">
-            <img src="img/product-brownSugar.jpg" alt="brown sugar" />
-            <h2>brown sugar</h2>
-
-            <article class="content">
-              <p class="price">price: <span id="priceValue">$6.99</span></p>
-            </article>
-            <button type="button">add to cart</button>
-          </article>
-
-          <article class="card">
-            <img src="img/product-icingSugar.jpg" alt="icing sugar" />
-            <h2>icing sugar</h2>
-            <article class="content">
-              <p class="price">price: <span id="priceValue">$6.99</span></p>
-            </article>
-          </article>
-
-          <article class="card" id="productCard">
-            <img
-              src="img/product-chocolate-powder.jpg"
-              alt="chocolate powder"
-            />
-            <h2>chocolate powder</h2>
-            <article class="content">
-              <p class="price">price: <span id="priceValue">$6.99</span></p>
-            </article>
-          </article> -->
-        </section>
+        <section class="card-wrapper ingredients"></section>
       </section>
       <!-- banner2 ends -->
 
       <!-- banner3 starts -->
       <section class="banner3">
         <h2>baking utensils</h2>
-        <section class="card-wrapper utensils">
-          <!-- <article class="card" id="productCard">
-            <img src="img/product-mixing-bowl.jpg" alt="mixing bowl" />
-            <h2>mixing bowl</h2>
-            <article class="content">
-              <p class="price">price: <span id="priceValue">$6.99</span></p>
-            </article>
-          </article>
-
-          <article class="card" id="productCard">
-            <img src="img/product-bakingTray.jpg" alt="baking tray" />
-            <h2>baking tray</h2>
-            <article class="content">
-              <p class="price">price: <span id="priceValue">$6.99</span></p>
-            </article>
-          </article>
-
-          <article class="card" id="productCard">
-            <img src="img/product-rolling-pin.jpg" alt="rolling pin" />
-            <h2>rolling pin</h2>
-            <article class="content">
-              <p class="price">price: <span id="priceValue">$6.99</span></p>
-            </article>
-          </article> -->
-        </section>
+        <section class="card-wrapper utensils"></section>
       </section>
       <!-- banner3 ends -->
       <!-- banner4 starts -->
       <section class="banner4">
         <h2>baking guidebooks</h2>
-        <section class="card-wrapper guidebooks">
-          <!-- <article class="card" id="productCard">
-            <img src="img/product-baking-guide.jpg" alt="baking guide" />
-            <h2>baking guide</h2>
-            <article class="content">
-              <p class="price">price: <span id="priceValue">$6.99</span></p>
-            </article>
-          </article>
-
-          <article class="card" id="productCard">
-            <img src="img/product-cookBook.jpg" alt="cookbook" />
-            <h2>baking cookbook</h2>
-            <article class="content">
-              <p class="price">price: <span id="priceValue">$6.99</span></p>
-            </article>
-          </article>
-
-          <article class="card" id="productCard">
-            <img src="img/product-recipebook.jpg" alt="baking recipe book" />
-            <h2>recipe book</h2>
-            <article class="content">
-              <p class="price">price: <span id="priceValue">$6.99</span></p>
-            </article>
-          </article> -->
-        </section>
+        <section class="card-wrapper guidebooks"></section>
       </section>
       <!-- banner4 ends -->
 
@@ -537,7 +466,6 @@
           <input
             type="text"
             name="fullName"
-            id="fullName"
             placeholder="Emma Watson"
             title="enter your full name"
             required
@@ -547,23 +475,27 @@
           <input
             type="email"
             name="userEmail"
-            id="userEmail"
+            id="order-email-input"
             placeholder="emma@gmail.com"
             title="enter your email address"
             required
+            oninput="emailValidityCheck(orderEmailInput,orderEmailMsg)"
           />
+          <div id="order-email-msg"></div>
+          <br />
 
           <label for="contactNumber">contact number*: </label>
           <input
             type="tel"
             name="contactNumber"
-            id="contactNumber"
+            id="order-phone-input"
             placeholder="+353-777888999"
             title="enter your email address"
             required
-            pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
+            oninput="phoneNumValidityCheck(orderPhoneInput, orderPhoneMsg)"
           />
-
+          <div id="order-phone-msg"></div>
+          <br />
           <label for="userMessage">message*: </label>
           <textarea rows="10" title="message" required>
  I want...

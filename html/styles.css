@@ -1905,7 +1905,7 @@ select {
   padding: 1.2rem;
 }
 
-.shop .banner10 .customForm #userEmail {
+.shop .banner10 .customForm #order-email-input {
   text-transform: none;
 }
 

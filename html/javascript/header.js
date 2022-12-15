@@ -330,20 +330,184 @@ closeGroceryBtn.addEventListener("click", function () {
 
 // -----------------------------------
 
-// script for login form input validation on header starts
+// script for common input validation on different pages starts
 
-let headerInputEmail = document.getElementById("header-login-email");
-let UserEmailRegex = /[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/;
-let output = document.getElementById("email-output");
+// define all necessary regex variables
+let emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
-function validateEmail(input, output) {
-  if (input !== "" && UserEmailRegex.test(input)) {
-    output.innerHTML = "Yay! E-mail is valid!";
-  } else if (input !== "") {
-    output.innerHTML = "Please enter you e-mail!";
+let passwordRegex =
+  /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$/;
+// Minimum eight characters, at least one upper case English letter, one lower case English letter, one number and one special character.
+
+let phoneNumberRegex =
+  /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
+// Match a phone number with "-" and/or country code.
+
+let creditCardNumRegex =
+  /(^4[0-9]{12}(?:[0-9]{3})?$)|(^(?:5[1-5][0-9]{2}|222[1-9]|22[3-9][0-9]|2[3-6][0-9]{2}|27[01][0-9]|2720)[0-9]{12}$)|(3[47][0-9]{13})|(^3(?:0[0-5]|[68][0-9])[0-9]{11}$)|(^6(?:011|5[0-9]{2})[0-9]{12}$)|(^(?:2131|1800|35\d{3})\d{11}$)/;
+
+let userNameRegex = /^[a-z0-9_-]{3,15}$/;
+
+let cvvRegex = /^[0-9]{3,4}$/;
+
+// define all form validation functions to be used across the site
+function emailValidityCheck(inputEmail, outputMsg) {
+  if (inputEmail.value == "") {
+    outputMsg.innerHTML = "Please enter your E-mail";
+    inputEmail.style.border = "0.05rem dotted #9b2226";
+    outputMsg.style.color = "#9b2226";
+  } else if (inputEmail.value.match(emailRegex)) {
+    inputEmail.style.border = "0.2rem solid #005f73";
+    outputMsg.innerHTML = "Great! This is valid E-mail";
+    outputMsg.style.color = "#005f73";
   } else {
-    output.innerHTML = "E-mail not valid!";
+    outputMsg.innerHTML = "Invalid. Please enter a valid E-mail ID";
+    inputEmail.style.border = "0.2rem solid #9b2226";
+    outputMsg.style.color = "#9b2226";
   }
 }
 
-validateEmail(headerInputEmail, output);
+function passwordValidityCheck(inputPsw, outputPsw) {
+  if (inputPsw.value == "") {
+    outputPsw.innerHTML = "Please enter your password";
+    inputPsw.style.border = "0.05rem dotted #9b2226";
+  } else if (inputPsw.value.match(passwordRegex)) {
+    inputPsw.style.border = "0.2rem solid #005f73";
+    outputPsw.innerHTML = "Your password is correct";
+    outputPsw.style.color = "#005f73";
+  } else {
+    outputPsw.innerHTML = "Incorrect Password. Please Try Again";
+    inputPsw.style.border = "0.2rem solid #9b2226";
+    outputPsw.style.color = "#9b2226";
+  }
+}
+
+function phoneNumValidityCheck(inputNum, outputNumMsg) {
+  if (inputNum.value == "") {
+    outputNumMsg.innerHTML = "Please enter your phone number";
+    inputNum.style.border = "0.05rem dotted #9b2226";
+  } else if (inputNum.value.match(phoneNumberRegex)) {
+    inputNum.style.border = "0.2rem solid #005f73";
+    outputNumMsg.innerHTML = "Yay! Valid Phone Number";
+    outputNumMsg.style.color = "#005f73";
+  } else {
+    outputNumMsg.innerHTML = "Invalid Phone Number. Please Try Again";
+    inputNum.style.border = "0.2rem solid #9b2226";
+    outputNumMsg.style.color = "#9b2226";
+  }
+}
+
+function usernameValidityCheck(inputUsername, outputUsernameMsg) {
+  if (inputUsername.value == "") {
+    outputUsernameMsg.innerHTML = "Please enter a username";
+    inputUsername.style.border = "0.05rem dotted #9b2226";
+  } else if (inputUsername.value.match(userNameRegex)) {
+    inputUsername.style.border = "0.2rem solid #005f73";
+    outputUsernameMsg.innerHTML = "Yay! Valid username";
+    outputUsernameMsg.style.color = "#005f73";
+  } else {
+    outputUsernameMsg.innerHTML = "Invalid user name. Please Try Again";
+    inputUsername.style.border = "0.2rem solid #9b2226";
+    outputUsernameMsg.style.color = "#9b2226";
+  }
+}
+
+function cardNumValidityCheck(inputCardNum, outputCardNumMsg) {
+  if (inputCardNum.value == "") {
+    outputCardNumMsg.innerHTML = "Please enter your card number";
+    inputCardNum.style.border = "0.05rem dotted #9b2226";
+  } else if (inputCardNum.value.match(creditCardNumRegex)) {
+    inputCardNum.style.border = "0.2rem solid #005f73";
+    outputCardNumMsg.innerHTML = " This is a valid card number";
+    outputCardNumMsg.style.color = "#005f73";
+  } else {
+    outputCardNumMsg.innerHTML =
+      "Invalid card number. Please Try Again or with a different card";
+    inputCardNum.style.border = "0.2rem solid #9b2226";
+    outputCardNumMsg.style.color = "#9b2226";
+  }
+}
+
+function cvvNumValidityCheck(inputCvvNum, outputCvvNumMsg) {
+  if (inputCvvNum.value == "") {
+    outputCvvNumMsg.innerHTML = "Please enter your CVV";
+    inputCvvNum.style.border = "0.05rem dotted #9b2226";
+  } else if (inputCvvNum.value.match(cvvRegex)) {
+    inputCvvNum.style.border = "0.2rem solid #005f73";
+    outputCvvNumMsg.innerHTML = " This is a valid cvv number";
+    outputCvvNumMsg.style.color = "#005f73";
+  } else {
+    outputCvvNumMsg.innerHTML =
+      "Invalid cvv. Please Try Again. It's the 3 digit number behind your card";
+    inputCvvNum.style.border = "0.2rem solid #9b2226";
+    outputCvvNumMsg.style.color = "#9b2226";
+  }
+}
+
+// input validation for login form on the header navigation panel
+let headerInputEmail = document.getElementById("header-login-email");
+let headerOutputEmail = document.getElementById("email-output");
+
+let headerInputPsw = document.getElementById("header-login-psw");
+let headerOutputPsw = document.getElementById("header-psw-output");
+
+// input validation of subscription form at the bottom of home page
+let subscribeEmailInput = document.getElementById("subscribe-email-input");
+let subscribeEmailOutputMsg = document.getElementById("subscribe-output-msg");
+
+// input validation of phone number field on about page within the contact form
+let contactPhoneNum = document.getElementById("contact-phone-Num");
+let contactPhoneMsg = document.getElementById("contact-phone-Msg");
+
+// input validation of email and phone number on shop page under the custom order form
+let orderEmailInput = document.getElementById("order-email-input");
+let orderEmailMsg = document.getElementById("order-email-msg");
+
+let orderPhoneInput = document.getElementById("order-phone-input");
+let orderPhoneMsg = document.getElementById("order-phone-msg");
+
+// input validation for login form on cart page
+let usernameInputLogin = document.getElementById("username-input-login");
+let usernameOutputMsg = document.getElementById("username-output-msg");
+
+let loginEmailAddressInput = document.getElementById("email-address");
+let loginEmailAddressOutputMsg = document.getElementById(
+  "email-address-output-msg"
+);
+
+let cartLoginPswInput = document.getElementById("password-cart-login");
+let cartLoginPswOutputMsg = document.getElementById("password-cart-login-msg");
+
+// input validation for signup form on cart page
+let signupUsernameInput = document.getElementById("signup-username-input");
+let signupUsernameOutputMsg = document.getElementById("signup-username-output");
+
+let signupEmailInput = document.getElementById("email-address-signUp");
+let signupEmailOutputMsg = document.getElementById("signup-email-msg");
+
+let createPasswordInput = document.getElementById("create-password");
+let createPasswordOutputMsg = document.getElementById("signup-password-msg");
+
+// function to match two password fields
+let rePasswordInput = document.getElementById("re-password");
+let rePasswordMatchMsg = document.getElementById("password-match");
+
+function matchPassword() {
+  if (rePasswordInput.value == createPasswordInput.value) {
+    rePasswordMatchMsg.innerHTML = "Passwords Match!";
+    rePasswordInput.style.border = "0.2rem solid #005f73";
+    rePasswordMatchMsg.style.color = "#005f73";
+  } else {
+    rePasswordMatchMsg.innerHTML =
+      "Passwords don't match. Type Again. This is to check if you'll be able to remember your password.";
+    rePasswordMatchMsg.style.color = "#9b2226";
+    rePasswordInput.style.border = "0.2rem solid #9b2226";
+  }
+}
+
+// input validation of payment form on cart page
+let creditCardNumInput = document.getElementById("cardNumber");
+let cardNumOutputMsg = document.getElementById("card-num-msg");
+
+let cvvInputNum = document.getElementById("cvv");
+let cvvOutputMsg = document.getElementById("cvv-output-msg");

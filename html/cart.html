@@ -267,8 +267,11 @@
             class="box"
             title="email address"
             placeholder="yourName@example.com"
+            id="header-login-email"
+            oninput="emailValidityCheck(headerInputEmail, headerOutputEmail)"
           />
         </p>
+        <div id="email-output">required</div>
 
         <p>
           Password:
@@ -277,8 +280,11 @@
             class="box"
             placeholder="your password"
             title="password"
+            id="header-login-psw"
+            oninput="passwordValidityCheck(headerInputPsw, headerOutputPsw)"
           />
         </p>
+        <div id="header-psw-output">required</div>
 
         <p>forgot your password? <a href="#">click here</a></p>
         <p>don't have an account? <a href="#">create now</a></p>
@@ -402,7 +408,10 @@
             placeholder="john-watson1996"
             title="user name"
             name="username"
+            id="username-input-login"
+            oninput="usernameValidityCheck(usernameInputLogin, usernameOutputMsg)"
           />
+          <div id="username-output-msg"></div>
           <br />
 
           <label for="email">E-mail <em> (required)</em>: </label>
@@ -413,26 +422,31 @@
             title="email address"
             placeholder="john-watson@gmail.com"
             required
+            oninput="emailValidityCheck(loginEmailAddressInput, loginEmailAddressOutputMsg)"
           />
+          <div id="email-address-output-msg"></div>
           <br />
 
           <label for="password">Password <em> (required)</em>: </label>
           <input
             type="password"
             name="password"
-            id="password"
+            id="password-cart-login"
             title="password"
             placeholder="your password"
             required
+            oninput="passwordValidityCheck(cartLoginPswInput, cartLoginPswOutputMsg)"
           />
+          <div id="password-cart-login-msg"></div>
           <br />
 
-          <label for="password">
+          <label for="remember-check">
             <input
               type="checkbox"
               title="remember me"
               checked="checked"
               name="remember"
+              id="remember-check"
             />
             : Remember Me
           </label>
@@ -475,8 +489,10 @@
             placeholder="john-watson1996"
             title="user name"
             name="username"
-            id="user-name"
+            id="signup-username-input"
+            oninput="usernameValidityCheck(signupUsernameInput, signupUsernameOutputMsg)"
           />
+          <div id="signup-username-output"></div>
           <br />
 
           <label for="email-sign">E-mail <em> (required)</em>: </label>
@@ -487,7 +503,9 @@
             title="email address"
             placeholder="john-watson@gmail.com"
             required
+            oninput="emailValidityCheck(signupEmailInput, signupEmailOutputMsg)"
           />
+          <div id="signup-email-msg"></div>
           <br />
 
           <label for="birth-date">your birth date: </label>
@@ -504,7 +522,14 @@
             title="create-password"
             placeholder="create a strong password"
             required
+            oninput="passwordValidityCheck(createPasswordInput, createPasswordOutputMsg)"
           />
+          <div id="signup-password-msg"></div>
+          <p>
+            Minimum eight characters, at least one upper case English letter,
+            one lower case English letter, one number and one special character.
+          </p>
+
           <br />
           <label for="re-password"
             >Re-enter Password <em> (required)</em>:
@@ -516,7 +541,9 @@
             title="re-password"
             placeholder="re-enter password"
             required
+            oninput="matchPassword()"
           />
+          <div id="password-match"></div>
           <br />
           <p>
             By creating an account you agree to our
@@ -531,13 +558,13 @@
 
           <label for="cardNumber">Card Number: </label>
           <input
-            type="number"
+            type="text"
             name="cardNumber"
             id="cardNumber"
             placeholder="000-0000-0000-0000"
-            required
-            pattern="^4[0-9]{12}(?:[0-9]{3})?$"
+            oninput="cardNumValidityCheck(creditCardNumInput, cardNumOutputMsg)"
           />
+          <div id="card-num-msg"></div>
           <br />
 
           <label for="expireMM">Expiry Month: </label>
@@ -573,8 +600,9 @@
             name="cvv"
             id="cvv"
             placeholder="CVV"
-            pattern="^[0-9]{3, 4}$"
+            oninput="cvvNumValidityCheck(cvvInputNum, cvvOutputMsg)"
           />
+          <div id="cvv-output-msg"></div>
           <br />
 
           <label for="address">Street Address: </label>
@@ -588,7 +616,7 @@
 
           <label for="pincode">Pin-code: </label>
           <input
-            type="number"
+            type="text"
             name="pincode"
             id="pincode"
             placeholder="D07XT61"

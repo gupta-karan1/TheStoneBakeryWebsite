@@ -273,9 +273,10 @@
             title="email address"
             placeholder="yourName@example.com"
             id="header-login-email"
+            oninput="emailValidityCheck(headerInputEmail, headerOutputEmail)"
           />
         </p>
-        <div id="email-output">output</div>
+        <div id="email-output">required</div>
 
         <p>
           Password:
@@ -284,8 +285,11 @@
             class="box"
             placeholder="your password"
             title="password"
+            id="header-login-psw"
+            oninput="passwordValidityCheck(headerInputPsw, headerOutputPsw)"
           />
         </p>
+        <div id="header-psw-output">required</div>
 
         <p>forgot your password? <a href="#">click here</a></p>
         <p>don't have an account? <a href="#">create now</a></p>
@@ -687,12 +691,15 @@
             type="email"
             class="emailInput"
             name="email"
-            id="emailInput"
+            id="subscribe-email-input"
             title="enter your email"
             placeholder="yourEmail@contact.com"
+            oninput="emailValidityCheck(subscribeEmailInput, subscribeEmailOutputMsg)"
           />
+
           <input type="submit" value="submit" class="secondaryBtn" />
         </article>
+        <div id="subscribe-output-msg"></div>
       </section>
 
       <!-- subscribeNews banner ends -->
