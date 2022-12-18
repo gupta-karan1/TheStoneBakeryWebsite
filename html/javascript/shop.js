@@ -199,6 +199,7 @@ let calculation = () => {
 calculation();
 
 // --------------------------------
+
 let headerCartValues = () => {
   let totalBillValue = document.getElementById("headerCartPrice");
   let totalItemQuantity = document.getElementById("headerCartQuantity");

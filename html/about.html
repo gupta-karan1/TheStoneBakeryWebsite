@@ -584,16 +584,12 @@
                 id="email-id"
                 oninput="validityChecker(emailId, errorMsg, tickIcon)"
               />
-              <div id="tickIcon">
-                <!-- <i class="fas fa-check-circle"></i> -->
-              </div>
+              <div id="tickIcon"></div>
             </div>
             <p id="error-msg">please enter a valid email address!</p>
-            <!-- pattern="[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+" -->
           </article>
           <article class="contact-wrapper">
             <label for="yourNumber">Phone (not required):</label>
-
             <input
               placeholder="+353-085135902"
               type="tel"
@@ -646,17 +642,14 @@
               placeholder="you@contact.com"
               oninput="validityChecker(emailIdSub, errorMsgSub, tickIconSub)"
             />
-            <!-- pattern="[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+" -->
-            <div id="tickIcon-subscribe">
-              <!-- <i class="fas fa-check-circle"></i> -->
-            </div>
+            <div id="tickIcon-subscribe"></div>
           </div>
           <p id="error-msg-subscribe">please enter a valid email address!</p>
           <input
             type="submit"
             id="subscribeNewsletter"
             value="submit"
-            class="tertiaryBtn"
+            class="secondaryBtn"
           />
         </article>
       </section>
