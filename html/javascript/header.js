@@ -2,22 +2,21 @@
 
 let searchForm = document.querySelector(".search-form");
 let searchBtn = document.querySelector("#search-btn");
+let searchCloseBtn = document.getElementById("search-close");
 
 // toggle the search input field visibility
 searchBtn.addEventListener("click", function () {
-  searchForm.classList.add("active");
+  searchForm.classList.toggle("active");
+
   shoppingCart.classList.remove("active");
   loginForm.classList.remove("active");
   navbar.classList.remove("active");
   convertorForm.classList.remove("active");
   groceryList.classList.remove("active");
+});
 
-  // toggle buttons
-  searchBtn.classList.add("inactive");
-  closeBtn.classList.add("active");
-  menuBtn.classList.remove("inactive");
-  loginBtn.classList.remove("inactive");
-  cartBtn.classList.remove("inactive");
+searchCloseBtn.addEventListener("click", function () {
+  searchForm.classList.remove("active");
 });
 
 // ---------------
@@ -25,22 +24,21 @@ searchBtn.addEventListener("click", function () {
 // shopping cart box toggle visibility:
 let shoppingCart = document.querySelector(".shopping-cart");
 let cartBtn = document.querySelector("#cart-btn");
+let closeCartBtn = document.getElementById("head-cart-close");
 
 // toggle the shopping cart box visibility
 cartBtn.addEventListener("click", function () {
-  shoppingCart.classList.add("active");
+  shoppingCart.classList.toggle("active");
+
   searchForm.classList.remove("active");
   loginForm.classList.remove("active");
   navbar.classList.remove("active");
   convertorForm.classList.remove("active");
   groceryList.classList.remove("active");
+});
 
-  // toggle buttons
-  closeBtn.classList.add("active");
-  cartBtn.classList.add("inactive");
-  loginBtn.classList.remove("inactive");
-  menuBtn.classList.remove("inactive");
-  searchBtn.classList.remove("inactive");
+closeCartBtn.addEventListener("click", () => {
+  shoppingCart.classList.remove("active");
 });
 
 // ---------------
@@ -48,22 +46,21 @@ cartBtn.addEventListener("click", function () {
 // login form box toggle visibility:
 let loginForm = document.querySelector(".login-form");
 let loginBtn = document.querySelector("#login-btn");
+let loginCloseBtn = document.getElementById("head-login-close");
 
 // toggle the shopping cart box visibility
 loginBtn.addEventListener("click", function () {
-  loginForm.classList.add("active");
+  loginForm.classList.toggle("active");
+
   searchForm.classList.remove("active");
   shoppingCart.classList.remove("active");
   navbar.classList.remove("active");
   convertorForm.classList.remove("active");
   groceryList.classList.remove("active");
+});
 
-  // toggle buttons
-  closeBtn.classList.add("active");
-  loginBtn.classList.add("inactive");
-  menuBtn.classList.remove("inactive");
-  cartBtn.classList.remove("inactive");
-  searchBtn.classList.remove("inactive");
+loginCloseBtn.addEventListener("click", () => {
+  loginForm.classList.remove("active");
 });
 
 // ---------------
@@ -71,50 +68,32 @@ loginBtn.addEventListener("click", function () {
 // menu button box
 let navbar = document.querySelector(".navbar");
 let menuBtn = document.querySelector("#menu-btn");
+let navCloseBtn = document.getElementById("head-nav-close");
 
 // toggle the menu navigation visibility
 menuBtn.addEventListener("click", function () {
-  navbar.classList.add("active");
+  navbar.classList.toggle("active");
+
   searchForm.classList.remove("active");
   shoppingCart.classList.remove("active");
   loginForm.classList.remove("active");
   convertorForm.classList.remove("active");
   groceryList.classList.remove("active");
-
-  // toggle buttons
-  closeBtn.classList.add("active");
-  menuBtn.classList.add("inactive");
-  loginBtn.classList.remove("inactive");
-  cartBtn.classList.remove("inactive");
-  searchBtn.classList.remove("inactive");
 });
 
-let closeBtn = document.querySelector(".close-btn");
-closeBtn.addEventListener("click", function () {
-  searchForm.classList.remove("active");
-  shoppingCart.classList.remove("active");
-  loginForm.classList.remove("active");
+navCloseBtn.addEventListener("click", () => {
   navbar.classList.remove("active");
-  convertorForm.classList.remove("active");
-  groceryList.classList.remove("active");
-
-  // toggle buttons
-  closeBtn.classList.remove("active");
-  loginBtn.classList.remove("inactive");
-  menuBtn.classList.remove("inactive");
-  searchBtn.classList.remove("inactive");
-  cartBtn.classList.remove("inactive");
 });
 
 window.addEventListener("scroll", function () {
-  searchForm.classList.remove("active");
   shoppingCart.classList.remove("active");
-  loginForm.classList.remove("active");
   navbar.classList.remove("active");
-  closeBtn.classList.remove("active");
 });
 
+// ------------------
+
 // script for a filterable list for searching through bakery products starts
+
 // got input element from search field
 let filterInput = document.getElementById("filterInput");
 
@@ -148,6 +127,8 @@ function filterNames() {
   }
 }
 // script for a filterable list for searching through bakery products ends
+
+// ------------------
 
 // script for weight and baking temperature conversion feature for baking purposes - feature is in navigation menu
 
@@ -254,20 +235,24 @@ let convertorForm = document.querySelector(".convertor-form");
 let closeConvertor = document.getElementById("close-convertor");
 
 unitBtn.addEventListener("click", function () {
-  convertorForm.classList.add("active");
+  convertorForm.classList.toggle("active");
+
   navbar.classList.remove("active");
-  navbar.classList.remove("active");
+  loginForm.classList.remove("active");
+  shoppingCart.classList.remove("active");
+  searchForm.classList.remove("active");
+  groceryList.classList.remove("active");
 });
 
 closeConvertor.addEventListener("click", function () {
   convertorForm.classList.remove("active");
-  closeBtn.classList.remove("active");
-  menuBtn.classList.remove("inactive");
 });
 
 // script for unit convertor feature ends
 
-// script for my grocery list feature - found under unity convertor feature within the navigation menu
+// ---------
+
+// script for shopping list feature - found under unity convertor feature within the navigation menu
 
 // adding onclick function to push button
 
@@ -282,7 +267,7 @@ document.querySelector("#push").onclick = function () {
         ${document.querySelector("#newTask input").value}
     </span>
     <button class = "delete">
-        <i class="fas fa-trash-alt    "></i>
+        <i class="fas fa-trash-alt"></i>
     </button>
 </div>`;
 
@@ -313,21 +298,21 @@ let groceryBtn = document.getElementById("groceryBtn");
 let groceryList = document.querySelector(".groceryList");
 
 groceryBtn.addEventListener("click", function () {
-  groceryList.classList.add("active");
-  closeBtn.classList.add("active");
-  menuBtn.classList.add("inactive");
+  groceryList.classList.toggle("active");
   navbar.classList.remove("active");
+  shoppingCart.classList.remove("active");
+  loginForm.classList.remove("active");
+  searchForm.classList.remove("active");
+  convertorForm.classList.remove("active");
 });
 
 // close grocery list on clicking the close button
 let closeGroceryBtn = document.getElementById("close-grocery");
 closeGroceryBtn.addEventListener("click", function () {
   groceryList.classList.remove("active");
-  closeBtn.classList.remove("active");
-  menuBtn.classList.remove("inactive");
 });
 
-// script for my grocery list feature ends here
+// script for shopping list feature ends here
 
 // -----------------------------------
 
@@ -512,3 +497,5 @@ let cardNumOutputMsg = document.getElementById("card-num-msg");
 
 let cvvInputNum = document.getElementById("cvv");
 let cvvOutputMsg = document.getElementById("cvv-output-msg");
+
+// ---------------------------------------------------------------------

@@ -52,32 +52,30 @@
 
       <!-- navigation menu starts -->
       <nav class="navbar">
+        <i class="fas fa-times" id="head-nav-close"></i>
         <a href="index.html" title="home">
           <i class="fas fa-home-lg"></i> Home</a
         >
         <a href="about.html" title="about us">
-          <i class="fas fa-users"></i> About Us</a
+          <i class="fas fa-users"></i> About</a
         >
         <a href="shop.html" title="bakery shop">
-          <i class="fas fa-shop"></i> Bakery Shop</a
+          <i class="fas fa-shop"></i> Shop</a
         >
         <a href="cart.html" title="shopping cart">
-          <i class="fas fa-cart-shopping"></i> Shopping Cart</a
+          <i class="fas fa-cart-shopping"></i> Cart</a
         >
         <button type="button" id="unitBtn" title="unit convertor">
           <i class="fas fa-weight"></i> unit convertor
         </button>
         <button type="button" id="groceryBtn" title="my grocery list">
-          <i class="fas fa-list-check"></i> my grocery list
+          <i class="fas fa-list-check"></i> shopping list
         </button>
       </nav>
       <!-- navigation menu ends -->
 
       <!-- nav menu icons start -->
       <section class="icons">
-        <button class="close-btn" title="close" type="button">
-          <i class="fas fa-times"></i>
-        </button>
         <button
           class="fas fa-user"
           id="login-btn"
@@ -109,6 +107,7 @@
 
       <!-- search input box starts -->
       <form action="" class="search-form">
+        <div class="fas fa-times" id="search-close"></div>
         <input
           type="search"
           name="search"
@@ -250,6 +249,7 @@
 
       <!-- shopping cart box starts  -->
       <section class="shopping-cart">
+        <i class="fas fa-times" id="head-cart-close"></i>
         <h3>Total Items in Your Cart:</h3>
         <h2 id="headerCartQuantity">00</h2>
         <h3>Your Total Bill:</h3>
@@ -265,7 +265,10 @@
       <!-- user login form box starts -->
 
       <form action="" class="login-form">
-        <h3><i class="fas fa-user-circle"></i> login now</h3>
+        <h3>
+          <i class="fas fa-user-circle"></i> login
+          <i class="fas fa-times" id="head-login-close"></i>
+        </h3>
         <p>
           Email Address:
           <input
@@ -304,7 +307,10 @@
       <!-- user login form box ends -->
       <!-- weight convertor modal box starts -->
       <form action="" class="convertor-form">
-        <h3><i class="fas fa-spoon"></i> Unit Convertor</h3>
+        <h3>
+          <i class="fas fa-spoon"></i> Unit Convertor
+          <i class="fas fa-times" id="close-convertor"></i>
+        </h3>
         <p>Quantity:</p>
         <article class="input-wrapper">
           <label for="cups">cups: </label>
@@ -346,19 +352,12 @@
           <label for="degF">deg fahrenheit (deg F):</label>
           <input type="number" id="degF" />
         </article>
-
-        <button class="primaryBtn" id="close-convertor" type="submit">
-          Close <i class="fas fa-close"></i>
-        </button>
       </form>
       <!-- weight convertor modal box ends -->
 
       <!-- my grocery list modal box starts -->
       <section class="groceryList">
-        <button class="tertiaryBtn" id="close-grocery" type="submit">
-          Close <i class="fas fa-close"></i>
-        </button>
-        <h2>My grocery list</h2>
+        <h2>shopping list <i class="fas fa-times" id="close-grocery"></i></h2>
         <article id="newTask">
           <input type="text" placeholder="add item here..." />
           <button type="button" class="secondaryBtn" id="push">Add</button>
@@ -669,16 +668,37 @@
     <footer class="footer" id="footer">
       <section class="box-container">
         <article class="box">
-          <h3><i class="fas fa-bread-slice"></i> The Stone bakers</h3>
+          <img
+            src="img/TheStoneBakery_Favicon.png"
+            alt="The stone bakery logo"
+            width="64px"
+          />
+          <h3>The Stone bakery</h3>
           <p>
             Established In 1869, <br />
             We Will Now Help You Bake-From-Home
           </p>
           <article class="share">
-            <a href="" class="fab fa-facebook" title="facebook"></a>
-            <a href="" class="fab fa-twitter" title="twitter"></a>
-            <a href="" class="fab fa-instagram" title="instagram"></a>
-            <a href="" class="fab fa-linkedin" title="linkedin"></a>
+            <a
+              href="https://www.facebook.com/"
+              class="fab fa-facebook"
+              title="facebook"
+            ></a>
+            <a
+              href="https://www.twitter.com/"
+              class="fab fa-twitter"
+              title="twitter"
+            ></a>
+            <a
+              href="https://www.instagram.com/"
+              class="fab fa-instagram"
+              title="instagram"
+            ></a>
+            <a
+              href="https://www.linkedin.com/"
+              class="fab fa-linkedin"
+              title="linkedin"
+            ></a>
           </article>
         </article>
         <article class="box">
@@ -699,13 +719,13 @@
             <i class="fas fa-home"></i> home
           </a>
           <a href="shop.html" class="links" title="links">
-            <i class="fas fa-shop"></i> bakery shop
+            <i class="fas fa-shop"></i> shop
           </a>
           <a href="about.html" class="links" title="links">
-            <i class="fas fa-users"></i> about us
+            <i class="fas fa-users"></i> about
           </a>
           <a href="cart.html" class="links" title="links">
-            <i class="fas fa-cart-shopping"></i> shopping cart
+            <i class="fas fa-cart-shopping"></i> cart
           </a>
         </article>
       </section>
