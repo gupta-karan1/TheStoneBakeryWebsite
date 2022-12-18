@@ -106,11 +106,12 @@ closeBtn.addEventListener("click", function () {
   cartBtn.classList.remove("inactive");
 });
 
-window.addEventListener("onscroll", function () {
+window.addEventListener("scroll", function () {
   searchForm.classList.remove("active");
   shoppingCart.classList.remove("active");
   loginForm.classList.remove("active");
   navbar.classList.remove("active");
+  closeBtn.classList.remove("active");
 });
 
 // script for a filterable list for searching through bakery products starts
