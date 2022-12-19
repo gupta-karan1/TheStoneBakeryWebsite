@@ -403,7 +403,7 @@
       <!-- banner 3 forms starts -->
       <section class="banner3">
         <h3>Let's proceed with checkout...</h3>
-        <form class="loginNew">
+        <form onsubmit="alertOnSubmit()" class="loginNew">
           <h2>Login</h2>
           <label for="username">username:</label>
           <input
@@ -464,7 +464,7 @@
           </p>
         </form>
 
-        <form class="signUp">
+        <form onsubmit="alertOnSubmit()" class="signUp">
           <h2>Sign Up</h2>
 
           <label for="first-name">first name <em> (required)</em>: </label>
@@ -556,7 +556,7 @@
           <input type="reset" class="tertiaryBtn" value="reset" />
         </form>
 
-        <form class="payment">
+        <form onsubmit="alertOnSubmit()" class="payment">
           <h2>Payment Details</h2>
 
           <label for="cardNumber">Card Number: </label>
@@ -590,11 +590,11 @@
           <label for="expireYY">Expiry Year: </label>
           <select name="expireYY" id="expireYY">
             <option value="">Year</option>
-            <option value="20">2020</option>
-            <option value="21">2021</option>
-            <option value="22">2022</option>
-            <option value="23">2023</option>
-            <option value="24">2024</option>
+            <option value="20">2023</option>
+            <option value="21">2024</option>
+            <option value="22">2025</option>
+            <option value="23">2026</option>
+            <option value="24">2027</option>
           </select>
 
           <label for="cvv">CVV: </label>

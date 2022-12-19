@@ -499,3 +499,16 @@ let cvvInputNum = document.getElementById("cvv");
 let cvvOutputMsg = document.getElementById("cvv-output-msg");
 
 // ---------------------------------------------------------------------
+
+// on submit event listener added to forms to display thankyou message when users submit a form
+let homeSubscribeEmail = document.querySelector(".subscribeNews");
+
+let headerLoginForm = document.querySelector(".login-form");
+
+function submitForm(formContainer) {
+  formContainer.innerHTML = "Thankyou for your time!";
+}
+
+function alertOnSubmit() {
+  alert("The form is submitted. Thankyou!");
+}

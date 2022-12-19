@@ -267,7 +267,7 @@
 
       <!-- user login form box starts -->
 
-      <form action="" class="login-form">
+      <form onsubmit="alertOnSubmit()" class="login-form">
         <h3>
           <i class="fas fa-user-circle"></i> login
           <i class="fas fa-times" id="head-login-close"></i>
@@ -301,7 +301,7 @@
 
         <p>forgot your password? <a href="#">click here</a></p>
         <p>don't have an account? <a href="#">create now</a></p>
-        <button class="primaryBtn" formaction="" type="submit">
+        <button class="primaryBtn" type="submit">
           login <i class="fas fa-user"></i>
         </button>
       </form>
@@ -388,9 +388,9 @@
           <p>Become a master baker right from the comfort of your kitchen.</p>
         </article>
         <article class="heroBtns">
-          <button type="button" href="" class="secondaryBtn">
-            visit Bakery <i class="fas fa-bread-slice"></i>
-          </button>
+          <a href="shop.html" class="secondaryBtn">
+            visit Shop <i class="fas fa-bread-slice"></i>
+          </a>
         </article>
       </section>
 
@@ -415,9 +415,9 @@
           Get all baking ingredients, equipments, guidebooks, and masterclasses
           right here!
         </h4>
-        <button type="button" href="" class="secondaryBtn">
+        <a href="shop.html" class="secondaryBtn">
           Shop Now <i class="fas fa-cart-shopping"></i>
-        </button>
+        </a>
       </section>
       <!-- banner 2 ends -->
       <!-- banner 3 starts -->
@@ -458,9 +458,9 @@
             </p>
           </article>
         </section>
-        <button type="button" href="" class="secondaryBtn">
+        <a href="shop.html" class="secondaryBtn">
           Shop Now <i class="fas fa-cart-arrow-down"></i>
-        </button>
+        </a>
       </section>
       <!-- banner 4 ends -->
 
@@ -485,9 +485,9 @@
         <h2>Online order</h2>
         <h3>anything from the comfort of your home</h3>
         <h4>taste our finest breads, pies, pastries, muffins and much more!</h4>
-        <button type="button" href="" class="tertiaryBtn">
+        <a href="shop.html" class="tertiaryBtn">
           Shop Now <f class="fas fa-cart-shopping"></f>
-        </button>
+        </a>
       </section>
 
       <!-- banner 5 ends -->
@@ -532,9 +532,9 @@
             </p>
           </article>
         </section>
-        <button type="button" href="" class="secondaryBtn">
+        <a href="shop.html" class="secondaryBtn">
           Shop Now <i class="fas fa-cart-arrow-down"></i>
-        </button>
+        </a>
       </section>
 
       <!-- banner 7 ends -->
@@ -691,21 +691,23 @@
       <section class="subscribeNews">
         <h2>get our bakery's secret recipes</h2>
         <h3>subscribe to our newsletter</h3>
-        <article class="inputField">
-          <label for="email">your email address:</label>
-          <input
-            type="email"
-            class="emailInput"
-            name="email"
-            id="subscribe-email-input"
-            title="enter your email"
-            placeholder="yourEmail@contact.com"
-            oninput="emailValidityCheck(subscribeEmailInput, subscribeEmailOutputMsg)"
-          />
+        <form onsubmit="submitForm(homeSubscribeEmail)">
+          <article class="inputField">
+            <label for="email">your email address:</label>
+            <input
+              type="email"
+              class="emailInput"
+              name="email"
+              id="subscribe-email-input"
+              title="enter your email"
+              placeholder="yourEmail@contact.com"
+              oninput="emailValidityCheck(subscribeEmailInput, subscribeEmailOutputMsg)"
+            />
 
-          <input type="submit" value="submit" class="secondaryBtn" />
-        </article>
-        <div id="subscribe-output-msg"></div>
+            <button type="submit" class="secondaryBtn">submit</button>
+          </article>
+          <div id="subscribe-output-msg"></div>
+        </form>
       </section>
 
       <!-- subscribeNews banner ends -->

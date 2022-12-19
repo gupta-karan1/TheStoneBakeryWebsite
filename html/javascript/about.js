@@ -199,3 +199,5 @@ let headerCartValues = () => {
 };
 
 headerCartValues();
+
+// ----------------------

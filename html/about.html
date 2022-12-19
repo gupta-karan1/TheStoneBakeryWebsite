@@ -559,7 +559,7 @@
       <!-- banner6 contact form starts-->
       <section class="banner6">
         <h2>Contact Us</h2>
-        <form action="" class="contactForm">
+        <form onsubmit="alertOnSubmit()" class="contactForm">
           <article class="contact-wrapper">
             <label for="yourName">Name (required):</label>
             <input
@@ -609,17 +609,13 @@
               id="yourMessage"
             ></textarea>
           </article>
+          <div id="contactSubmitMsg"></div>
 
+          <input type="submit" value="submit" class="secondaryBtn" />
           <input
-            type="submit"
-            name="submitBtn"
-            value="submit"
-            class="secondaryBtn"
-          />
-          <input
+            id="resetContactBtn"
             type="reset"
             name="resetBtn"
-            value="reset"
             class="primaryBtn"
           />
         </form>
@@ -629,29 +625,31 @@
       <section class="subscribeNews">
         <h2>get our bakery's secret recipes</h2>
         <h3>subscribe to our newsletter</h3>
-        <article class="inputField">
-          <label for="email">Type in your email address:</label>
-          <div id="email-wrapper-subscribe">
+        <form onsubmit="submitForm(homeSubscribeEmail)">
+          <article class="inputField">
+            <label for="email">Type in your email address:</label>
+            <div id="email-wrapper-subscribe">
+              <input
+                type="email"
+                class="emailInput"
+                name="email"
+                id="email-id-subscribe"
+                required
+                title="enter your email"
+                placeholder="you@contact.com"
+                oninput="validityChecker(emailIdSub, errorMsgSub, tickIconSub)"
+              />
+              <div id="tickIcon-subscribe"></div>
+            </div>
+            <p id="error-msg-subscribe">please enter a valid email address!</p>
             <input
-              type="email"
-              class="emailInput"
-              name="email"
-              id="email-id-subscribe"
-              required
-              title="enter your email"
-              placeholder="you@contact.com"
-              oninput="validityChecker(emailIdSub, errorMsgSub, tickIconSub)"
+              type="submit"
+              id="subscribeNewsletter"
+              value="submit"
+              class="secondaryBtn"
             />
-            <div id="tickIcon-subscribe"></div>
-          </div>
-          <p id="error-msg-subscribe">please enter a valid email address!</p>
-          <input
-            type="submit"
-            id="subscribeNewsletter"
-            value="submit"
-            class="secondaryBtn"
-          />
-        </article>
+          </article>
+        </form>
       </section>
       <!-- banner9 ends -->
     </main>
